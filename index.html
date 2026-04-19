@@ -39,7 +39,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .nav-btn:hover { background: var(--green2); transform: translateY(-1px); }
 .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 2rem 80px; position: relative; overflow: hidden; text-align: center; }
 .blob { position: absolute; border-radius: 50%; z-index: 0; pointer-events: none; }
-.blob-1 { width: 560px; height: 480px; background: #E8DDD0; border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; top: 50%; left: 50%; transform: translate(-50%, -52%); opacity: 0.7; animation: morph1 12s ease-in-out infinite; }
+.blob-1 { width: 560px; height: 480px; background: #E8DDD0; border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; top: 50%; left: 50%; transform: translate(-50%, -52%); opacity: 0.7; animation: morph1 12s ease-in-out infinite; z-index: 0; }
 .blob-2 { width: 300px; height: 260px; background: #D4E8D8; border-radius: 70% 30% 40% 60% / 50% 60% 40% 50%; top: 15%; right: 10%; opacity: 0.35; animation: morph2 15s ease-in-out infinite; }
 .blob-3 { width: 220px; height: 200px; background: #C8D8E0; border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%; bottom: 20%; left: 8%; opacity: 0.25; animation: morph3 18s ease-in-out infinite; }
 @keyframes morph1 { 0%, 100% { border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; } 33% { border-radius: 45% 55% 38% 62% / 55% 45% 55% 45%; } 66% { border-radius: 55% 45% 62% 38% / 42% 58% 42% 58%; } }
