@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soroflow | Cybersecurity Consultancy</title>
+<meta name="description" content="We help individuals and businesses protect their data without the complexity. Clear advice, practical solutions, peace of mind.">
+<link rel="icon" href="https://www.soroflow.com/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #F7F4EF;
+  --bg2: #EFE9DF;
+  --white: #FDFCFA;
+  --dark: #0F0E0C;
+  --dark2: #1C1A17;
+  --green: #1A3828;
+  --green2: #2C5940;
+  --green-light: #EAF2EC;
+  --text: #0F0E0C;
+  --text-mid: #6B6558;
+  --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09);
+  --border2: rgba(15,14,12,0.14);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(247, 244, 239, 0.8); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 7px; }
+.brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
+.nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
+.nav-links a { font-size: 14px; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.nav-btn:hover { background: var(--green2); transform: translateY(-1px); }
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 2rem 80px; position: relative; overflow: hidden; text-align: center; }
+.blob { position: absolute; border-radius: 50%; z-index: 0; pointer-events: none; }
+.blob-1 { width: 560px; height: 480px; background: #E8DDD0; border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; top: 50%; left: 50%; transform: translate(-50%, -52%); opacity: 0.7; animation: morph1 12s ease-in-out infinite; }
+.blob-2 { width: 300px; height: 260px; background: #D4E8D8; border-radius: 70% 30% 40% 60% / 50% 60% 40% 50%; top: 15%; right: 10%; opacity: 0.35; animation: morph2 15s ease-in-out infinite; }
+.blob-3 { width: 220px; height: 200px; background: #C8D8E0; border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%; bottom: 20%; left: 8%; opacity: 0.25; animation: morph3 18s ease-in-out infinite; }
+@keyframes morph1 { 0%, 100% { border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; } 33% { border-radius: 45% 55% 38% 62% / 55% 45% 55% 45%; } 66% { border-radius: 55% 45% 62% 38% / 42% 58% 42% 58%; } }
+@keyframes morph2 { 0%, 100% { border-radius: 70% 30% 40% 60% / 50% 60% 40% 50%; } 50% { border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%; } }
+@keyframes morph3 { 0%, 100% { border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%; } 50% { border-radius: 70% 30% 40% 60% / 40% 60% 40% 60%; } }
+.hero-inner { position: relative; z-index: 1; max-width: 780px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-mid); background: rgba(255,255,255,0.7); border: 1px solid var(--border2); border-radius: 30px; padding: 5px 14px 5px 10px; margin-bottom: 2rem; backdrop-filter: blur(10px); }
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #4CAF72; animation: blink 2.5s ease-in-out infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 8vw, 88px); font-weight: 400; line-height: 1.0; letter-spacing: -2px; color: var(--text); margin-bottom: 1.5rem; }
+.hero h1 em { font-style: italic; color: var(--green); }
+.hero-sub { font-size: 18px; color: var(--text-mid); line-height: 1.7; font-weight: 300; max-width: 500px; margin: 0 auto 2.5rem; }
+.hero-actions { display: flex; align-items: center; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+.btn-dark { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: var(--white); background: var(--dark); padding: 14px 28px; border-radius: 10px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.btn-dark:hover { background: var(--dark2); transform: translateY(-2px); }
+.btn-ghost { font-size: 14px; color: var(--text-mid); text-decoration: none; padding: 14px 20px; border-radius: 10px; border: 1px solid var(--border2); background: rgba(255,255,255,0.5); transition: background 0.2s, color 0.2s; backdrop-filter: blur(8px); }
+.btn-ghost:hover { background: var(--white); color: var(--text); }
+.hero-trust { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13px; color: var(--text-light); flex-wrap: wrap; }
+.hero-trust-sep { opacity: 0.4; }
+.hero-img-strip { padding: 0 2rem 5rem; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-img-wrap { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 32px 80px rgba(15,14,12,0.14), 0 8px 24px rgba(15,14,12,0.08); }
+.hero-img-wrap img { width: 100%; height: 420px; object-fit: cover; display: block; }
+.hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(15,14,12,0.3) 100%); }
+.hero-img-badges { position: absolute; bottom: 24px; left: 24px; right: 24px; display: flex; gap: 10px; flex-wrap: wrap; }
+.img-badge { background: rgba(253,252,250,0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.6); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--text); }
+.trust-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--white); padding: 3.5rem 2rem; }
+.trust-strip-inner { max-width: 1000px; margin: 0 auto; }
+.trust-strip-label { text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); margin-bottom: 2.5rem; }
+.trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.trust-item { background: var(--white); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 10px; }
+.trust-item-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.trust-item strong { font-size: 15px; font-weight: 500; color: var(--text); }
+.trust-item p { font-size: 14px; color: var(--text-mid); line-height: 1.6; font-weight: 300; }
+section { padding: 6rem 2rem; }
+.container { max-width: 1000px; margin: 0 auto; }
+.section-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
+.section-heading { font-family: 'Instrument Serif', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; line-height: 1.1; letter-spacing: -0.8px; color: var(--text); margin-bottom: 1rem; }
+.section-body { font-size: 16px; color: var(--text-mid); line-height: 1.75; font-weight: 300; max-width: 480px; }
+.services-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.services-cards { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: var(--border); }
+.s-card { background: var(--white); padding: 1.75rem; transition: background 0.2s; }
+.s-card:hover { background: #FDFCF9; }
+.s-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.s-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.s-card h3 { font-size: 16px; font-weight: 500; color: var(--text); }
+.s-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; font-weight: 300; padding-left: 50px; }
+.compliance-bg { background: var(--dark); }
+.compliance-bg .section-eyebrow { color: rgba(255,255,255,0.3); }
+.compliance-bg .section-heading { color: var(--white); }
+.compliance-bg .section-body { color: rgba(255,255,255,0.5); }
+.comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; margin-top: 3rem; }
+.comp-card { background: var(--dark2); padding: 2rem 1.75rem; transition: background 0.2s; }
+.comp-card:hover { background: #252320; }
+.comp-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: #4CAF72; background: rgba(76, 175, 114, 0.12); border-radius: 5px; padding: 3px 9px; display: inline-block; margin-bottom: 1.25rem; }
+.comp-card h3 { font-family: 'Instrument Serif', serif; font-size: 30px; font-weight: 400; color: var(--white); margin-bottom: 8px; }
+.comp-card p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.65; font-weight: 300; }
+.who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 3rem; }
+.who-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.who-card:hover { transform: translateY(-5px); box-shadow: 0 24px 60px rgba(15,14,12,0.1); }
+.who-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.who-body { padding: 1.75rem; }
+.who-pill { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.6px; color: var(--green); background: var(--green-light); border-radius: 30px; padding: 4px 12px; display: inline-block; margin-bottom: 1rem; }
+.who-card h3 { font-size: 19px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+.who-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
+.about-bg { background: var(--green); }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-bg .section-eyebrow { color: rgba(255,255,255,0.35); }
+.about-text { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.75; font-weight: 300; }
+.philosophy { text-align: center; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.philosophy .section-heading { font-size: clamp(36px, 5vw, 56px); max-width: 560px; margin: 0 auto 1rem; }
+.philosophy .section-body { max-width: 400px; margin: 0 auto 2.5rem; }
+.pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.pill { font-size: 14px; padding: 10px 22px; border: 1px solid var(--border2); border-radius: 30px; color: var(--text-mid); background: var(--white); transition: all 0.2s; }
+.pill:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
+.cta-section { text-align: center; background: var(--white); }
+.cta-section .section-heading { max-width: 480px; margin: 0 auto 0.75rem; }
+.cta-section .section-body { max-width: 380px; margin: 0 auto 2.5rem; }
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-outline { font-size: 15px; color: var(--text-mid); padding: 14px 26px; border: 1px solid var(--border2); border-radius: 10px; text-decoration: none; transition: all 0.2s; }
+.btn-outline:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
+footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
+.footer-top { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.footer-brand { display: flex; flex-direction: column; gap: 14px; }
+.footer-brand-row { display: flex; align-items: center; gap: 9px; }
+.footer-brand-row img { width: 28px; height: 28px; border-radius: 6px; }
+.footer-brand-name { font-size: 15px; font-weight: 500; color: var(--white); }
+.footer-tagline { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.65; max-width: 240px; font-weight: 300; }
+.footer-col h4 { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.25); margin-bottom: 1.25rem; }
+.footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; font-weight: 300; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { max-width: 1000px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.25); flex-wrap: wrap; gap: 1rem; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hero { padding: 100px 1.25rem 60px; }
+  .hero-img-strip { padding: 0 1.25rem 4rem; }
+  .hero-img-wrap img { height: 260px; }
+  section { padding: 4rem 1.25rem; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .services-wrap { grid-template-columns: 1fr; gap: 2rem; }
+  .comp-grid { grid-template-columns: 1fr; }
+  .who-grid { grid-template-columns: 1fr; }
+  .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; }
+  .hero-img-badges { display: none; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="brand">
+    <img src="https://www.soroflow.com/icon.png" alt="Soroflow">
+    <span class="brand-name">Soroflow</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#compliance">Compliance</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:hello@soroflow.com" class="nav-btn">Get in touch →</a>
+</nav>
+<section class="hero">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="badge-dot"></span> Cybersecurity consultancy</div>
+    <h1>Cybersecurity,<br><em>simplified.</em></h1>
+    <p class="hero-sub">We help individuals and businesses protect their data without the complexity. Clear advice, practical solutions, and peace of mind.</p>
+    <div class="hero-actions">
+      <a href="mailto:hello@soroflow.com" class="btn-dark">Get in touch →</a>
+      <a href="#services" class="btn-ghost">See what we do</a>
+    </div>
+    <div class="hero-trust">
+      <span>Trusted guidance</span><span class="hero-trust-sep">·</span>
+      <span>No jargon</span><span class="hero-trust-sep">·</span>
+      <span>No complexity</span>
+    </div>
+  </div>
+</section>
+<div class="hero-img-strip reveal">
+  <div class="hero-img-wrap">
+    <img src="https://www.soroflow.com/images/hero-visual.jpg" alt="Cybersecurity">
+    <div class="hero-img-overlay"></div>
+    <div class="hero-img-badges">
+      <div class="img-badge"><span>🔒</span> NIS2 Ready</div>
+      <div class="img-badge"><span>✓</span> ISO 27001</div>
+      <div class="img-badge"><span>🇪🇺</span> GDPR Compliant</div>
+    </div>
+  </div>
+</div>
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <p class="trust-strip-label">Trusted approach to modern cybersecurity</p>
+    <div class="trust-grid">
+      <div class="trust-item reveal"><div class="trust-item-icon">💬</div><strong>Clear communication</strong><p>Plain language explanations — no technical overwhelm.</p></div>
+      <div class="trust-item reveal reveal-d1"><div class="trust-item-icon">🛠</div><strong>Practical solutions</strong><p>Real-world measures tailored to your situation.</p></div>
+      <div class="trust-item reveal reveal-d2"><div class="trust-item-icon">🇪🇺</div><strong>EU compliance focus</strong><p>Deep expertise in NIS2, GDPR, and ISO 27001.</p></div>
+    </div>
+  </div>
+</div>
+<section id="services">
+  <div class="container">
+    <div class="services-wrap">
+      <div class="services-left reveal">
+        <p class="section-eyebrow">What we do</p>
+        <h2 class="section-heading">Services built around you</h2>
+        <p class="section-body">We assess, advise, and protect — without the complexity that usually comes with cybersecurity consultancy.</p>
+      </div>
+      <div class="services-cards reveal reveal-d1">
+        <div class="s-card"><div class="s-card-top"><div class="s-icon">🔍</div><h3>Risk assessment</h3></div><p>We identify where you're vulnerable and help you understand your risks in plain language.</p></div>
+        <div class="s-card"><div class="s-card-top"><div class="s-icon">🧭</div><h3>Security guidance</h3></div><p>Personalized recommendations tailored to your situation, not generic advice from the internet.</p></div>
+        <div class="s-card"><div class="s-card-top"><div class="s-icon">🔒</div><h3>Basic protection</h3></div><p>Simple, effective measures to secure your accounts, devices, and sensitive information.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="compliance" class="compliance-bg">
+  <div class="container">
+    <p class="section-eyebrow reveal">Compliance & standards</p>
+    <h2 class="section-heading reveal">Meeting requirements,<br>made simple</h2>
+    <div class="comp-grid">
+      <div class="comp-card reveal"><span class="comp-tag">EU Directive</span><h3>NIS2</h3><p>Helping organizations meet EU cybersecurity requirements and improve resilience.</p></div>
+      <div class="comp-card reveal reveal-d1"><span class="comp-tag">International</span><h3>ISO 27001</h3><p>Support with implementing and maintaining information security management systems.</p></div>
+      <div class="comp-card reveal reveal-d2"><span class="comp-tag">EU Regulation</span><h3>GDPR</h3><p>Ensuring compliance with data protection regulations and protecting personal data.</p></div>
+    </div>
+  </div>
+</section>
+<section id="who">
+  <div class="container">
+    <p class="section-eyebrow reveal">Who we help</p>
+    <h2 class="section-heading reveal">Built for real people</h2>
+    <div class="who-grid">
+      <div class="who-card reveal"><img src="https://www.soroflow.com/images/individual-security.jpg" alt="Personal security"><div class="who-body"><span class="who-pill">Individuals</span><h3>Protect what's yours</h3><p>Secure your personal data, lock down your online accounts, and navigate the digital world with confidence. No technical background required.</p></div></div>
+      <div class="who-card reveal reveal-d1"><img src="https://www.soroflow.com/images/business-security.jpg" alt="Business security"><div class="who-body"><span class="who-pill">Small & medium businesses</span><h3>Grow without the risk</h3><p>Safeguard your company's data, protect your customers, and meet security requirements — without hiring a full team or breaking the budget.</p></div></div>
+    </div>
+  </div>
+</section>
+<section id="about" class="about-bg">
+  <div class="container">
+    <div class="about-inner">
+      <div class="reveal"><p class="section-eyebrow">Who we are</p><h2 class="section-heading" style="color:white;">Built on expertise,<br>driven by clarity</h2></div>
+      <div class="reveal reveal-d1"><p class="about-text">Soroflow was founded with one mission: to make cybersecurity accessible to everyone. We work with a network of experienced specialists, so you always get the right help — regardless of the size of the task.</p></div>
+    </div>
+  </div>
+</section>
+<section class="philosophy">
+  <div class="container">
+    <p class="section-eyebrow reveal">Our approach</p>
+    <h2 class="section-heading reveal">Security shouldn't<br>be complicated.</h2>
+    <p class="section-body reveal">We cut through the noise and give you what matters — clear answers, practical steps, and solutions that actually work.</p>
+    <div class="pills reveal">
+      <span class="pill">Plain language</span>
+      <span class="pill">Practical solutions</span>
+      <span class="pill">No hidden costs</span>
+    </div>
+  </div>
+</section>
+<section id="contact" class="cta-section">
+  <div class="container">
+    <p class="section-eyebrow reveal">Get started</p>
+    <h2 class="section-heading reveal">Ready to get started?</h2>
+    <p class="section-body reveal">Reach out and tell us about your situation. We'll get back to you with how we can help.</p>
+    <div class="cta-btns reveal">
+      <a href="mailto:hello@soroflow.com" class="btn-dark">Get in touch →</a>
+      <a href="mailto:hello@soroflow.com" class="btn-outline">hello@soroflow.com</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-row"><img src="https://www.soroflow.com/icon.png" alt="Soroflow"><span class="footer-brand-name">Soroflow</span></div>
+      <p class="footer-tagline">Cybersecurity, simplified. For people and businesses who deserve clear answers.</p>
+    </div>
+    <div class="footer-col"><h4>Navigation</h4><a href="#services">Services</a><a href="#compliance">Compliance</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Cybersecurity, simplified.</span></div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
