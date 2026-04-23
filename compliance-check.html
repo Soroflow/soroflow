@@ -64,8 +64,16 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .option-btn { display: flex; align-items: center; gap: 14px; padding: 1rem 1.25rem; border: 1.5px solid var(--border2); border-radius: 12px; background: var(--bg); cursor: pointer; transition: all 0.2s; text-align: left; font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--text); font-weight: 400; }
 .option-btn:hover { border-color: var(--green); background: var(--green-light); color: var(--green); }
 .option-btn.selected { border-color: var(--green); background: var(--green-light); color: var(--green); }
-.option-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--white); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; transition: all 0.2s; }
-.option-btn:hover .option-icon, .option-btn.selected .option-icon { background: var(--green); border-color: var(--green); }
+.option-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--white); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; transition: all 0.2s; color: var(--text-mid); }
+.option-icon--text { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: #003399; background: #EEF2FF; border-color: #C7D2FE; }
+.option-btn:hover .option-icon, .option-btn.selected .option-icon { background: var(--green); border-color: var(--green); color: var(--white); }
+.option-btn:hover .option-icon--text, .option-btn.selected .option-icon--text { background: var(--green); border-color: var(--green); color: var(--white); }
+.option-flag { border: none !important; border-radius: 8px; flex-direction: column; gap: 2px; }
+.option-flag--eu { background: #003399 !important; color: #FFCC00 !important; }
+.option-flag--world { background: #0F766E !important; color: white !important; }
+.option-flag--outside { background: #374151 !important; color: white !important; }
+.eu-star { font-size: 8px; line-height: 1.2; display: block; text-align: center; }
+.option-btn:hover .option-flag, .option-btn.selected .option-flag { filter: brightness(1.15); }
 
 /* Nav buttons */
 .nav-btns { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
@@ -138,9 +146,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
       <p class="question-text">Where is your business based or operating?</p>
       <p class="question-hint">EU regulations apply if you're based in the EU or if you serve EU residents.</p>
       <div class="options">
-        <button class="option-btn" onclick="answer('q1','eu')"><span class="option-icon">🇪🇺</span> In the EU / EEA</button>
-        <button class="option-btn" onclick="answer('q1','serves_eu')"><span class="option-icon">🌍</span> Outside the EU, but I serve EU customers</button>
-        <button class="option-btn" onclick="answer('q1','outside')"><span class="option-icon">🌐</span> Outside the EU, no EU customers</button>
+        <button class="option-btn" onclick="answer('q1','eu')"><span class="option-icon option-flag option-flag--eu"><span class="eu-star">★</span><span class="eu-star">★</span><span class="eu-star">★</span><span class="eu-star">★</span></span> In the EU / EEA</button>
+        <button class="option-btn" onclick="answer('q1','serves_eu')"><span class="option-icon option-flag option-flag--world"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="7" x2="22" y2="7"/><line x1="2" y1="17" x2="22" y2="17"/></svg></span> Outside the EU, but I serve EU customers</button>
+        <button class="option-btn" onclick="answer('q1','outside')"><span class="option-icon option-flag option-flag--outside"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span> Outside the EU, no EU customers</button>
       </div>
     </div>
 
@@ -149,9 +157,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
       <p class="question-text">Do you collect or process personal data about individuals?</p>
       <p class="question-hint">Personal data includes names, emails, phone numbers, IP addresses, or any information that can identify a person.</p>
       <div class="options">
-        <button class="option-btn" onclick="answer('q2','yes')"><span class="option-icon">✅</span> Yes — we collect customer, employee, or user data</button>
-        <button class="option-btn" onclick="answer('q2','minimal')"><span class="option-icon">⚠️</span> Minimal — only basic contact info</button>
-        <button class="option-btn" onclick="answer('q2','no')"><span class="option-icon">❌</span> No — we don't collect personal data</button>
+        <button class="option-btn" onclick="answer('q2','yes')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Yes — we collect customer, employee, or user data</button>
+        <button class="option-btn" onclick="answer('q2','minimal')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span> Minimal — only basic contact info</button>
+        <button class="option-btn" onclick="answer('q2','no')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> No — we don't collect personal data</button>
       </div>
     </div>
 
@@ -160,9 +168,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
       <p class="question-text">How many employees does your organisation have?</p>
       <p class="question-hint">NIS2 thresholds are based on company size. Some obligations apply regardless of size in critical sectors.</p>
       <div class="options">
-        <button class="option-btn" onclick="answer('q3','large')"><span class="option-icon">🏢</span> 250 or more</button>
-        <button class="option-btn" onclick="answer('q3','medium')"><span class="option-icon">🏬</span> 50–249</button>
-        <button class="option-btn" onclick="answer('q3','small')"><span class="option-icon">🏠</span> Fewer than 50</button>
+        <button class="option-btn" onclick="answer('q3','large')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></span> 250 or more</button>
+        <button class="option-btn" onclick="answer('q3','medium')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> 50–249</button>
+        <button class="option-btn" onclick="answer('q3','small')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span> Fewer than 50</button>
       </div>
     </div>
 
@@ -171,9 +179,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
       <p class="question-text">Does your business operate in any of these sectors?</p>
       <p class="question-hint">NIS2 applies to organisations in critical sectors, regardless of size in some cases.</p>
       <div class="options">
-        <button class="option-btn" onclick="answer('q4','critical')"><span class="option-icon">⚡</span> Energy, transport, health, finance, water, or digital infrastructure</button>
-        <button class="option-btn" onclick="answer('q4','important')"><span class="option-icon">📦</span> Postal, waste, manufacturing, food, or digital services</button>
-        <button class="option-btn" onclick="answer('q4','none')"><span class="option-icon">🛍️</span> None of the above</button>
+        <button class="option-btn" onclick="answer('q4','critical')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span> Energy, transport, health, finance, water, or digital infrastructure</button>
+        <button class="option-btn" onclick="answer('q4','important')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span> Postal, waste, manufacturing, food, or digital services</button>
+        <button class="option-btn" onclick="answer('q4','none')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span> None of the above</button>
       </div>
     </div>
 
@@ -182,9 +190,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
       <p class="question-text">Do you work with large enterprise clients or public sector organisations?</p>
       <p class="question-hint">Many enterprise and government clients require suppliers to hold ISO 27001 certification as a condition of doing business.</p>
       <div class="options">
-        <button class="option-btn" onclick="answer('q5','yes')"><span class="option-icon">✅</span> Yes — or we're planning to</button>
-        <button class="option-btn" onclick="answer('q5','maybe')"><span class="option-icon">🤔</span> Not yet, but it's on our roadmap</button>
-        <button class="option-btn" onclick="answer('q5','no')"><span class="option-icon">❌</span> No — we work with SMEs and individuals</button>
+        <button class="option-btn" onclick="answer('q5','yes')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Yes — or we're planning to</button>
+        <button class="option-btn" onclick="answer('q5','maybe')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span> Not yet, but it's on our roadmap</button>
+        <button class="option-btn" onclick="answer('q5','no')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> No — we work with SMEs and individuals</button>
       </div>
     </div>
 
@@ -193,9 +201,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
       <p class="question-text">Have you ever reviewed your cybersecurity or data protection practices?</p>
       <p class="question-hint">This helps us understand where you're starting from.</p>
       <div class="options">
-        <button class="option-btn" onclick="answer('q6','yes')"><span class="option-icon">✅</span> Yes — we have policies and processes in place</button>
-        <button class="option-btn" onclick="answer('q6','partial')"><span class="option-icon">⚠️</span> Partially — some things are in place but not all</button>
-        <button class="option-btn" onclick="answer('q6','no')"><span class="option-icon">❌</span> No — we haven't looked at this yet</button>
+        <button class="option-btn" onclick="answer('q6','yes')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Yes — we have policies and processes in place</button>
+        <button class="option-btn" onclick="answer('q6','partial')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span> Partially — some things are in place but not all</button>
+        <button class="option-btn" onclick="answer('q6','no')"><span class="option-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> No — we haven't looked at this yet</button>
       </div>
     </div>
 
