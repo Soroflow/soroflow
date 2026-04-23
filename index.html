@@ -121,6 +121,14 @@ section { padding: 6rem 2rem; }
 .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-outline { font-size: 15px; color: var(--text-mid); padding: 14px 26px; border: 1px solid var(--border2); border-radius: 10px; text-decoration: none; transition: all 0.2s; }
 .btn-outline:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
+/* Lead Magnet */
+.lead-magnet { background: var(--dark2); border-top: 1px solid rgba(255,255,255,0.06); }
+.lead-magnet-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.lead-magnet-left { display: flex; align-items: center; gap: 1.5rem; }
+.lead-magnet-icon { font-size: 36px; flex-shrink: 0; }
+.lead-magnet-btn { font-size: 14px; font-weight: 500; color: var(--dark); background: var(--white); padding: 14px 28px; border-radius: 10px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.2s, transform 0.15s; }
+.lead-magnet-btn:hover { background: var(--bg); transform: translateY(-1px); }
+
 footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .footer-top { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
@@ -330,6 +338,23 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     </div>
   </div>
 </section>
+<!-- Lead Magnet Section -->
+<section class="lead-magnet">
+  <div class="container">
+    <div class="lead-magnet-inner reveal">
+      <div class="lead-magnet-left">
+        <div class="lead-magnet-icon">📋</div>
+        <div>
+          <p class="section-eyebrow" style="color:rgba(255,255,255,0.4);">Free download</p>
+          <h2 class="section-heading" style="color:white; font-size: clamp(24px, 3vw, 36px); margin-bottom: 0.5rem;">GDPR Compliance Checklist<br><em>for SMEs</em></h2>
+          <p style="font-size:15px; color:rgba(255,255,255,0.6); font-weight:300; line-height:1.7; max-width:420px;">16 key checkpoints to identify gaps in your data protection practices. Free, no sign-up required.</p>
+        </div>
+      </div>
+      <a href="https://drive.google.com/file/d/1JX_JNwA8JHsE_kFLuFmNN0_muBGsrmyt/view?usp=sharing" target="_blank" class="lead-magnet-btn">Download free PDF →</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
