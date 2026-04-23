@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Soroflow</title>
+<meta name="description" content="Privacy Policy for Soroflow - how we collect, use and protect your personal data.">
+<link rel="icon" href="/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #F7F4EF;
+  --bg2: #EFE9DF;
+  --white: #FDFCFA;
+  --dark: #0F0E0C;
+  --dark2: #1C1A17;
+  --green: #1A3828;
+  --green2: #2C5940;
+  --green-light: #EAF2EC;
+  --text: #0F0E0C;
+  --text-mid: #6B6558;
+  --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09);
+  --border2: rgba(15,14,12,0.14);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(247, 244, 239, 0.8); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 7px; }
+.brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
+.nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s; }
+.nav-btn:hover { background: var(--green2); }
+.page-header { padding: 120px 2rem 4rem; text-align: center; }
+.page-header p { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
+.page-header h1 { font-family: 'Instrument Serif', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; letter-spacing: -1px; color: var(--text); margin-bottom: 1rem; }
+.page-header .updated { font-size: 14px; color: var(--text-light); font-weight: 300; }
+.content { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 6rem; }
+.content h2 { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.5rem 0 0.75rem; }
+.content p { font-size: 15px; color: var(--text-mid); line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+.content ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+.content ul li { font-size: 15px; color: var(--text-mid); line-height: 1.8; font-weight: 300; margin-bottom: 0.4rem; }
+.content a { color: var(--green); text-decoration: underline; }
+.divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+.info-box { background: var(--white); border: 1px solid var(--border2); border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 1.5rem; }
+.info-box strong { font-size: 14px; font-weight: 500; color: var(--text); display: block; margin-bottom: 0.4rem; }
+.info-box p { margin-bottom: 0; }
+footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
+.footer-top { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.footer-brand { display: flex; flex-direction: column; gap: 14px; }
+.footer-brand-row { display: flex; align-items: center; gap: 9px; }
+.footer-brand-row img { width: 28px; height: 28px; border-radius: 6px; }
+.footer-brand-name { font-size: 15px; font-weight: 500; color: var(--white); }
+.footer-tagline { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.65; max-width: 240px; font-weight: 300; }
+.footer-col h4 { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.25); margin-bottom: 1.25rem; }
+.footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; font-weight: 300; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { max-width: 1000px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.25); flex-wrap: wrap; gap: 1rem; }
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="brand">
+    <img src="/icon.png" alt="Soroflow">
+    <span class="brand-name">Soroflow</span>
+  </a>
+  <a href="/" class="nav-btn">← Back to home</a>
+</nav>
+
+<div class="page-header">
+  <p>Legal</p>
+  <h1>Privacy Policy</h1>
+  <span class="updated">Last updated: April 2026</span>
+</div>
+
+<div class="content">
+
+  <div class="info-box">
+    <strong>Data controller</strong>
+    <p>Soroflow · hello@soroflow.com · Copenhagen, Denmark</p>
+  </div>
+
+  <p>This Privacy Policy explains how Soroflow ("we", "us", "our") collects, uses, and protects your personal data when you visit our website or use our services. We are committed to handling your data responsibly and in accordance with the General Data Protection Regulation (GDPR).</p>
+
+  <h2>1. What data we collect</h2>
+  <p>We may collect the following personal data:</p>
+  <ul>
+    <li><strong>Contact information</strong> — name and email address, when you contact us or book a call</li>
+    <li><strong>Booking information</strong> — date, time, and notes submitted via Calendly when scheduling a meeting</li>
+    <li><strong>Communication data</strong> — emails and messages you send us</li>
+    <li><strong>Client records</strong> — name, email, company name, and engagement status, stored in Google Sheets for the purpose of managing our client relationships</li>
+  </ul>
+  <p>We do not collect sensitive personal data such as health information, financial data, or national identity numbers.</p>
+
+  <h2>2. How we use your data</h2>
+  <p>We use your personal data for the following purposes:</p>
+  <ul>
+    <li>To respond to your enquiries and provide our services</li>
+    <li>To schedule and manage meetings booked via Calendly</li>
+    <li>To maintain records of our client engagements</li>
+    <li>To comply with our legal obligations</li>
+  </ul>
+  <p>The legal basis for processing your data is <strong>legitimate interest</strong> (Article 6(1)(f) GDPR) for general enquiries, and <strong>performance of a contract</strong> (Article 6(1)(b) GDPR) for client engagements.</p>
+
+  <h2>3. Third-party services</h2>
+  <p>We use the following third-party services that may process your personal data:</p>
+  <ul>
+    <li><strong>Calendly</strong> — for scheduling meetings. Calendly's privacy policy applies to data processed through their platform. See <a href="https://calendly.com/privacy" target="_blank">calendly.com/privacy</a></li>
+    <li><strong>Google Workspace</strong> — for email communication and storing client records in Google Sheets. Google's privacy policy applies. See <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+    <li><strong>Unsplash</strong> — for images displayed on our website. Unsplash may set cookies when images are loaded.</li>
+    <li><strong>Google Fonts</strong> — for typography on our website. Google may log requests for fonts.</li>
+  </ul>
+
+  <h2>4. Data retention</h2>
+  <p>We retain your personal data only as long as necessary for the purposes described in this policy. Client records are kept for up to 3 years after our last engagement. You may request deletion at any time by contacting us.</p>
+
+  <h2>5. Your rights</h2>
+  <p>Under GDPR, you have the following rights:</p>
+  <ul>
+    <li><strong>Right of access</strong> — you can request a copy of the data we hold about you</li>
+    <li><strong>Right to rectification</strong> — you can request correction of inaccurate data</li>
+    <li><strong>Right to erasure</strong> — you can request that we delete your data</li>
+    <li><strong>Right to restriction</strong> — you can request that we limit how we use your data</li>
+    <li><strong>Right to object</strong> — you can object to processing based on legitimate interest</li>
+    <li><strong>Right to data portability</strong> — you can request your data in a machine-readable format</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:hello@soroflow.com">hello@soroflow.com</a>. We will respond within 30 days.</p>
+  <p>You also have the right to lodge a complaint with the Danish Data Protection Authority (Datatilsynet) at <a href="https://www.datatilsynet.dk" target="_blank">datatilsynet.dk</a>.</p>
+
+  <h2>6. Data security</h2>
+  <p>We take appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or misuse. Access to client records is restricted to authorised personnel only.</p>
+
+  <h2>7. Cookies</h2>
+  <p>Our website uses cookies from third-party services. For full details, please see our <a href="/cookies.html">Cookie Policy</a>.</p>
+
+  <h2>8. Changes to this policy</h2>
+  <p>We may update this Privacy Policy from time to time. The date at the top of this page will always reflect the most recent version. Continued use of our website after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>9. Contact</h2>
+  <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us at <a href="mailto:hello@soroflow.com">hello@soroflow.com</a>.</p>
+
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-row"><img src="/icon.png" alt="Soroflow"><span class="footer-brand-name">Soroflow</span></div>
+      <p class="footer-tagline">Cybersecurity, simplified. Based in Copenhagen, serving clients across Denmark and the EU.</p>
+    </div>
+    <div class="footer-col"><h4>Navigation</h4><a href="/#services">Services</a><a href="/#compliance">Compliance</a><a href="/#about">About</a><a href="/#contact">Contact</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Cybersecurity, simplified.</span></div>
+</footer>
+</body>
+</html>

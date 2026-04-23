@@ -137,6 +137,18 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .reveal-d1 { transition-delay: 0.1s; }
 .reveal-d2 { transition-delay: 0.2s; }
 .reveal-d3 { transition-delay: 0.3s; }
+
+/* Cookie Banner */
+.cookie-banner { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 999; background: var(--dark2); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; max-width: 680px; width: calc(100% - 3rem); box-shadow: 0 16px 48px rgba(0,0,0,0.3); flex-wrap: wrap; }
+.cookie-banner p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300; flex: 1; min-width: 200px; }
+.cookie-banner a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+.cookie-banner-btns { display: flex; gap: 8px; flex-shrink: 0; }
+.cookie-accept { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 9px 20px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+.cookie-accept:hover { background: var(--green2); }
+.cookie-decline { font-size: 13px; color: rgba(255,255,255,0.4); background: transparent; padding: 9px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+.cookie-decline:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
+.cookie-banner.hidden { display: none; }
+
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
@@ -157,10 +169,21 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; }
   .hero-img-badges { display: none; }
+  .cookie-banner { flex-direction: column; align-items: flex-start; gap: 1rem; bottom: 1rem; }
 }
 </style>
 </head>
 <body>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use third-party cookies from Google Fonts, Unsplash, and Calendly to provide our services. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a> for details.</p>
+  <div class="cookie-banner-btns">
+    <button class="cookie-decline" onclick="dismissCookies()">Decline</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
+
 <nav>
   <a href="#" class="brand">
     <img src="/icon.png" alt="Soroflow">
@@ -172,7 +195,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:hello@soroflow.com" class="nav-btn">Get in touch →</a>
+  <a href="https://calendly.com/hello-soroflow/20min" class="nav-btn">Get in touch →</a>
 </nav>
 <section class="hero">
   <div class="blob blob-1"></div>
@@ -183,7 +206,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <h1>Cybersecurity,<br><em>simplified.</em></h1>
     <p class="hero-sub">We help individuals and businesses protect their data without the complexity. Clear advice, practical solutions, and peace of mind.</p>
     <div class="hero-actions">
-      <a href="mailto:hello@soroflow.com" class="btn-dark">Get in touch →</a>
+      <a href="https://calendly.com/hello-soroflow/20min" class="btn-dark">Get in touch →</a>
       <a href="#services" class="btn-ghost">See what we do</a>
     </div>
     <div class="hero-trust">
@@ -277,7 +300,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <h2 class="section-heading reveal">Not sure where to begin?</h2>
     <p class="section-body reveal">Book a free 20-minute intro call — we'll listen to your situation and tell you honestly how we can help.</p>
     <div class="cta-btns reveal">
-      <!-- Replace href below with your Calendly link when ready -->
       <a href="https://calendly.com/hello-soroflow/20min" class="btn-dark">Book a free call →</a>
       <a href="mailto:hello@soroflow.com" class="btn-outline">hello@soroflow.com</a>
     </div>
@@ -290,15 +312,29 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
       <p class="footer-tagline">Cybersecurity, simplified. Based in Copenhagen, serving clients across Denmark and the EU.</p>
     </div>
     <div class="footer-col"><h4>Navigation</h4><a href="#services">Services</a><a href="#compliance">Compliance</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-    <div class="footer-col"><h4>Contact</h4><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
   </div>
   <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Cybersecurity, simplified.</span></div>
 </footer>
 <script>
+  // Reveal animation
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Cookie banner
+  if (localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+  function dismissCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
 </script>
 </body>
 </html>

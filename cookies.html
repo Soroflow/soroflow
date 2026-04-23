@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Policy | Soroflow</title>
+<meta name="description" content="Cookie Policy for Soroflow - how we use cookies on our website.">
+<link rel="icon" href="/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #F7F4EF;
+  --bg2: #EFE9DF;
+  --white: #FDFCFA;
+  --dark: #0F0E0C;
+  --dark2: #1C1A17;
+  --green: #1A3828;
+  --green2: #2C5940;
+  --green-light: #EAF2EC;
+  --text: #0F0E0C;
+  --text-mid: #6B6558;
+  --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09);
+  --border2: rgba(15,14,12,0.14);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(247, 244, 239, 0.8); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 7px; }
+.brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
+.nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s; }
+.nav-btn:hover { background: var(--green2); }
+.page-header { padding: 120px 2rem 4rem; text-align: center; }
+.page-header p { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
+.page-header h1 { font-family: 'Instrument Serif', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 400; letter-spacing: -1px; color: var(--text); margin-bottom: 1rem; }
+.page-header .updated { font-size: 14px; color: var(--text-light); font-weight: 300; }
+.content { max-width: 720px; margin: 0 auto; padding: 2rem 2rem 6rem; }
+.content h2 { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; color: var(--text); margin: 2.5rem 0 0.75rem; }
+.content p { font-size: 15px; color: var(--text-mid); line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+.content ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+.content ul li { font-size: 15px; color: var(--text-mid); line-height: 1.8; font-weight: 300; margin-bottom: 0.4rem; }
+.content a { color: var(--green); text-decoration: underline; }
+.cookie-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+.cookie-table th { background: var(--green); color: white; padding: 10px 14px; text-align: left; font-weight: 500; font-size: 13px; }
+.cookie-table th:first-child { border-radius: 8px 0 0 0; }
+.cookie-table th:last-child { border-radius: 0 8px 0 0; }
+.cookie-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: var(--text-mid); font-weight: 300; vertical-align: top; }
+.cookie-table tr:last-child td { border-bottom: none; }
+.cookie-table tr:nth-child(even) td { background: var(--white); }
+footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
+.footer-top { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.footer-brand { display: flex; flex-direction: column; gap: 14px; }
+.footer-brand-row { display: flex; align-items: center; gap: 9px; }
+.footer-brand-row img { width: 28px; height: 28px; border-radius: 6px; }
+.footer-brand-name { font-size: 15px; font-weight: 500; color: var(--white); }
+.footer-tagline { font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.65; max-width: 240px; font-weight: 300; }
+.footer-col h4 { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.25); margin-bottom: 1.25rem; }
+.footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; font-weight: 300; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { max-width: 1000px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.25); flex-wrap: wrap; gap: 1rem; }
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; }
+  .cookie-table { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="brand">
+    <img src="/icon.png" alt="Soroflow">
+    <span class="brand-name">Soroflow</span>
+  </a>
+  <a href="/" class="nav-btn">← Back to home</a>
+</nav>
+
+<div class="page-header">
+  <p>Legal</p>
+  <h1>Cookie Policy</h1>
+  <span class="updated">Last updated: April 2026</span>
+</div>
+
+<div class="content">
+
+  <p>This Cookie Policy explains how Soroflow uses cookies and similar technologies on our website (soroflow.com). By continuing to use our website, you consent to the use of cookies as described in this policy.</p>
+
+  <h2>1. What are cookies?</h2>
+  <p>Cookies are small text files that are stored on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners. Cookies can be "session cookies" (deleted when you close your browser) or "persistent cookies" (stored for a set period of time).</p>
+
+  <h2>2. Cookies we use</h2>
+  <p>Our website does not set any first-party cookies. However, the following third-party services used on our website may set cookies:</p>
+
+  <table class="cookie-table">
+    <tr>
+      <th>Service</th>
+      <th>Purpose</th>
+      <th>Type</th>
+      <th>More info</th>
+    </tr>
+    <tr>
+      <td><strong>Google Fonts</strong></td>
+      <td>Loads fonts used on the website. Google may log font requests.</td>
+      <td>Functional</td>
+      <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Unsplash</strong></td>
+      <td>Serves images displayed on our website.</td>
+      <td>Functional</td>
+      <td><a href="https://unsplash.com/privacy" target="_blank">Unsplash Privacy</a></td>
+    </tr>
+    <tr>
+      <td><strong>Calendly</strong></td>
+      <td>Powers the meeting booking functionality. Calendly sets cookies when you interact with the booking link.</td>
+      <td>Functional</td>
+      <td><a href="https://calendly.com/privacy" target="_blank">Calendly Privacy</a></td>
+    </tr>
+  </table>
+
+  <p>We do not use any marketing, advertising, or tracking cookies, and we do not share data with advertisers.</p>
+
+  <h2>3. How to control cookies</h2>
+  <p>You can control and manage cookies in your browser settings. Most browsers allow you to refuse cookies or delete existing ones. Please note that disabling cookies may affect the functionality of some parts of our website.</p>
+  <p>Here are links to cookie settings for common browsers:</p>
+  <ul>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">Mozilla Firefox</a></li>
+    <li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
+    <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank">Microsoft Edge</a></li>
+  </ul>
+
+  <h2>4. Changes to this policy</h2>
+  <p>We may update this Cookie Policy from time to time. The date at the top of this page will always reflect the most recent version.</p>
+
+  <h2>5. Contact</h2>
+  <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:hello@soroflow.com">hello@soroflow.com</a>.</p>
+
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-row"><img src="/icon.png" alt="Soroflow"><span class="footer-brand-name">Soroflow</span></div>
+      <p class="footer-tagline">Cybersecurity, simplified. Based in Copenhagen, serving clients across Denmark and the EU.</p>
+    </div>
+    <div class="footer-col"><h4>Navigation</h4><a href="/#services">Services</a><a href="/#compliance">Compliance</a><a href="/#about">About</a><a href="/#contact">Contact</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Cybersecurity, simplified.</span></div>
+</footer>
+</body>
+</html>
