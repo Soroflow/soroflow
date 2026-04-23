@@ -10,6 +10,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics (consent-gated) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: 'denied' });
+  (function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
+    document.head.appendChild(s);
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-Z6E3W7W8BE');
+  if (localStorage.getItem('cookieConsent') === 'accepted') {
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
+</script>
+
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -29,6 +48,7 @@
 }
 section, .trust-strip, .hero-img-strip { scroll-margin-top: 70px; }
 #process, #who, #about, #compliance, #services, #contact, #testimonials { scroll-margin-top: 65px; }
+html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(247, 244, 239, 0.8); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
 .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
@@ -39,6 +59,19 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .nav-links a:hover { color: var(--text); }
 .nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
 .nav-btn:hover { background: var(--green2); transform: translateY(-1px); }
+
+/* Hamburger */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s ease; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: rgba(247,244,239,0.98); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); z-index: 199; padding: 1.25rem 1.5rem; flex-direction: column; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 15px; color: var(--text-mid); text-decoration: none; padding: 0.85rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+.mobile-menu a:last-child { border-bottom: none; color: var(--green); font-weight: 500; padding-bottom: 0.25rem; }
+.mobile-menu a:hover { color: var(--text); }
+
 .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 2rem 80px; position: relative; overflow: hidden; text-align: center; }
 .blob { position: absolute; border-radius: 50%; z-index: 0; pointer-events: none; }
 .blob-1 { width: 560px; height: 480px; background: #E8DDD0; border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; top: 50%; left: 50%; transform: translate(-50%, -52%); opacity: 0.7; animation: morph1 12s ease-in-out infinite; z-index: 0; }
@@ -125,19 +158,13 @@ section { padding: 6rem 2rem; }
 .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-outline { font-size: 15px; color: var(--text-mid); padding: 14px 26px; border: 1px solid var(--border2); border-radius: 10px; text-decoration: none; transition: all 0.2s; }
 .btn-outline:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
-/* Testimonials */
 .testimonials-bg { background: var(--dark2); }
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
 .testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem; }
-.testimonial-quote { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.75; font-weight: 300; font-style: italic; margin-bottom: 1.25rem; }
-.testimonial-author { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.5); }
-.testimonial-company { font-size: 12px; color: rgba(255,255,255,0.3); font-weight: 300; margin-top: 2px; }
 .testimonial-placeholder { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; min-height: 120px; border-style: dashed; }
 .testimonial-placeholder-inner { text-align: center; }
 .testimonial-placeholder-inner p { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
 .testimonial-placeholder-inner span { font-size: 13px; color: rgba(255,255,255,0.25); font-weight: 300; }
-
-/* Process section */
 #process { background: var(--white); border-top: 1px solid var(--border); }
 .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-top: 3rem; }
 .process-step { background: var(--white); padding: 1.75rem; display: flex; gap: 1rem; align-items: flex-start; transition: background 0.2s; }
@@ -146,15 +173,12 @@ section { padding: 6rem 2rem; }
 .process-body h3 { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
 .process-body p { font-size: 13px; color: var(--text-mid); line-height: 1.65; font-weight: 300; margin-bottom: 10px; }
 .process-tag { font-size: 11px; font-weight: 500; color: var(--green); background: var(--green-light); border-radius: 30px; padding: 3px 10px; display: inline-block; }
-
-/* Lead Magnet */
 .lead-magnet { background: var(--dark2); border-top: 1px solid rgba(255,255,255,0.06); }
 .lead-magnet-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
 .lead-magnet-left { display: flex; align-items: center; gap: 1.5rem; }
 .lead-magnet-icon { font-size: 36px; flex-shrink: 0; }
 .lead-magnet-btn { font-size: 14px; font-weight: 500; color: var(--dark); background: var(--white); padding: 14px 28px; border-radius: 10px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.2s, transform 0.15s; }
 .lead-magnet-btn:hover { background: var(--bg); transform: translateY(-1px); }
-
 footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .footer-top { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
@@ -171,8 +195,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .reveal-d1 { transition-delay: 0.1s; }
 .reveal-d2 { transition-delay: 0.2s; }
 .reveal-d3 { transition-delay: 0.3s; }
-
-/* Compliance Check Strip */
 .compliance-check-strip { background: var(--green); padding: 1.25rem 2rem; }
 .compliance-check-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 .compliance-check-left { display: flex; align-items: center; gap: 1rem; }
@@ -181,8 +203,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .compliance-check-left p { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 300; }
 .compliance-check-btn { font-size: 13px; font-weight: 500; color: var(--green); background: var(--white); padding: 10px 20px; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: background 0.2s, transform 0.15s; flex-shrink: 0; }
 .compliance-check-btn:hover { background: var(--green-light); transform: translateY(-1px); }
-
-/* Cookie Banner */
 .cookie-banner { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 999; background: var(--dark2); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; max-width: 680px; width: calc(100% - 3rem); box-shadow: 0 16px 48px rgba(0,0,0,0.3); flex-wrap: wrap; }
 .cookie-banner p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300; flex: 1; min-width: 200px; }
 .cookie-banner a { color: rgba(255,255,255,0.8); text-decoration: underline; }
@@ -196,6 +216,8 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
+  .nav-btn { display: none; }
+  .hamburger { display: flex; }
   .hero { padding: 100px 1.25rem 60px; min-height: auto; }
   .blob-1 { width: 380px; height: 420px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
   .blob-2 { display: none; }
@@ -223,7 +245,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use third-party cookies from Google Fonts, Unsplash, and Calendly to provide our services. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a> for details.</p>
+  <p>We use analytics cookies (Google Analytics) and third-party services (Google Fonts, Unsplash, Calendly). See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
   <div class="cookie-banner-btns">
     <button class="cookie-decline" onclick="dismissCookies()">Decline</button>
     <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
@@ -244,7 +266,22 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="https://calendly.com/hello-soroflow/20min" class="nav-btn">Book a free call →</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#compliance" onclick="closeMenu()">Compliance</a>
+  <a href="/compliance-check.html">Check compliance</a>
+  <a href="#process" onclick="closeMenu()">How it works</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="https://calendly.com/hello-soroflow/20min">Book a free call →</a>
+</div>
+
 <section class="hero">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
@@ -276,7 +313,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     </div>
   </div>
 </div>
-<!-- Compliance Check Banner -->
 <div class="compliance-check-strip">
   <div class="compliance-check-inner">
     <div class="compliance-check-left">
@@ -289,7 +325,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <a href="/compliance-check.html" class="compliance-check-btn">Check your compliance →</a>
   </div>
 </div>
-
 <div class="trust-strip">
   <div class="trust-strip-inner">
     <p class="trust-strip-label">Trusted approach to modern cybersecurity</p>
@@ -312,7 +347,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
         <div class="s-card"><div class="s-card-top"><div class="s-icon">🔍</div><h3>NIS2 Compliance Assessment</h3></div><p>We review your organization against NIS2 requirements and deliver a clear report with prioritized action points — so you know exactly what's missing.</p></div>
         <div class="s-card"><div class="s-card-top"><div class="s-icon">🛡️</div><h3>GDPR Gap Analysis</h3></div><p>We map how you handle personal data today, identify gaps, and give you a concrete plan to become compliant.</p></div>
         <div class="s-card"><div class="s-card-top"><div class="s-icon">📋</div><h3>ISO 27001 Readiness Review</h3></div><p>Not sure if you're ready for certification? We assess your current security maturity and show you the path forward.</p></div>
-        <div class="s-card s-card--pricing"><div class="s-card-top"><div class="s-icon">💬</div><h3>Pricing</h3></div><p>Pricing is based on the size and complexity of your organisation. Book a free call to get a tailored quote.</p></div>
+        <div class="s-card"><div class="s-card-top"><div class="s-icon">💬</div><h3>Pricing</h3></div><p>Pricing is based on the size and complexity of your organisation. Book a free call to get a tailored quote.</p></div>
       </div>
     </div>
   </div>
@@ -363,54 +398,12 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <p class="section-eyebrow reveal">How it works</p>
     <h2 class="section-heading reveal">A clear process,<br>start to finish</h2>
     <div class="process-grid reveal reveal-d1">
-      <div class="process-step">
-        <div class="process-num">01</div>
-        <div class="process-body">
-          <h3>Free intro call</h3>
-          <p>We listen to your situation and tell you honestly how we can help — no pressure, no obligation.</p>
-          <span class="process-tag">20 minutes</span>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-num">02</div>
-        <div class="process-body">
-          <h3>Proposal</h3>
-          <p>We send a clear proposal outlining scope, deliverables, and pricing based on your needs.</p>
-          <span class="process-tag">Within 24 hours</span>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-num">03</div>
-        <div class="process-body">
-          <h3>Assessment</h3>
-          <p>We review your organisation against the relevant standards — through documents, a questionnaire, or a follow-up meeting.</p>
-          <span class="process-tag">Tailored to your situation</span>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-num">04</div>
-        <div class="process-body">
-          <h3>Report delivered</h3>
-          <p>You receive a written report with our findings and a prioritised action plan — in plain language, not technical jargon.</p>
-          <span class="process-tag">Within 5 business days</span>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-num">05</div>
-        <div class="process-body">
-          <h3>Walkthrough</h3>
-          <p>We present the findings together, answer your questions, and make sure you leave with a clear path forward.</p>
-          <span class="process-tag">Included</span>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-num">06</div>
-        <div class="process-body">
-          <h3>Follow-up</h3>
-          <p>We check in 30 days after delivery to answer any questions that have come up along the way.</p>
-          <span class="process-tag">30 days after delivery</span>
-        </div>
-      </div>
+      <div class="process-step"><div class="process-num">01</div><div class="process-body"><h3>Free intro call</h3><p>We listen to your situation and tell you honestly how we can help — no pressure, no obligation.</p><span class="process-tag">20 minutes</span></div></div>
+      <div class="process-step"><div class="process-num">02</div><div class="process-body"><h3>Proposal</h3><p>We send a clear proposal outlining scope, deliverables, and pricing based on your needs.</p><span class="process-tag">Within 24 hours</span></div></div>
+      <div class="process-step"><div class="process-num">03</div><div class="process-body"><h3>Assessment</h3><p>We review your organisation against the relevant standards — through documents, a questionnaire, or a follow-up meeting.</p><span class="process-tag">Tailored to your situation</span></div></div>
+      <div class="process-step"><div class="process-num">04</div><div class="process-body"><h3>Report delivered</h3><p>You receive a written report with our findings and a prioritised action plan — in plain language, not technical jargon.</p><span class="process-tag">Within 5 business days</span></div></div>
+      <div class="process-step"><div class="process-num">05</div><div class="process-body"><h3>Walkthrough</h3><p>We present the findings together, answer your questions, and make sure you leave with a clear path forward.</p><span class="process-tag">Included</span></div></div>
+      <div class="process-step"><div class="process-num">06</div><div class="process-body"><h3>Follow-up</h3><p>We check in 30 days after delivery to answer any questions that have come up along the way.</p><span class="process-tag">30 days after delivery</span></div></div>
     </div>
   </div>
 </section>
@@ -439,7 +432,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     </div>
   </div>
 </section>
-<!-- Lead Magnet Section -->
 <section class="lead-magnet">
   <div class="container">
     <div class="lead-magnet-inner reveal">
@@ -455,7 +447,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
@@ -467,6 +458,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   </div>
   <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Cybersecurity, simplified.</span></div>
 </footer>
+
 <script>
   // Reveal animation
   const observer = new IntersectionObserver((entries) => {
@@ -474,13 +466,24 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Cookie banner
+  // Hamburger menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
+  // Cookie consent
   if (localStorage.getItem('cookieConsent')) {
     document.getElementById('cookieBanner').classList.add('hidden');
   }
   function acceptCookies() {
     localStorage.setItem('cookieConsent', 'accepted');
     document.getElementById('cookieBanner').classList.add('hidden');
+    gtag('consent', 'update', { analytics_storage: 'granted' });
   }
   function dismissCookies() {
     localStorage.setItem('cookieConsent', 'declined');
