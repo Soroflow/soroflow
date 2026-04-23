@@ -121,6 +121,16 @@ section { padding: 6rem 2rem; }
 .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-outline { font-size: 15px; color: var(--text-mid); padding: 14px 26px; border: 1px solid var(--border2); border-radius: 10px; text-decoration: none; transition: all 0.2s; }
 .btn-outline:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
+/* Process section */
+#process { background: var(--white); border-top: 1px solid var(--border); }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-top: 3rem; }
+.process-step { background: var(--white); padding: 1.75rem; display: flex; gap: 1rem; align-items: flex-start; transition: background 0.2s; }
+.process-step:hover { background: var(--bg); }
+.process-num { font-family: 'Instrument Serif', serif; font-size: 28px; font-weight: 400; color: var(--green-light); line-height: 1; flex-shrink: 0; width: 36px; }
+.process-body h3 { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.process-body p { font-size: 13px; color: var(--text-mid); line-height: 1.65; font-weight: 300; margin-bottom: 10px; }
+.process-tag { font-size: 11px; font-weight: 500; color: var(--green); background: var(--green-light); border-radius: 30px; padding: 3px 10px; display: inline-block; }
+
 /* Lead Magnet */
 .lead-magnet { background: var(--dark2); border-top: 1px solid rgba(255,255,255,0.06); }
 .lead-magnet-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
@@ -184,6 +194,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   .comp-grid { grid-template-columns: 1fr; }
   .who-grid { grid-template-columns: 1fr; }
   .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .process-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; }
   .hero-img-badges { display: none; }
@@ -325,6 +336,62 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
       <span class="pill">Plain language</span>
       <span class="pill">Practical solutions</span>
       <span class="pill">No hidden costs</span>
+    </div>
+  </div>
+</section>
+<section id="process">
+  <div class="container">
+    <p class="section-eyebrow reveal">How it works</p>
+    <h2 class="section-heading reveal">A clear process,<br>start to finish</h2>
+    <div class="process-grid reveal reveal-d1">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-body">
+          <h3>Free intro call</h3>
+          <p>We listen to your situation and tell you honestly how we can help — no pressure, no obligation.</p>
+          <span class="process-tag">20 minutes</span>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-body">
+          <h3>Proposal</h3>
+          <p>We send a clear proposal outlining scope, deliverables, and pricing based on your needs.</p>
+          <span class="process-tag">Within 24 hours</span>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-body">
+          <h3>Assessment</h3>
+          <p>We review your organisation against the relevant standards — through documents, a questionnaire, or a follow-up meeting.</p>
+          <span class="process-tag">Tailored to your situation</span>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-body">
+          <h3>Report delivered</h3>
+          <p>You receive a written report with our findings and a prioritised action plan — in plain language, not technical jargon.</p>
+          <span class="process-tag">Within 5 business days</span>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">05</div>
+        <div class="process-body">
+          <h3>Walkthrough</h3>
+          <p>We present the findings together, answer your questions, and make sure you leave with a clear path forward.</p>
+          <span class="process-tag">Included</span>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">06</div>
+        <div class="process-body">
+          <h3>Follow-up</h3>
+          <p>We check in 30 days after delivery to answer any questions that have come up along the way.</p>
+          <span class="process-tag">30 days after delivery</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
