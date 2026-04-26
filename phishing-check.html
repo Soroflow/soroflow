@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phishing Readiness Check | Soroflow</title>
+<meta name="description" content="Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.">
+<link rel="icon" href="/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics (consent-gated) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: 'denied' });
+  (function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
+    document.head.appendChild(s);
+  })();
+  gtag('js', new Date());
+  gtag('config', 'G-Z6E3W7W8BE');
+  if (localStorage.getItem('cookieConsent') === 'accepted') {
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
+</script>
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #F7F4EF;
+  --bg2: #EFE9DF;
+  --white: #FDFCFA;
+  --dark: #0F0E0C;
+  --dark2: #1C1A17;
+  --green: #1A3828;
+  --green2: #2C5940;
+  --green-light: #EAF2EC;
+  --text: #0F0E0C;
+  --text-mid: #6B6558;
+  --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09);
+  --border2: rgba(15,14,12,0.14);
+  --amber: #B7700A;
+  --amber-light: #FEF4E4;
+  --red: #A32D2D;
+  --red-light: #FCEBEB;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(247, 244, 239, 0.9); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 7px; }
+.brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
+.nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s; }
+.nav-btn:hover { background: var(--green2); }
+.page-wrap { max-width: 680px; margin: 0 auto; padding: 100px 2rem 6rem; }
+.page-header { text-align: center; margin-bottom: 3rem; }
+.page-header .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
+.page-header h1 { font-family: 'Instrument Serif', serif; font-size: clamp(36px, 5vw, 52px); font-weight: 400; letter-spacing: -1px; line-height: 1.1; color: var(--text); margin-bottom: 1rem; }
+.page-header h1 em { font-style: italic; color: var(--green); }
+.page-header p { font-size: 16px; color: var(--text-mid); line-height: 1.7; font-weight: 300; max-width: 480px; margin: 0 auto; }
+.progress-wrap { margin-bottom: 2rem; }
+.progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-light); margin-bottom: 8px; }
+.progress-bar { height: 4px; background: var(--border2); border-radius: 4px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--green); border-radius: 4px; transition: width 0.4s ease; }
+.section-label { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem; text-align: center; }
+.question-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 2.25rem 2.5rem; margin-bottom: 1.5rem; }
+.question-card.hidden { display: none; }
+.question-num { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
+.question-text { font-family: 'Instrument Serif', serif; font-size: 22px; font-weight: 400; color: var(--text); line-height: 1.35; margin-bottom: 0.6rem; }
+.question-hint { font-size: 13px; color: var(--text-light); font-weight: 300; line-height: 1.6; margin-bottom: 1.75rem; }
+.options { display: flex; flex-direction: column; gap: 10px; }
+.option-btn { display: flex; align-items: center; gap: 14px; padding: 0.95rem 1.25rem; border: 1.5px solid var(--border2); border-radius: 12px; background: var(--bg); cursor: pointer; transition: all 0.2s; text-align: left; font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--text); font-weight: 400; }
+.option-btn:hover { border-color: var(--green); background: var(--green-light); color: var(--green); }
+.option-btn.selected { border-color: var(--green); background: var(--green-light); color: var(--green); }
+.option-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--white); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; color: var(--text-mid); }
+.option-btn:hover .option-icon, .option-btn.selected .option-icon { background: var(--green); border-color: var(--green); color: var(--white); }
+.nav-btns { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+.btn-back { font-size: 14px; color: var(--text-light); background: none; border: none; cursor: pointer; padding: 10px 0; transition: color 0.2s; font-family: 'DM Sans', sans-serif; }
+.btn-back:hover { color: var(--text); }
+.btn-next { font-size: 14px; font-weight: 500; color: var(--white); background: var(--green); padding: 12px 28px; border-radius: 10px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; font-family: 'DM Sans', sans-serif; }
+.btn-next:hover { background: var(--green2); transform: translateY(-1px); }
+.btn-next:disabled { background: var(--border2); color: var(--text-light); cursor: not-allowed; transform: none; }
+.result-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; display: none; }
+.result-card.show { display: block; }
+.score-block { text-align: center; padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.score-tag { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 1rem; }
+.score-tag.strong { background: var(--green-light); color: var(--green); }
+.score-tag.notable { background: var(--amber-light); color: var(--amber); }
+.score-tag.high { background: var(--red-light); color: var(--red); }
+.score-number { font-family: 'Instrument Serif', serif; font-size: 64px; font-weight: 400; line-height: 1; color: var(--text); letter-spacing: -2px; }
+.score-number .total { color: var(--text-light); font-size: 32px; }
+.score-headline { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; margin-top: 0.75rem; color: var(--text); letter-spacing: -0.5px; }
+.score-intro { font-size: 14px; color: var(--text-mid); font-weight: 300; line-height: 1.7; margin-top: 0.75rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+.section-scores { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.75rem; }
+.section-score { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 0.9rem 1.1rem; }
+.section-score-label { font-size: 11px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px; }
+.section-score-val { font-size: 17px; font-weight: 500; color: var(--text); }
+.section-score-val.weak { color: var(--red); }
+.section-score-val.partial { color: var(--amber); }
+.section-score-val.strong { color: var(--green); }
+.gaps-block { margin-bottom: 1.75rem; }
+.gaps-block h3 { font-size: 13px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
+.gap-item { background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--amber); border-radius: 10px; padding: 0.85rem 1.1rem; margin-bottom: 8px; }
+.gap-item.weak { border-left-color: var(--red); }
+.gap-item-title { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
+.gap-item-hint { font-size: 12px; color: var(--text-mid); font-weight: 300; line-height: 1.5; }
+.gap-item-status { font-size: 11px; color: var(--text-light); float: right; font-weight: 500; }
+.result-cta { background: var(--green); border-radius: 14px; padding: 1.75rem; text-align: center; }
+.result-cta p { font-size: 15px; color: rgba(255,255,255,0.7); font-weight: 300; margin-bottom: 1.25rem; line-height: 1.6; }
+.result-cta-btns { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.result-cta a { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--white); background: rgba(255,255,255,0.15); padding: 11px 22px; border-radius: 10px; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s; }
+.result-cta a:hover { background: rgba(255,255,255,0.25); }
+.result-cta a.outline { background: transparent; }
+.btn-restart { display: block; text-align: center; margin: 1.25rem auto 0; font-size: 13px; color: var(--text-light); cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; transition: color 0.2s; }
+.btn-restart:hover { color: var(--text); }
+.cookie-banner { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 999; background: var(--dark2); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; max-width: 680px; width: calc(100% - 3rem); box-shadow: 0 16px 48px rgba(0,0,0,0.3); flex-wrap: wrap; }
+.cookie-banner p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300; flex: 1; min-width: 200px; }
+.cookie-banner a { color: rgba(255,255,255,0.8); text-decoration: underline; }
+.cookie-banner-btns { display: flex; gap: 8px; flex-shrink: 0; }
+.cookie-accept { font-size: 13px; font-weight: 500; color: white; background: var(--green); padding: 9px 20px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+.cookie-accept:hover { background: var(--green2); }
+.cookie-decline { font-size: 13px; color: rgba(255,255,255,0.4); background: transparent; padding: 9px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+.cookie-decline:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
+.cookie-banner.hidden { display: none; }
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; }
+  .page-wrap { padding: 90px 1.25rem 4rem; }
+  .question-card { padding: 1.75rem; }
+  .section-scores { grid-template-columns: 1fr; }
+  .cookie-banner { flex-direction: column; align-items: flex-start; gap: 1rem; bottom: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>We use analytics cookies (Google Analytics) and third-party services (Google Fonts, Calendly). See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>. Your quiz answers are scored locally in your browser — we do not store them.</p>
+  <div class="cookie-banner-btns">
+    <button class="cookie-decline" onclick="dismissCookies()">Decline</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+  </div>
+</div>
+
+<nav>
+  <a href="/" class="brand">
+    <img src="/icon.png" alt="Soroflow">
+    <span class="brand-name">Soroflow</span>
+  </a>
+  <a href="/" class="nav-btn">← Back to site</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="page-header">
+    <p class="eyebrow">Free tool</p>
+    <h1>How resilient is<br>your <em>phishing defence?</em></h1>
+    <p>16 checkpoints aligned with NIS2 awareness requirements. About 4 minutes — your answers stay in your browser.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="progressText">Question 1 of 16</span>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+
+  <div id="quizWrap"></div>
+
+  <div class="nav-btns" id="navBtns">
+    <button class="btn-back" id="btnBack" onclick="goBack()" style="visibility:hidden">← Back</button>
+    <button class="btn-next" id="btnNext" onclick="goNext()" disabled>Next →</button>
+  </div>
+
+  <div class="result-card" id="resultCard">
+    <div class="score-block">
+      <span class="score-tag" id="scoreTag">—</span>
+      <div class="score-number"><span id="scoreVal">0</span><span class="total"> / 16</span></div>
+      <h2 class="score-headline" id="scoreHeadline">Your phishing readiness</h2>
+      <p class="score-intro" id="scoreIntro"></p>
+    </div>
+
+    <h3 style="font-size:13px; font-weight:500; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-light); margin-bottom:0.75rem;">Score by area</h3>
+    <div class="section-scores" id="sectionScores"></div>
+
+    <div class="gaps-block" id="gapsBlock">
+      <h3>Where to focus first</h3>
+      <div id="gapsList"></div>
+    </div>
+
+    <div class="result-cta">
+      <p id="ctaText">Want help closing your weakest gaps? Book a free 20-minute call — we'll review your situation and tell you honestly what to do.</p>
+      <div class="result-cta-btns">
+        <a href="https://calendly.com/hello-soroflow/20min">Book a free call →</a>
+        <a href="/Phishing_Awareness_Soroflow.pdf" download class="outline">Download as PDF</a>
+      </div>
+    </div>
+    <button class="btn-restart" onclick="restart()">← Start over</button>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = [
+  // 1. Recognising Phishing
+  { sec: 'Recognising phishing', text: "Staff verify the sender's actual email address, not just the display name", hint: "Phishing emails commonly spoof familiar names while using a completely different real address." },
+  { sec: 'Recognising phishing', text: "Unexpected urgency or pressure is treated as a red flag", hint: "Phrases like 'act now' or 'urgent payment required' are classic warning signs." },
+  { sec: 'Recognising phishing', text: "Staff hover over links before clicking to verify the destination", hint: "The real domain often differs from the displayed text — e.g. nordea-login.dk vs. nordea.dk." },
+  { sec: 'Recognising phishing', text: "We are cautious of unexpected attachments, even from known senders", hint: "Compromised accounts are routinely used to send malware to existing contacts." },
+  // 2. Email & Account Security
+  { sec: 'Email & account security', text: "Multi-factor authentication is enabled on all email and business accounts", hint: "Drastically reduces account takeover risk even if a password is phished." },
+  { sec: 'Email & account security', text: "SPF, DKIM, and DMARC are configured for our email domain", hint: "Prevents attackers from spoofing your business domain in their phishing campaigns." },
+  { sec: 'Email & account security', text: "Look-alike domains are monitored or blocked at the email gateway", hint: "Variants like soroflovv.com or soroflow-support.com — register and monitor them." },
+  // 3. Awareness & Training
+  { sec: 'Awareness & training', text: "Phishing awareness training is delivered at least once per year", hint: "NIS2 Article 21 requires regular cybersecurity training for all staff and management." },
+  { sec: 'Awareness & training', text: "Staff have a clear, easy way to report suspicious emails", hint: "A 'Report Phishing' button, a dedicated mailbox, or a named IT contact." },
+  { sec: 'Awareness & training', text: "New employees receive phishing awareness training during onboarding", hint: "Don't wait for the annual cycle — establish security awareness from day one." },
+  // 4. Incident Response
+  { sec: 'Incident response', text: "We have a written procedure for what to do if someone clicks a phishing link", hint: "Speed matters: isolate the device, change passwords, notify IT, review activity logs." },
+  { sec: 'Incident response', text: "Passwords can be reset and active sessions revoked quickly for compromised accounts", hint: "Required to contain account takeover before further damage occurs." },
+  { sec: 'Incident response', text: "Reported phishing attempts are logged and reviewed", hint: "Patterns reveal targeted campaigns and inform future training topics." },
+  // 5. Testing & Continuous Improvement
+  { sec: 'Testing & improvement', text: "We run simulated phishing campaigns to test staff readiness", hint: "NIS2 best practice — reveals real-world gaps before actual attackers do." },
+  { sec: 'Testing & improvement', text: "We track our click-rate over time and aim to reduce it", hint: "A common goal: a click-rate under 5% within 12 months." },
+  { sec: 'Testing & improvement', text: "Staff are briefed on current threats targeting Danish SMEs", hint: "MitID-spoofing, e-Boks impersonation, fake invoices from 'DSB' or 'PostNord'." },
+];
+
+const ICONS = {
+  yes: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
+  partial: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+  no: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+};
+
+const total = QUESTIONS.length;
+const answers = {};
+let current = 1;
+
+// Render all question cards
+function renderQuestions() {
+  const wrap = document.getElementById('quizWrap');
+  let html = '';
+  QUESTIONS.forEach((q, i) => {
+    const num = i + 1;
+    html += `<div class="question-card${num === 1 ? '' : ' hidden'}" id="q${num}">
+      <p class="question-num">${q.sec} · Question ${num} of ${total}</p>
+      <p class="question-text">${q.text}</p>
+      <p class="question-hint">${q.hint}</p>
+      <div class="options">
+        <button class="option-btn" data-q="${num}" data-val="yes" onclick="answer(${num},'yes')"><span class="option-icon">${ICONS.yes}</span> Yes — fully in place</button>
+        <button class="option-btn" data-q="${num}" data-val="partial" onclick="answer(${num},'partial')"><span class="option-icon">${ICONS.partial}</span> Partially — some of the way there</button>
+        <button class="option-btn" data-q="${num}" data-val="no" onclick="answer(${num},'no')"><span class="option-icon">${ICONS.no}</span> No — not in place</button>
+      </div>
+    </div>`;
+  });
+  wrap.innerHTML = html;
+}
+renderQuestions();
+
+function answer(q, val) {
+  answers[q] = val;
+  document.querySelectorAll(`#q${q} .option-btn`).forEach(b => b.classList.remove('selected'));
+  document.querySelector(`#q${q} .option-btn[data-val="${val}"]`).classList.add('selected');
+  document.getElementById('btnNext').disabled = false;
+}
+
+function updateProgress() {
+  const pct = Math.round(((current - 1) / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').innerText = pct + '%';
+  document.getElementById('progressText').innerText = current <= total ? `Question ${current} of ${total}` : 'Complete';
+  document.getElementById('btnBack').style.visibility = current > 1 ? 'visible' : 'hidden';
+}
+
+function goNext() {
+  if (!answers[current]) return;
+  if (current === total) { showResult(); return; }
+  document.getElementById(`q${current}`).classList.add('hidden');
+  current++;
+  document.getElementById(`q${current}`).classList.remove('hidden');
+  document.getElementById('btnNext').disabled = !answers[current];
+  document.getElementById('btnNext').innerText = current === total ? 'See my score →' : 'Next →';
+  updateProgress();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goBack() {
+  if (current === 1) return;
+  document.getElementById(`q${current}`).classList.add('hidden');
+  current--;
+  document.getElementById(`q${current}`).classList.remove('hidden');
+  document.getElementById('btnNext').disabled = false;
+  document.getElementById('btnNext').innerText = current === total ? 'See my score →' : 'Next →';
+  updateProgress();
+}
+
+function showResult() {
+  // Score: yes = 1, partial = 0.5, no = 0
+  let score = 0;
+  const sectionTotals = {};
+  const sectionMax = {};
+  QUESTIONS.forEach((q, i) => {
+    const val = answers[i + 1] || 'no';
+    const pts = val === 'yes' ? 1 : val === 'partial' ? 0.5 : 0;
+    score += pts;
+    sectionTotals[q.sec] = (sectionTotals[q.sec] || 0) + pts;
+    sectionMax[q.sec] = (sectionMax[q.sec] || 0) + 1;
+  });
+  const finalScore = Math.round(score);
+
+  let bucket, tagClass, headline, intro, ctaText;
+  if (finalScore >= 13) {
+    bucket = 'Strong defences';
+    tagClass = 'strong';
+    headline = 'Strong phishing defences.';
+    intro = "You're in solid shape. Most SMEs we see don't reach this level. Use the gaps below to refine an already-good programme — and consider a formal NIS2 review to document what you have.";
+    ctaText = 'Want help formalising your awareness programme into NIS2-ready documentation? Book a free 20-minute call.';
+  } else if (finalScore >= 8) {
+    bucket = 'Notable gaps';
+    tagClass = 'notable';
+    headline = 'Some notable gaps.';
+    intro = "Foundations are in place but several controls would significantly raise your resilience — particularly anything in red below. These are exactly the gaps a real attacker would look for first.";
+    ctaText = 'Most of these gaps can be closed in a few hours. Book a free 20-minute call and we will tell you which 3-4 to start with.';
+  } else {
+    bucket = 'High exposure';
+    tagClass = 'high';
+    headline = 'High phishing exposure.';
+    intro = "Phishing is statistically your most likely path to a breach right now. The good news: a few specific changes (MFA, DMARC, a basic awareness programme) typically lift this score by 6-8 points within a month.";
+    ctaText = 'A short conversation can map out the priorities. Book a free 20-minute intro call — no jargon, no obligation.';
+  }
+
+  // GA4 event
+  if (typeof gtag === 'function') {
+    gtag('event', 'phishing_check_completed', { score: finalScore, bucket: bucket });
+  }
+
+  document.getElementById('scoreVal').innerText = finalScore;
+  document.getElementById('scoreTag').innerText = bucket;
+  document.getElementById('scoreTag').className = 'score-tag ' + tagClass;
+  document.getElementById('scoreHeadline').innerText = headline;
+  document.getElementById('scoreIntro').innerText = intro;
+  document.getElementById('ctaText').innerText = ctaText;
+
+  // Section scores
+  const secEl = document.getElementById('sectionScores');
+  secEl.innerHTML = Object.keys(sectionMax).map(sec => {
+    const pts = sectionTotals[sec];
+    const max = sectionMax[sec];
+    const pct = pts / max;
+    const cls = pct >= 0.8 ? 'strong' : pct >= 0.5 ? 'partial' : 'weak';
+    const ptsStr = (pts % 1 === 0) ? pts : pts.toFixed(1);
+    return `<div class="section-score">
+      <div class="section-score-label">${sec}</div>
+      <div class="section-score-val ${cls}">${ptsStr} / ${max}</div>
+    </div>`;
+  }).join('');
+
+  // Gaps — items answered no or partial, sorted by severity
+  const gaps = [];
+  QUESTIONS.forEach((q, i) => {
+    const v = answers[i + 1] || 'no';
+    if (v === 'yes') return;
+    gaps.push({ q, status: v, weight: v === 'no' ? 2 : 1 });
+  });
+  gaps.sort((a, b) => b.weight - a.weight);
+  const topGaps = gaps.slice(0, 5);
+  const gapsBlock = document.getElementById('gapsBlock');
+  if (topGaps.length === 0) {
+    gapsBlock.style.display = 'none';
+  } else {
+    document.getElementById('gapsList').innerHTML = topGaps.map(g => `
+      <div class="gap-item ${g.status === 'no' ? 'weak' : ''}">
+        <span class="gap-item-status">${g.status === 'no' ? 'Not in place' : 'Partial'}</span>
+        <div class="gap-item-title">${g.q.text}</div>
+        <div class="gap-item-hint">${g.q.hint}</div>
+      </div>
+    `).join('');
+  }
+
+  document.getElementById('quizWrap').style.display = 'none';
+  document.getElementById('navBtns').style.display = 'none';
+  document.querySelector('.progress-wrap').style.display = 'none';
+  document.getElementById('resultCard').classList.add('show');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function restart() {
+  Object.keys(answers).forEach(k => delete answers[k]);
+  current = 1;
+  renderQuestions();
+  document.getElementById('quizWrap').style.display = 'block';
+  document.getElementById('navBtns').style.display = 'flex';
+  document.querySelector('.progress-wrap').style.display = 'block';
+  document.getElementById('resultCard').classList.remove('show');
+  document.getElementById('btnNext').disabled = true;
+  document.getElementById('btnNext').innerText = 'Next →';
+  updateProgress();
+}
+
+// Cookie consent
+if (localStorage.getItem('cookieConsent')) {
+  document.getElementById('cookieBanner').classList.add('hidden');
+}
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  document.getElementById('cookieBanner').classList.add('hidden');
+  gtag('consent', 'update', { analytics_storage: 'granted' });
+}
+function dismissCookies() {
+  localStorage.setItem('cookieConsent', 'declined');
+  document.getElementById('cookieBanner').classList.add('hidden');
+}
+
+updateProgress();
+</script>
+</body>
+</html>
