@@ -281,6 +281,51 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   .hero h1 { font-size: 38px; }
 }
 </style>
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.soroflow.com/#organization",
+      "name": "Soroflow",
+      "url": "https://www.soroflow.com/da/",
+      "logo": "https://www.soroflow.com/icon.png",
+      "image": "https://www.soroflow.com/og-image.png",
+      "description": "Cybersikkerhedsrådgivning der hjælper privatpersoner og virksomheder med at beskytte deres data uden kompleksiteten. Specialiseret i NIS2, GDPR og ISO 27001 for SMV'er i Danmark og EU.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "København",
+        "addressCountry": "DK"
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "Danmark"},
+        {"@type": "AdministrativeArea", "name": "Den Europæiske Union"}
+      ],
+      "serviceType": [
+        "GDPR-rådgivning",
+        "NIS2 Compliance-vurdering",
+        "ISO 27001-parathedsvurdering",
+        "Cybersikkerhedsrådgivning"
+      ],
+      "knowsAbout": ["GDPR", "NIS2", "ISO 27001", "Cybersikkerhed", "Databeskyttelse", "Compliance", "Phishing-awareness"],
+      "email": "hello@soroflow.com",
+      "priceRange": "$$",
+      "slogan": "Cybersikkerhed, gjort enkelt."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.soroflow.com/#website",
+      "url": "https://www.soroflow.com/da/",
+      "name": "Soroflow",
+      "publisher": {"@id": "https://www.soroflow.com/#organization"},
+      "inLanguage": ["da-DK", "en-GB"]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
