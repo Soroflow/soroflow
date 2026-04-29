@@ -4,19 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | Soroflow</title>
-<meta name="description" content="Privacy Policy for Soroflow - how we collect, use and protect your personal data.">
+<meta name="description" content="Privacy Policy for Soroflow — how we collect, use and protect your personal data.">
+<meta name="theme-color" content="#1A3828">
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://www.soroflow.com/privacy.html">
+<link rel="alternate" hreflang="en" href="https://www.soroflow.com/privacy.html">
+<link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/privacy.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Soroflow">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://www.soroflow.com/privacy.html">
+<meta property="og:title" content="Privacy Policy | Soroflow">
+<meta property="og:description" content="Privacy Policy for Soroflow — how we collect, use and protect your personal data.">
+<meta property="og:image" content="https://www.soroflow.com/og-image.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy | Soroflow">
+<meta name="twitter:description" content="Privacy Policy for Soroflow — how we collect, use and protect your personal data.">
+<meta name="twitter:image" content="https://www.soroflow.com/og-image.png">
+
 <link rel="icon" href="/icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE"></script>
+<!-- Google Analytics (consent-gated) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: 'denied' });
+  (function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
+    document.head.appendChild(s);
+  })();
   gtag('js', new Date());
   gtag('config', 'G-Z6E3W7W8BE');
+  if (localStorage.getItem('cookieConsent') === 'accepted') {
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+  }
 </script>
 
 <style>
@@ -42,6 +73,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
 .brand img { width: 30px; height: 30px; border-radius: 7px; }
 .brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
+.nav-right { display: flex; align-items: center; gap: 0.75rem; }
+.lang-toggle { font-size: 12px; font-weight: 500; color: var(--text-mid); text-decoration: none; padding: 6px 10px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+.lang-toggle:hover { background: var(--bg2); color: var(--text); }
 .nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s; }
 .nav-btn:hover { background: var(--green2); }
 .page-header { padding: 120px 2rem 4rem; text-align: center; }
@@ -71,6 +105,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .footer-bottom { max-width: 1000px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.25); flex-wrap: wrap; gap: 1rem; }
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
+  .lang-toggle { display: none; }
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; }
 }
@@ -82,7 +117,10 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <img src="/icon.png" alt="Soroflow">
     <span class="brand-name">Soroflow</span>
   </a>
-  <a href="/" class="nav-btn">← Back to home</a>
+  <div class="nav-right">
+    <a href="/da/privacy.html" class="lang-toggle" hreflang="da" title="Skift til dansk">DA</a>
+    <a href="/" class="nav-btn">← Back to home</a>
+  </div>
 </nav>
 
 <div class="page-header">
@@ -106,7 +144,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <li><strong>Contact information</strong> — name and email address, when you contact us or book a call</li>
     <li><strong>Booking information</strong> — date, time, and notes submitted via Calendly when scheduling a meeting</li>
     <li><strong>Communication data</strong> — emails and messages you send us</li>
-    <li><strong>Client records</strong> — name, email, company name, and engagement status, stored in Google Sheets for the purpose of managing our client relationships</li>
+    <li><strong>Client records</strong> — name, email, company name, and engagement status, kept in a controlled-access business system protected by strong authentication (MFA) for the purpose of managing our client relationships</li>
     <li><strong>Usage data</strong> — anonymised data about how you interact with our website, collected via Google Analytics (e.g. pages visited, time on site, general location). This data does not identify you personally.</li>
   </ul>
   <p>We do not collect sensitive personal data such as health information, financial data, or national identity numbers.</p>
@@ -127,7 +165,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   <ul>
     <li><strong>Google Analytics</strong> — for website analytics. Google Analytics collects anonymised usage data via cookies. IP addresses are anonymised. Data is processed by Google in accordance with their privacy policy. See <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
     <li><strong>Calendly</strong> — for scheduling meetings. Calendly's privacy policy applies to data processed through their platform. See <a href="https://calendly.com/privacy" target="_blank">calendly.com/privacy</a></li>
-    <li><strong>Google Workspace</strong> — for email communication and storing client records in Google Sheets. Google's privacy policy applies. See <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+    <li><strong>Google Workspace</strong> — for email communication. Google's privacy policy applies. See <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
     <li><strong>Unsplash</strong> — for images displayed on our website. Unsplash may set cookies when images are loaded.</li>
     <li><strong>Google Fonts</strong> — for typography on our website. Google may log requests for fonts.</li>
   </ul>
@@ -169,9 +207,9 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
       <p class="footer-tagline">Cybersecurity, simplified. Based in Copenhagen, serving clients across Denmark and the EU.</p>
     </div>
     <div class="footer-col"><h4>Navigation</h4><a href="/#services">Services</a><a href="/#compliance">Compliance</a><a href="/#about">About</a><a href="/#contact">Contact</a></div>
-    <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="/da/privacy.html" hreflang="da">Dansk version</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Cybersecurity, simplified.</span></div>
+  <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Copenhagen, Denmark</span></div>
 </footer>
 </body>
 </html>

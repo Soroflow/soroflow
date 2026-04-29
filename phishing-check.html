@@ -5,7 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phishing Readiness Check | Soroflow</title>
 <meta name="description" content="Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.">
+<meta name="theme-color" content="#1A3828">
+
+<link rel="canonical" href="https://www.soroflow.com/phishing-check.html">
+<link rel="alternate" hreflang="en" href="https://www.soroflow.com/phishing-check.html">
+<link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/phishing-check.html">
+<link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/phishing-check.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Soroflow">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://www.soroflow.com/phishing-check.html">
+<meta property="og:title" content="Phishing Readiness Check | Soroflow">
+<meta property="og:description" content="Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.">
+<meta property="og:image" content="https://www.soroflow.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phishing Readiness Check | Soroflow">
+<meta name="twitter:description" content="Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.">
+<meta name="twitter:image" content="https://www.soroflow.com/og-image.png">
+
 <link rel="icon" href="/icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -55,6 +78,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
 .brand img { width: 30px; height: 30px; border-radius: 7px; }
 .brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
+.nav-right { display: flex; align-items: center; gap: 0.75rem; }
+.lang-toggle { font-size: 12px; font-weight: 500; color: var(--text-mid); text-decoration: none; padding: 6px 10px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+.lang-toggle:hover { background: var(--bg2); color: var(--text); }
 .nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s; }
 .nav-btn:hover { background: var(--green2); }
 .page-wrap { max-width: 680px; margin: 0 auto; padding: 100px 2rem 6rem; }
@@ -129,10 +155,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .cookie-banner.hidden { display: none; }
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
+  .lang-toggle { display: none; }
   .page-wrap { padding: 90px 1.25rem 4rem; }
   .question-card { padding: 1.75rem; }
   .section-scores { grid-template-columns: 1fr; }
   .cookie-banner { flex-direction: column; align-items: flex-start; gap: 1rem; bottom: 1rem; }
+}
+@media (max-width: 480px) {
+  .page-header h1 br { display: none; }
 }
 </style>
 </head>
@@ -140,7 +170,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use analytics cookies (Google Analytics) and third-party services (Google Fonts, Calendly). See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>. Your quiz answers are scored locally in your browser — we do not store them.</p>
+  <p>We use analytics cookies (Google Analytics) and third-party services (Google Fonts, Calendly) that may set cookies. Analytics is only enabled if you accept. Your quiz answers are scored locally in your browser — we do not store them. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
   <div class="cookie-banner-btns">
     <button class="cookie-decline" onclick="dismissCookies()">Decline</button>
     <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
@@ -152,13 +182,16 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
     <img src="/icon.png" alt="Soroflow">
     <span class="brand-name">Soroflow</span>
   </a>
-  <a href="/" class="nav-btn">← Back to site</a>
+  <div class="nav-right">
+    <a href="/da/phishing-check.html" class="lang-toggle" hreflang="da" title="Skift til dansk">DA</a>
+    <a href="/" class="nav-btn">← Back to site</a>
+  </div>
 </nav>
 
 <div class="page-wrap">
   <div class="page-header">
     <p class="eyebrow">Free tool</p>
-    <h1>How resilient is<br>your <em>phishing defence?</em></h1>
+    <h1>How resilient is <br>your <em>phishing defence?</em></h1>
     <p>16 checkpoints aligned with NIS2 awareness requirements. About 4 minutes — your answers stay in your browser.</p>
   </div>
 
