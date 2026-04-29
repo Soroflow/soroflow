@@ -109,7 +109,9 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .footer-bottom { max-width: 1000px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.25); flex-wrap: wrap; gap: 1rem; }
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
-  .lang-toggle { display: none; }
+  .lang-toggle { padding: 6px 8px; }
+  .lang-toggle span { display: none; }
+  .lang-toggle .flag { margin-right: 0; }
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; }
   .cookie-table { font-size: 12px; }

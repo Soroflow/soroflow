@@ -140,7 +140,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .cookie-banner.hidden { display: none; }
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
-  .lang-toggle { display: none; }
+  .lang-toggle { padding: 6px 8px; }
+  .lang-toggle span { display: none; }
+  .lang-toggle .flag { margin-right: 0; }
   .page-wrap { padding: 90px 1.25rem 4rem; }
   .question-card { padding: 1.75rem; }
   .section-scores { grid-template-columns: 1fr; }
@@ -168,7 +170,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
     <span class="brand-name">Soroflow</span>
   </a>
   <div class="nav-right">
-    <a href="/gdpr-check.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><rect width="60" height="30" fill="#012169"/><path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="#C8102E" stroke-width="6"/></svg> <span>EN</span></a>
+    <a href="/gdpr-check.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#012169"/><path d="M0 0L28 21M28 0L0 21" stroke="#fff" stroke-width="3.5"/><path d="M0 0L28 21M28 0L0 21" stroke="#C8102E" stroke-width="1.5"/><path d="M14 0V21M0 10.5H28" stroke="#fff" stroke-width="5"/><path d="M14 0V21M0 10.5H28" stroke="#C8102E" stroke-width="3"/></svg> <span>EN</span></a>
     <a href="/da/" class="nav-btn">← Tilbage</a>
   </div>
 </nav>

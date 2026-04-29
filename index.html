@@ -82,7 +82,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
 .brand img { width: 30px; height: 30px; border-radius: 7px; }
 .brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
-.nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
+.nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; flex: 1; justify-content: center; margin: 0 2rem; }
 .nav-links a { font-size: 14px; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
 .nav-links a:hover { color: var(--text); }
 .nav-right { display: flex; align-items: center; gap: 1rem; }
@@ -252,7 +252,9 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
   .nav-btn { display: none; }
-  .lang-toggle { display: none; }
+  .lang-toggle { padding: 6px 8px; }
+  .lang-toggle span { display: none; }
+  .lang-toggle .flag { margin-right: 0; }
   .hamburger { display: flex; }
   .hero { padding: 100px 1.25rem 60px; min-height: auto; }
   .blob-1 { width: 380px; height: 420px; top: 50%; left: 50%; transform: translate(-50%, -50%); }

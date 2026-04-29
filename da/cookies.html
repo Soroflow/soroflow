@@ -100,7 +100,9 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .footer-bottom { max-width: 1000px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.25); flex-wrap: wrap; gap: 1rem; }
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
-  .lang-toggle { display: none; }
+  .lang-toggle { padding: 6px 8px; }
+  .lang-toggle span { display: none; }
+  .lang-toggle .flag { margin-right: 0; }
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; }
   .cookie-table { font-size: 12px; }
@@ -114,7 +116,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <span class="brand-name">Soroflow</span>
   </a>
   <div class="nav-right">
-    <a href="/cookies.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><rect width="60" height="30" fill="#012169"/><path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="#C8102E" stroke-width="6"/></svg> <span>EN</span></a>
+    <a href="/cookies.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#012169"/><path d="M0 0L28 21M28 0L0 21" stroke="#fff" stroke-width="3.5"/><path d="M0 0L28 21M28 0L0 21" stroke="#C8102E" stroke-width="1.5"/><path d="M14 0V21M0 10.5H28" stroke="#fff" stroke-width="5"/><path d="M14 0V21M0 10.5H28" stroke="#C8102E" stroke-width="3"/></svg> <span>EN</span></a>
     <a href="/da/" class="nav-btn">← Tilbage</a>
   </div>
 </nav>
