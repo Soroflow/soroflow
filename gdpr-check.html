@@ -81,6 +81,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .nav-right { display: flex; align-items: center; gap: 0.75rem; }
 .lang-toggle { font-size: 12px; font-weight: 500; color: var(--text-mid); text-decoration: none; padding: 6px 10px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
 .lang-toggle:hover { background: var(--bg2); color: var(--text); }
+.lang-toggle .flag { display: inline-block; width: 18px; height: 13px; vertical-align: -2px; margin-right: 6px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.1); }
 .nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s; }
 .nav-btn:hover { background: var(--green2); }
 .page-wrap { max-width: 680px; margin: 0 auto; padding: 100px 2rem 6rem; }
@@ -182,7 +183,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
     <span class="brand-name">Soroflow</span>
   </a>
   <div class="nav-right">
-    <a href="/da/gdpr-check.html" class="lang-toggle" hreflang="da" title="Skift til dansk">DA</a>
+    <a href="/da/gdpr-check.html" class="lang-toggle" hreflang="da" title="Skift til dansk"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#C60C30"/><rect x="9" width="3" height="21" fill="#fff"/><rect y="9" width="28" height="3" fill="#fff"/></svg> <span>DA</span></a>
     <a href="/" class="nav-btn">← Back to site</a>
   </div>
 </nav>

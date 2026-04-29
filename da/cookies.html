@@ -66,6 +66,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .nav-right { display: flex; align-items: center; gap: 0.75rem; }
 .lang-toggle { font-size: 12px; font-weight: 500; color: var(--text-mid); text-decoration: none; padding: 6px 10px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
 .lang-toggle:hover { background: var(--bg2); color: var(--text); }
+.lang-toggle .flag { display: inline-block; width: 18px; height: 13px; vertical-align: -2px; margin-right: 6px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.1); }
 .nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s; }
 .nav-btn:hover { background: var(--green2); }
 .page-header { padding: 120px 2rem 4rem; text-align: center; }
@@ -113,7 +114,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <span class="brand-name">Soroflow</span>
   </a>
   <div class="nav-right">
-    <a href="/cookies.html" class="lang-toggle" hreflang="en" title="Switch to English">EN</a>
+    <a href="/cookies.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false"><rect width="60" height="30" fill="#012169"/><path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L60 30M60 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="#C8102E" stroke-width="6"/></svg> <span>EN</span></a>
     <a href="/da/" class="nav-btn">← Tilbage</a>
   </div>
 </nav>
