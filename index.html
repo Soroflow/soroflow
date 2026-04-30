@@ -4,33 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soroflow | Cybersecurity Consultancy</title>
-<meta name="description" content="We help individuals and businesses protect their data without the complexity. Clear advice, practical solutions, peace of mind.">
+<meta name="description" content="We help individuals and businesses protect their data — without the complexity. Clear advice, practical solutions, peace of mind.">
 <meta name="google-site-verification" content="dru7P6BTjKk5h7dT1Ywmvv0B1Xs8_evzuzO_L6iHWLk" />
 <meta name="theme-color" content="#1A3828">
 
-<!-- Canonical & language alternates -->
 <link rel="canonical" href="https://www.soroflow.com/">
 <link rel="alternate" hreflang="en" href="https://www.soroflow.com/">
 <link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/">
 <link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/">
 
-<!-- Open Graph (LinkedIn, Slack, WhatsApp etc.) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Soroflow">
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="da_DK">
 <meta property="og:url" content="https://www.soroflow.com/">
 <meta property="og:title" content="Soroflow | Cybersecurity Consultancy">
-<meta property="og:description" content="We help individuals and businesses protect their data without the complexity. Clear advice, practical solutions, peace of mind.">
+<meta property="og:description" content="We help individuals and businesses protect their data — without the complexity. Clear advice, practical solutions, peace of mind.">
 <meta property="og:image" content="https://www.soroflow.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Soroflow — Cybersecurity, simplified.">
+<meta property="og:image:alt" content="Soroflow — Cybersecurity, made simple.">
 
-<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Soroflow | Cybersecurity Consultancy">
-<meta name="twitter:description" content="We help individuals and businesses protect their data without the complexity. Clear advice, practical solutions, peace of mind.">
+<meta name="twitter:description" content="We help individuals and businesses protect their data — without the complexity.">
 <meta name="twitter:image" content="https://www.soroflow.com/og-image.png">
 
 <link rel="icon" href="/icon.png">
@@ -60,25 +57,16 @@
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --bg: #F7F4EF;
-  --bg2: #EFE9DF;
-  --white: #FDFCFA;
-  --dark: #0F0E0C;
-  --dark2: #1C1A17;
-  --green: #1A3828;
-  --green2: #2C5940;
-  --green-light: #EAF2EC;
-  --text: #0F0E0C;
-  --text-mid: #6B6558;
-  --text-light: #9E9589;
-  --border: rgba(15,14,12,0.09);
-  --border2: rgba(15,14,12,0.14);
+  --bg: #F7F4EF; --bg2: #EFE9DF; --white: #FDFCFA; --dark: #0F0E0C; --dark2: #1C1A17;
+  --green: #1A3828; --green2: #2C5940; --green-light: #EAF2EC;
+  --text: #0F0E0C; --text-mid: #6B6558; --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09); --border2: rgba(15,14,12,0.14);
 }
-section, .trust-strip, .hero-img-strip { scroll-margin-top: 70px; }
-#process, #who, #about, #compliance, #services, #contact, #testimonials { scroll-margin-top: 65px; }
+section { scroll-margin-top: 70px; }
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(247, 244, 239, 0.8); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(247, 244, 239, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
 .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
 .brand img { width: 30px; height: 30px; border-radius: 7px; }
 .brand-name { font-size: 16px; font-weight: 500; color: var(--text); letter-spacing: -0.2px; }
@@ -91,8 +79,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .lang-toggle .flag { display: inline-block; width: 18px; height: 13px; vertical-align: -2px; margin-right: 6px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.1); }
 .nav-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 8px 18px; border-radius: 7px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
 .nav-btn:hover { background: var(--green2); transform: translateY(-1px); }
-
-/* Hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; z-index: 300; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s ease; }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -104,116 +90,119 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .mobile-menu a:last-child { border-bottom: none; color: var(--green); font-weight: 500; padding-bottom: 0.25rem; }
 .mobile-menu a:hover { color: var(--text); }
 
-.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 2rem 80px; position: relative; overflow: hidden; text-align: center; }
-.blob { position: absolute; border-radius: 50%; z-index: 0; pointer-events: none; }
-.blob-1 { width: 560px; height: 480px; background: #E8DDD0; border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; top: 50%; left: 50%; transform: translate(-50%, -52%); opacity: 0.7; animation: morph1 12s ease-in-out infinite; z-index: 0; }
-.blob-2 { width: 300px; height: 260px; background: #D4E8D8; border-radius: 70% 30% 40% 60% / 50% 60% 40% 50%; top: 15%; right: 10%; opacity: 0.35; animation: morph2 15s ease-in-out infinite; }
-.blob-3 { width: 220px; height: 200px; background: #C8D8E0; border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%; bottom: 20%; left: 8%; opacity: 0.25; animation: morph3 18s ease-in-out infinite; }
-@keyframes morph1 { 0%, 100% { border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%; } 33% { border-radius: 45% 55% 38% 62% / 55% 45% 55% 45%; } 66% { border-radius: 55% 45% 62% 38% / 42% 58% 42% 58%; } }
-@keyframes morph2 { 0%, 100% { border-radius: 70% 30% 40% 60% / 50% 60% 40% 50%; } 50% { border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%; } }
-@keyframes morph3 { 0%, 100% { border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%; } 50% { border-radius: 70% 30% 40% 60% / 40% 60% 40% 60%; } }
-.hero-inner { position: relative; z-index: 10; max-width: 780px; width: 100%; }
+.hero { min-height: 95vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 120px 2rem 80px; text-align: center; position: relative; overflow: hidden; }
+.hero-inner { position: relative; z-index: 10; max-width: 780px; }
 .hero-badge { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-mid); background: rgba(255,255,255,0.7); border: 1px solid var(--border2); border-radius: 30px; padding: 5px 14px 5px 10px; margin-bottom: 2rem; backdrop-filter: blur(10px); }
 .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #4CAF72; animation: blink 2.5s ease-in-out infinite; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-.hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(52px, 8vw, 88px); font-weight: 400; line-height: 1.0; letter-spacing: -2px; color: var(--text); margin-bottom: 1.5rem; }
+.hero h1 { font-family: 'Instrument Serif', serif; font-size: clamp(46px, 7vw, 78px); line-height: 1.0; letter-spacing: -2px; margin-bottom: 1.5rem; }
 .hero h1 em { font-style: italic; color: var(--green); }
-.hero-sub { font-size: 18px; color: var(--text-mid); line-height: 1.7; font-weight: 300; max-width: 500px; margin: 0 auto 2.5rem; }
-.hero-actions { display: flex; align-items: center; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+.hero-sub { font-size: 18px; color: var(--text-mid); max-width: 540px; margin: 0 auto 2.5rem; font-weight: 300; line-height: 1.7; }
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 1.25rem; }
 .btn-dark { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: var(--white); background: var(--dark); padding: 14px 24px; border-radius: 10px; text-decoration: none; transition: background 0.2s, transform 0.15s; white-space: nowrap; }
 .btn-dark:hover { background: var(--dark2); transform: translateY(-2px); }
-.btn-ghost { display: inline-flex; align-items: center; font-size: 15px; color: var(--text-mid); text-decoration: none; padding: 14px 24px; border-radius: 10px; border: 1px solid var(--border2); background: rgba(255,255,255,0.5); transition: background 0.2s, color 0.2s; backdrop-filter: blur(8px); white-space: nowrap; }
+.btn-ghost { display: inline-flex; align-items: center; font-size: 15px; color: var(--text-mid); text-decoration: none; padding: 14px 24px; border-radius: 10px; border: 1px solid var(--border2); background: rgba(255,255,255,0.5); transition: all 0.2s; backdrop-filter: blur(8px); white-space: nowrap; }
 .btn-ghost:hover { background: var(--white); color: var(--text); }
-.hero-email-alt { font-size: 13px; color: var(--text-light); margin-bottom: 1.5rem; }
-.hero-email-alt a { color: var(--text-mid); text-decoration: underline; transition: color 0.2s; }
-.hero-email-alt a:hover { color: var(--text); }
-.hero-trust { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13px; color: var(--text-light); flex-wrap: wrap; }
-.hero-trust-sep { opacity: 0.4; }
-.hero-img-strip { padding: 0 2rem 5rem; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
-.hero-img-wrap { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 32px 80px rgba(15,14,12,0.14), 0 8px 24px rgba(15,14,12,0.08); }
-.hero-img-wrap img { width: 100%; height: 420px; object-fit: cover; display: block; }
-.hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(15,14,12,0.3) 100%); }
-.hero-img-badges { position: absolute; bottom: 24px; left: 24px; right: 24px; display: flex; gap: 10px; flex-wrap: wrap; }
-.img-badge { background: rgba(253,252,250,0.92); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.6); border-radius: 10px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--text); }
-.trust-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--white); padding: 3.5rem 2rem; }
-.trust-strip-inner { max-width: 1000px; margin: 0 auto; }
-.trust-strip-label { text-align: center; font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); margin-bottom: 2.5rem; }
-.trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-.trust-item { background: var(--white); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 10px; }
-.trust-item-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 18px; }
-.trust-item strong { font-size: 15px; font-weight: 500; color: var(--text); }
-.trust-item p { font-size: 14px; color: var(--text-mid); line-height: 1.6; font-weight: 300; }
-section { padding: 6rem 2rem; }
-.container { max-width: 1000px; margin: 0 auto; }
-.section-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
-.section-heading { font-family: 'Instrument Serif', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 400; line-height: 1.1; letter-spacing: -0.8px; color: var(--text); margin-bottom: 1rem; }
-.section-body { font-size: 16px; color: var(--text-mid); line-height: 1.75; font-weight: 300; max-width: 480px; }
-.services-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-.services-cards { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: var(--border); }
-.s-card { background: var(--white); padding: 1.75rem; transition: background 0.2s; }
-.s-card:hover { background: #FDFCF9; }
-.s-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.s-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-.s-card h3 { font-size: 16px; font-weight: 500; color: var(--text); }
-.s-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; font-weight: 300; padding-left: 50px; }
+.hero-email-alt { font-size: 13px; color: var(--text-light); margin-top: 0.5rem; }
+.hero-email-alt a { color: var(--text-mid); text-decoration: underline; }
+.blob { position: absolute; z-index: 1; filter: blur(80px); opacity: 0.5; pointer-events: none; }
+.blob-1 { width: 600px; height: 600px; background: #E2DCCF; border-radius: 50%; top: -10%; left: -10%; animation: float 20s infinite alternate; }
+.blob-2 { width: 500px; height: 500px; background: #EAF2EC; border-radius: 50%; bottom: -5%; right: -5%; animation: float 15s infinite alternate-reverse; }
+@keyframes float { 0% { transform: translate(0,0) rotate(0); } 100% { transform: translate(40px, 60px) rotate(10deg); } }
+
+.compliance-check-strip { background: var(--green); padding: 1.25rem 2rem; }
+.compliance-check-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.compliance-check-left { display: flex; align-items: center; gap: 1rem; }
+.compliance-check-left svg { color: rgba(255,255,255,0.8); flex-shrink: 0; }
+.compliance-check-left strong { font-size: 15px; font-weight: 500; color: var(--white); display: block; margin-bottom: 2px; }
+.compliance-check-left p { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 300; }
+.compliance-check-btn { font-size: 13px; font-weight: 500; color: var(--green); background: var(--white); padding: 10px 20px; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: all 0.2s; }
+.compliance-check-btn:hover { background: var(--green-light); transform: translateY(-1px); }
+
+.container { max-width: 1100px; margin: 0 auto; }
+section { padding: 7rem 2rem; position: relative; }
+.section-header { margin-bottom: 4rem; max-width: 600px; }
+.section-header.centered { margin-left: auto; margin-right: auto; text-align: center; }
+.section-header p { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
+.section-header h2 { font-family: 'Instrument Serif', serif; font-size: clamp(34px, 4.5vw, 54px); color: var(--text); line-height: 1.1; letter-spacing: -1px; }
+.section-header h2 em { font-style: italic; color: var(--green); }
+
+.trust-strip { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 2rem; }
+.trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 3rem; max-width: 1100px; margin: 0 auto; }
+.trust-item { display: flex; flex-direction: column; align-items: flex-start; }
+.icon-circle { width: 56px; height: 56px; background: var(--green-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: var(--green); margin-bottom: 1.25rem; flex-shrink: 0; transition: transform 0.3s ease; }
+.trust-item strong { display: block; font-size: 17px; margin-bottom: 0.5rem; color: var(--text); font-weight: 500; }
+.trust-item p { font-size: 14px; color: var(--text-mid); line-height: 1.65; font-weight: 300; }
+
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.service-card { background: var(--white); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border); transition: all 0.4s ease; display: flex; flex-direction: column; }
+.service-card:hover { border-color: var(--green); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(15,14,12,0.05); }
+.service-card h3 { font-family: 'Instrument Serif', serif; font-size: 1.6rem; margin-bottom: 0.75rem; }
+.service-card > p { color: var(--text-mid); font-size: 14px; line-height: 1.65; font-weight: 300; }
+.service-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.65rem; }
+.service-list li { font-size: 14px; color: var(--text-mid); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+.service-list li::before { content: ""; width: 5px; height: 5px; background: var(--green); border-radius: 50%; opacity: 0.5; flex-shrink: 0; margin-top: 8px; }
+
 .compliance-bg { background: var(--dark); }
-.compliance-bg .section-eyebrow { color: rgba(255,255,255,0.3); }
-.compliance-bg .section-heading { color: var(--white); }
-.compliance-bg .section-body { color: rgba(255,255,255,0.5); }
-.comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; margin-top: 3rem; }
-.comp-card { background: var(--dark2); padding: 2rem 1.75rem; transition: background 0.2s; }
+.compliance-bg .section-header p { color: rgba(255,255,255,0.3); }
+.compliance-bg .section-header h2 { color: var(--white); }
+.compliance-bg .section-header h2 em { color: #4CAF72; }
+.comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; overflow: hidden; }
+.comp-card { background: var(--dark2); padding: 2.25rem 1.75rem; transition: background 0.2s; }
 .comp-card:hover { background: #252320; }
 .comp-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: #4CAF72; background: rgba(76, 175, 114, 0.12); border-radius: 5px; padding: 3px 9px; display: inline-block; margin-bottom: 1.25rem; }
-.comp-card h3 { font-family: 'Instrument Serif', serif; font-size: 30px; font-weight: 400; color: var(--white); margin-bottom: 8px; }
-.comp-card p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.65; font-weight: 300; }
-.who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 3rem; }
-.who-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-.who-card:hover { transform: translateY(-5px); box-shadow: 0 24px 60px rgba(15,14,12,0.1); }
-.who-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
-.who-body { padding: 1.75rem; }
+.comp-card h3 { font-family: 'Instrument Serif', serif; font-size: 30px; font-weight: 400; color: var(--white); margin-bottom: 0.5rem; }
+.comp-card p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.65; font-weight: 300; }
+
+.tools-bg { background: var(--bg2); }
+.tool-card { background: var(--white); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--border); transition: all 0.4s ease; display: flex; flex-direction: column; }
+.tool-card:hover { border-color: var(--green); transform: translateY(-4px); }
+.tool-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; color: var(--green); background: var(--green-light); border-radius: 30px; padding: 4px 12px; align-self: flex-start; margin-bottom: 1.25rem; }
+.tool-card h3 { font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 0.75rem; }
+.tool-card p { color: var(--text-mid); font-size: 14px; line-height: 1.65; font-weight: 300; flex: 1; }
+.tool-actions { display: flex; gap: 8px; margin-top: 1.5rem; flex-wrap: wrap; }
+.tool-btn { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 10px 18px; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+.tool-btn:hover { background: var(--green2); }
+.tool-btn-ghost { font-size: 13px; font-weight: 500; color: var(--text-mid); background: transparent; padding: 10px 18px; border-radius: 8px; text-decoration: none; border: 1px solid var(--border2); transition: all 0.2s; }
+.tool-btn-ghost:hover { color: var(--text); border-color: var(--text); }
+
+.who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.who-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; transition: transform 0.3s, box-shadow 0.3s; }
+.who-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(15,14,12,0.06); }
 .who-pill { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.6px; color: var(--green); background: var(--green-light); border-radius: 30px; padding: 4px 12px; display: inline-block; margin-bottom: 1rem; }
-.who-card h3 { font-size: 19px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
-.who-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; font-weight: 300; }
-.about-bg { background: var(--green); }
-.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.about-bg .section-eyebrow { color: rgba(255,255,255,0.35); }
-.about-text { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.75; font-weight: 300; }
-.philosophy { text-align: center; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.philosophy .section-heading { font-size: clamp(36px, 5vw, 56px); max-width: 560px; margin: 0 auto 1rem; }
-.philosophy .section-body { max-width: 400px; margin: 0 auto 2.5rem; }
-.pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.pill { font-size: 14px; padding: 10px 22px; border: 1px solid var(--border2); border-radius: 30px; color: var(--text-mid); background: var(--white); transition: all 0.2s; }
-.pill:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
-.cta-section { text-align: center; background: var(--white); }
-.cta-section .section-heading { max-width: 480px; margin: 0 auto 0.75rem; }
-.cta-section .section-body { max-width: 380px; margin: 0 auto 2.5rem; }
-.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn-outline { display: inline-flex; align-items: center; justify-content: center; font-size: 15px; color: var(--text-mid); padding: 14px 26px; border: 1px solid var(--border2); border-radius: 10px; text-decoration: none; transition: all 0.2s; }
-.btn-outline:hover { border-color: var(--text); color: var(--text); background: var(--bg); }
-.testimonials-bg { background: var(--dark2); }
-.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
-.testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2rem; }
-.testimonial-placeholder { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; min-height: 120px; border-style: dashed; }
-.testimonial-placeholder-inner { text-align: center; }
-.testimonial-placeholder-inner p { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
-.testimonial-placeholder-inner span { font-size: 13px; color: rgba(255,255,255,0.25); font-weight: 300; }
-#process { background: var(--white); border-top: 1px solid var(--border); }
-.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-top: 3rem; }
-.process-step { background: var(--white); padding: 1.75rem; display: flex; gap: 1rem; align-items: flex-start; transition: background 0.2s; }
-.process-step:hover { background: var(--bg); }
-.process-num { font-family: 'Instrument Serif', serif; font-size: 28px; font-weight: 400; color: var(--border2); line-height: 1; flex-shrink: 0; width: 36px; }
-.process-body h3 { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
-.process-body p { font-size: 13px; color: var(--text-mid); line-height: 1.65; font-weight: 300; margin-bottom: 10px; }
+.who-card h3 { font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 0.75rem; }
+.who-card p { color: var(--text-mid); font-size: 14px; line-height: 1.7; font-weight: 300; }
+
+.about-bg { background: var(--white); }
+.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
+.about-text p { font-size: 16px; color: var(--text-mid); line-height: 1.8; font-weight: 300; margin-bottom: 1rem; }
+.about-callout { background: var(--bg2); padding: 2rem; border-radius: 20px; border: 1px solid var(--border); }
+.about-callout h3 { font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 1.25rem; }
+
+.process-bg { background: var(--bg2); }
+.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.process-step { background: var(--white); padding: 2rem; border-radius: 20px; border: 1px solid var(--border); transition: all 0.3s ease; position: relative; }
+.process-step:hover { border-color: var(--green); transform: translateY(-4px); }
+.process-icon-wrap { width: 56px; height: 56px; background: var(--green-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: var(--green); margin-bottom: 1.25rem; position: relative; }
+.process-num { position: absolute; top: -8px; right: -8px; background: var(--green); color: white; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 10px rgba(26,56,40,0.15); }
+.process-step h3 { font-size: 17px; font-weight: 500; margin-bottom: 0.5rem; }
+.process-step p { font-size: 14px; color: var(--text-mid); line-height: 1.6; font-weight: 300; margin-bottom: 1rem; }
 .process-tag { font-size: 11px; font-weight: 500; color: var(--green); background: var(--green-light); border-radius: 30px; padding: 3px 10px; display: inline-block; }
-.lead-magnet { background: var(--dark2); border-top: 1px solid rgba(255,255,255,0.06); }
-.lead-magnet-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-.lead-magnet-left { display: flex; align-items: center; gap: 1.5rem; }
-.lead-magnet-icon { font-size: 36px; flex-shrink: 0; }
-.lead-magnet-btns { display: flex; gap: 8px; flex-shrink: 0; flex-wrap: wrap; }
-.lead-magnet-btn { font-size: 14px; font-weight: 500; color: var(--dark); background: var(--white); padding: 14px 28px; border-radius: 10px; text-decoration: none; white-space: nowrap; transition: background 0.2s, transform 0.15s; }
-.lead-magnet-btn:hover { background: var(--bg); transform: translateY(-1px); }
-.lead-magnet-btn-outline { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.85); background: transparent; padding: 14px 24px; border-radius: 10px; text-decoration: none; white-space: nowrap; border: 1px solid rgba(255,255,255,0.18); transition: all 0.2s; }
-.lead-magnet-btn-outline:hover { background: rgba(255,255,255,0.08); color: var(--white); }
+
+.testimonial-bg { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.testimonial-card { max-width: 720px; margin: 0 auto; text-align: center; }
+.testimonial-text { font-family: 'Instrument Serif', serif; font-size: clamp(24px, 3vw, 36px); line-height: 1.3; margin-bottom: 1.5rem; color: var(--text); font-style: italic; }
+.testimonial-author { font-size: 14px; font-weight: 500; color: var(--text-mid); }
+.testimonial-author span { color: var(--text-light); font-weight: 300; }
+
+#contact { padding-top: 4rem; padding-bottom: 7rem; }
+.cta-wrap { background: var(--green); padding: 5rem 3rem; border-radius: 32px; text-align: center; color: white; position: relative; overflow: hidden; max-width: 1000px; margin: 0 auto; }
+.cta-wrap h2 { font-family: 'Instrument Serif', serif; color: white; font-size: clamp(32px, 4vw, 52px); line-height: 1.1; letter-spacing: -1px; margin-bottom: 1.5rem; }
+.cta-wrap p { color: rgba(255,255,255,0.75); font-size: 17px; max-width: 480px; margin: 0 auto 2.5rem; font-weight: 300; line-height: 1.65; }
+.cta-btn-primary { background: var(--white); color: var(--green); padding: 16px 32px; border-radius: 10px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s; font-size: 15px; }
+.cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+.cta-mailto { display: block; margin-top: 1.5rem; color: rgba(255,255,255,0.6); font-size: 14px; text-decoration: underline; }
+
 footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .footer-top { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
@@ -225,28 +214,21 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; font-weight: 300; }
 .footer-col a:hover { color: var(--white); }
 .footer-bottom { max-width: 1000px; margin: 2rem auto 0; display: flex; justify-content: space-between; font-size: 13px; color: rgba(255,255,255,0.25); flex-wrap: wrap; gap: 1rem; }
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-d1 { transition-delay: 0.1s; }
-.reveal-d2 { transition-delay: 0.2s; }
-.reveal-d3 { transition-delay: 0.3s; }
-.compliance-check-strip { background: var(--green); padding: 1.25rem 2rem; }
-.compliance-check-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
-.compliance-check-left { display: flex; align-items: center; gap: 1rem; }
-.compliance-check-icon { font-size: 24px; flex-shrink: 0; }
-.compliance-check-left strong { font-size: 15px; font-weight: 500; color: var(--white); display: block; margin-bottom: 2px; }
-.compliance-check-left p { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 300; }
-.compliance-check-btn { font-size: 13px; font-weight: 500; color: var(--green); background: var(--white); padding: 10px 20px; border-radius: 8px; text-decoration: none; white-space: nowrap; transition: background 0.2s, transform 0.15s; flex-shrink: 0; }
-.compliance-check-btn:hover { background: var(--green-light); transform: translateY(-1px); }
+
 .cookie-banner { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 999; background: var(--dark2); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; max-width: 680px; width: calc(100% - 3rem); box-shadow: 0 16px 48px rgba(0,0,0,0.3); flex-wrap: wrap; }
+.cookie-banner.hidden { display: none; }
 .cookie-banner p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300; flex: 1; min-width: 200px; }
 .cookie-banner a { color: rgba(255,255,255,0.8); text-decoration: underline; }
 .cookie-banner-btns { display: flex; gap: 8px; flex-shrink: 0; }
-.cookie-accept { font-size: 13px; font-weight: 500; color: var(--white); background: var(--green); padding: 9px 20px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+.cookie-accept { font-size: 13px; font-weight: 500; color: white; background: var(--green); padding: 9px 20px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
 .cookie-accept:hover { background: var(--green2); }
 .cookie-decline { font-size: 13px; color: rgba(255,255,255,0.4); background: transparent; padding: 9px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
 .cookie-decline:hover { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
-.cookie-banner.hidden { display: none; }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
 
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
@@ -257,31 +239,18 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   .lang-toggle span { display: none; }
   .lang-toggle .flag { margin-right: 0; }
   .hamburger { display: flex; }
+  section { padding: 4.5rem 1.25rem; }
   .hero { padding: 100px 1.25rem 60px; min-height: auto; }
-  .blob-1 { width: 380px; height: 420px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-  .blob-2 { display: none; }
-  .blob-3 { display: none; }
-  .hero-inner { width: 100%; }
-  .hero h1 { font-size: 44px; letter-spacing: -1px; }
-  .hero-img-strip { padding: 0 1.25rem 4rem; }
-  .hero-img-wrap img { height: 260px; }
-  section { padding: 4rem 1.25rem; }
-  .trust-grid { grid-template-columns: 1fr; }
-  .services-wrap { grid-template-columns: 1fr; gap: 2rem; }
-  .comp-grid { grid-template-columns: 1fr; }
-  .who-grid { grid-template-columns: 1fr; }
-  .about-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .process-grid { grid-template-columns: 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 42px; letter-spacing: -1px; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; }
-  .hero-img-badges { display: none; }
   .cookie-banner { flex-direction: column; align-items: flex-start; gap: 1rem; bottom: 1rem; }
+  .cta-wrap { padding: 3rem 1.5rem; }
 }
-/* Hide hard line-breaks in headings on narrow screens so text wraps naturally (#19) */
 @media (max-width: 480px) {
-  .hero h1 br, .section-heading br { display: none; }
-  .hero h1 { font-size: 38px; }
+  .hero h1 br, .section-header h2 br { display: none; }
+  .hero h1 { font-size: 36px; }
 }
 </style>
 
@@ -297,7 +266,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
       "url": "https://www.soroflow.com/",
       "logo": "https://www.soroflow.com/icon.png",
       "image": "https://www.soroflow.com/og-image.png",
-      "description": "Cybersecurity consultancy helping individuals and businesses protect their data without the complexity. Specialising in NIS2, GDPR, and ISO 27001 compliance for SMEs in Denmark and the EU.",
+      "description": "Cybersecurity consultancy helping individuals and businesses protect their data without the complexity. Specialised in NIS2, GDPR and ISO 27001 for SMEs in Denmark and the EU.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Copenhagen",
@@ -308,15 +277,15 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
         {"@type": "AdministrativeArea", "name": "European Union"}
       ],
       "serviceType": [
-        "GDPR Compliance Consulting",
+        "GDPR Consulting",
         "NIS2 Compliance Assessment",
-        "ISO 27001 Readiness Review",
-        "Cybersecurity Consulting"
+        "ISO 27001 Readiness Assessment",
+        "Cybersecurity Advisory"
       ],
       "knowsAbout": ["GDPR", "NIS2", "ISO 27001", "Cybersecurity", "Data Protection", "Compliance", "Phishing Awareness"],
       "email": "hello@soroflow.com",
       "priceRange": "$$",
-      "slogan": "Cybersecurity, simplified."
+      "slogan": "Cybersecurity, made simple."
     },
     {
       "@type": "WebSite",
@@ -332,7 +301,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 </head>
 <body>
 
-<!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
   <p>We use analytics cookies (Google Analytics) and third-party services (Google Fonts, Unsplash, Calendly) that may set cookies. Analytics is only enabled if you accept. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
   <div class="cookie-banner-btns">
@@ -342,250 +310,368 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 </div>
 
 <nav>
-  <a href="#" class="brand">
+  <a href="/" class="brand">
     <img src="/icon.png" alt="Soroflow">
     <span class="brand-name">Soroflow</span>
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="/compliance-check.html">Compliance check</a></li>
-    <li><a href="/gdpr-check.html">GDPR test</a></li>
-    <li><a href="/phishing-check.html">Phishing test</a></li>
+    <li><a href="/compliance-check.html">Compliance Check</a></li>
+    <li><a href="/gdpr-check.html">GDPR Test</a></li>
+    <li><a href="/phishing-check.html">Phishing Test</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <a href="/da/" class="lang-toggle" hreflang="da" title="Skift til dansk"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#C60C30"/><rect x="9" width="3" height="21" fill="#fff"/><rect y="9" width="28" height="3" fill="#fff"/></svg> <span>DA</span></a>
-    <a href="https://calendly.com/hello-soroflow/20min" class="nav-btn">Book a free call →</a>
+    <a href="/da/" class="lang-toggle" hreflang="da" title="Skift til dansk"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#C8102E"/><rect x="9" width="3" height="21" fill="#fff"/><rect y="9" width="28" height="3" fill="#fff"/></svg> <span>DA</span></a>
+    <a href="https://calendly.com/hello-soroflow/20min" class="nav-btn">Book free intro →</a>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#services" onclick="closeMenu()">Services</a>
-  <a href="#compliance" onclick="closeMenu()">Compliance</a>
-  <a href="/compliance-check.html">Compliance check</a>
-  <a href="/gdpr-check.html">GDPR readiness test</a>
-  <a href="/phishing-check.html">Phishing readiness test</a>
-  <a href="#process" onclick="closeMenu()">How it works</a>
+  <a href="/compliance-check.html">Compliance Check</a>
+  <a href="/gdpr-check.html">GDPR Readiness Test</a>
+  <a href="/phishing-check.html">Phishing Readiness Test</a>
   <a href="#about" onclick="closeMenu()">About</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
   <a href="/da/" hreflang="da">Dansk version →</a>
-  <a href="https://calendly.com/hello-soroflow/20min">Book a free call →</a>
+  <a href="https://calendly.com/hello-soroflow/20min">Book free intro →</a>
 </div>
 
 <section class="hero">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-  <div class="hero-inner">
-    <div class="hero-badge"><span class="badge-dot"></span> Cybersecurity consultancy</div>
-    <h1>Cybersecurity, <br><em>simplified.</em></h1>
-    <p class="hero-sub">We help individuals and businesses protect their data without the complexity. Clear advice, practical solutions, and peace of mind.</p>
+  <div class="hero-inner reveal">
+    <div class="hero-badge"><span class="badge-dot"></span> Cybersecurity Consultancy</div>
+    <h1>Cybersecurity, <br><em>made simple.</em></h1>
+    <p class="hero-sub">We help individuals and businesses protect their data — without the complexity. Clear advice, practical solutions, peace of mind.</p>
     <div class="hero-actions">
-      <a href="https://calendly.com/hello-soroflow/20min" class="btn-dark">Book a free call →</a>
-      <a href="#services" class="btn-ghost">See what we do</a>
+      <a href="https://calendly.com/hello-soroflow/20min" class="btn-dark">Book free intro →</a>
+      <a href="#services" class="btn-ghost">See what we offer</a>
     </div>
     <p class="hero-email-alt">Prefer to write first? <a href="mailto:hello@soroflow.com">hello@soroflow.com</a></p>
-    <div class="hero-trust">
-      <span>Trusted guidance</span><span class="hero-trust-sep">·</span>
-      <span>No jargon</span><span class="hero-trust-sep">·</span>
-      <span>No complexity</span>
-    </div>
   </div>
 </section>
-<div class="hero-img-strip reveal">
-  <div class="hero-img-wrap">
-    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&q=80" alt="Cybersecurity">
-    <div class="hero-img-overlay"></div>
-    <div class="hero-img-badges">
-      <div class="img-badge"><span>🔒</span> NIS2 Ready</div>
-      <div class="img-badge"><span>✓</span> ISO 27001</div>
-      <div class="img-badge"><span>🇪🇺</span> GDPR Compliant</div>
-    </div>
-  </div>
-</div>
+
 <div class="compliance-check-strip">
   <div class="compliance-check-inner">
     <div class="compliance-check-left">
-      <span class="compliance-check-icon">🔍</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
       <div>
-        <strong>Not sure if you're compliant?</strong>
-        <p>Find out in 2 minutes which EU regulations apply to your business.</p>
+        <strong>Unsure about compliance?</strong>
+        <p>Find out in 2 minutes which EU rules apply to your business.</p>
       </div>
     </div>
     <a href="/compliance-check.html" class="compliance-check-btn">Check your compliance →</a>
   </div>
 </div>
-<div class="trust-strip">
-  <div class="trust-strip-inner">
-    <p class="trust-strip-label">Trusted approach to modern cybersecurity</p>
-    <div class="trust-grid">
-      <div class="trust-item reveal"><div class="trust-item-icon">💬</div><strong>Clear communication</strong><p>Plain language explanations — no technical overwhelm.</p></div>
-      <div class="trust-item reveal reveal-d1"><div class="trust-item-icon">🛠</div><strong>Practical solutions</strong><p>Real-world measures tailored to your situation.</p></div>
-      <div class="trust-item reveal reveal-d2"><div class="trust-item-icon">🇪🇺</div><strong>EU compliance focus</strong><p>Deep expertise in NIS2, GDPR, and ISO 27001.</p></div>
+
+<section class="trust-strip">
+  <div class="trust-grid">
+    <div class="trust-item reveal">
+      <div class="icon-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <strong>Clear communication</strong>
+      <p>Plain-language explanations — no technical overload. We translate compliance into clear business decisions.</p>
+    </div>
+    <div class="trust-item reveal reveal-d1">
+      <div class="icon-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <strong>Practical solutions</strong>
+      <p>Real-world measures tailored to your situation. We don't just find problems — we build the fixes.</p>
+    </div>
+    <div class="trust-item reveal reveal-d2">
+      <div class="icon-circle">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <strong>EU compliance focus</strong>
+      <p>Deep expertise in NIS2, GDPR and ISO 27001 — built for SMEs operating in Denmark and the EU.</p>
     </div>
   </div>
-</div>
+</section>
+
 <section id="services">
   <div class="container">
-    <div class="services-wrap">
-      <div class="services-left reveal">
-        <p class="section-eyebrow">What we do</p>
-        <h2 class="section-heading">Services built around you</h2>
-        <p class="section-body">We assess, advise, and protect — without the complexity that usually comes with cybersecurity consultancy.</p>
+    <div class="section-header reveal">
+      <p>What we do</p>
+      <h2>Practical cybersecurity <br>for growing businesses</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="icon-circle">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>The full setup</h3>
+        <p>For organisations that need a professional security foundation built from the ground up.</p>
+        <ul class="service-list">
+          <li>Gap analysis &amp; system review</li>
+          <li>MFA &amp; password management</li>
+          <li>Secure cloud configuration</li>
+          <li>Employee awareness training</li>
+        </ul>
       </div>
-      <div class="services-cards reveal reveal-d1">
-        <div class="s-card"><div class="s-card-top"><div class="s-icon">🔍</div><h3>NIS2 Compliance Assessment</h3></div><p>We review your organisation against NIS2 requirements and deliver a clear report with prioritised action points — so you know exactly what's missing.</p></div>
-        <div class="s-card"><div class="s-card-top"><div class="s-icon">🛡️</div><h3>GDPR Gap Analysis</h3></div><p>We map how you handle personal data today, identify gaps, and give you a concrete plan to become compliant.</p></div>
-        <div class="s-card"><div class="s-card-top"><div class="s-icon">📋</div><h3>ISO 27001 Readiness Review</h3></div><p>Not sure if you're ready for certification? We assess your current security maturity and show you the path forward.</p></div>
-        <div class="s-card"><div class="s-card-top"><div class="s-icon">💬</div><h3>Pricing</h3></div><p>Pricing is based on the size and complexity of your organisation. Book a free call to get a tailored quote.</p></div>
+      <div class="service-card reveal reveal-d1">
+        <div class="icon-circle">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Compliance assessment</h3>
+        <p>Identify which rules apply and how to meet them — efficiently and prioritised.</p>
+        <ul class="service-list">
+          <li>NIS2 compliance assessment</li>
+          <li>GDPR gap analysis</li>
+          <li>ISO 27001 readiness assessment</li>
+          <li>Prioritised compliance roadmap</li>
+        </ul>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="icon-circle">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Advisory</h3>
+        <p>Strategic security advice on demand — for specific projects or ongoing peace of mind.</p>
+        <ul class="service-list">
+          <li>Vendor security review</li>
+          <li>Policies &amp; processes</li>
+          <li>Incident response plans</li>
+          <li>Monthly security check-ins</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
+
 <section id="compliance" class="compliance-bg">
   <div class="container">
-    <p class="section-eyebrow reveal">Compliance & standards</p>
-    <h2 class="section-heading reveal">Meeting requirements, <br>made simple</h2>
+    <div class="section-header reveal">
+      <p>Compliance &amp; standards</p>
+      <h2>Requirements met, <br><em>made simple</em></h2>
+    </div>
     <div class="comp-grid">
-      <div class="comp-card reveal"><span class="comp-tag">EU Directive</span><h3>NIS2</h3><p>Helping organisations meet EU cybersecurity requirements and improve resilience.</p></div>
-      <div class="comp-card reveal reveal-d1"><span class="comp-tag">International</span><h3>ISO 27001</h3><p>Support with implementing and maintaining information security management systems.</p></div>
-      <div class="comp-card reveal reveal-d2"><span class="comp-tag">EU Regulation</span><h3>GDPR</h3><p>Ensuring compliance with data protection regulations and protecting personal data.</p></div>
+      <div class="comp-card reveal">
+        <span class="comp-tag">EU Directive</span>
+        <h3>NIS2</h3>
+        <p>Helping organisations meet the EU's cybersecurity requirements, manage risk and improve resilience.</p>
+      </div>
+      <div class="comp-card reveal reveal-d1">
+        <span class="comp-tag">International</span>
+        <h3>ISO 27001</h3>
+        <p>Support for implementing and maintaining information security management systems.</p>
+      </div>
+      <div class="comp-card reveal reveal-d2">
+        <span class="comp-tag">EU Regulation</span>
+        <h3>GDPR</h3>
+        <p>Ensuring compliance with data protection rules and protecting personal data.</p>
+      </div>
     </div>
   </div>
 </section>
+
+<section class="tools-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <p>Free tools</p>
+      <h2>Test your readiness</h2>
+    </div>
+    <div class="services-grid">
+      <div class="tool-card reveal">
+        <span class="tool-tag">2 minutes</span>
+        <h3>Compliance Check</h3>
+        <p>Find out which EU rules apply to your business — GDPR, NIS2 or ISO 27001 — based on six quick questions.</p>
+        <div class="tool-actions">
+          <a href="/compliance-check.html" class="tool-btn">Start the check →</a>
+        </div>
+      </div>
+      <div class="tool-card reveal reveal-d1">
+        <span class="tool-tag">4 minutes</span>
+        <h3>GDPR Readiness Test</h3>
+        <p>16 checkpoints covering core GDPR obligations for SMEs. Get your readiness score — answers stay in your browser.</p>
+        <div class="tool-actions">
+          <a href="/gdpr-check.html" class="tool-btn">Take the test →</a>
+          <a href="/GDPR_Checklist_Soroflow.pdf" download class="tool-btn-ghost">Download PDF</a>
+        </div>
+      </div>
+      <div class="tool-card reveal reveal-d2">
+        <span class="tool-tag">4 minutes</span>
+        <h3>Phishing Readiness Test</h3>
+        <p>16 checkpoints aligned with NIS2's awareness requirements. Test your phishing defences against current threats.</p>
+        <div class="tool-actions">
+          <a href="/phishing-check.html" class="tool-btn">Test defences →</a>
+          <a href="/Phishing_Awareness_Soroflow.pdf" download class="tool-btn-ghost">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="who">
   <div class="container">
-    <p class="section-eyebrow reveal">Who we help</p>
-    <h2 class="section-heading reveal">Built for real people</h2>
+    <div class="section-header reveal">
+      <p>Who we help</p>
+      <h2>Built for real people</h2>
+    </div>
     <div class="who-grid">
-      <div class="who-card reveal"><img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="Personal security"><div class="who-body"><span class="who-pill">Individuals</span><h3>Protect what's yours</h3><p>Secure your personal data, lock down your online accounts, and navigate the digital world with confidence. No technical background required.</p></div></div>
-      <div class="who-card reveal reveal-d1"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Business security"><div class="who-body"><span class="who-pill">Small & medium businesses</span><h3>Grow without the risk</h3><p>Safeguard your company's data, protect your customers, and meet security requirements — without hiring a full team or breaking the budget.</p></div></div>
+      <div class="who-card reveal">
+        <span class="who-pill">Individuals</span>
+        <h3>Protect what's yours</h3>
+        <p>Secure your personal data, lock down your online accounts, and navigate the digital world with confidence. No technical background required.</p>
+      </div>
+      <div class="who-card reveal reveal-d1">
+        <span class="who-pill">Small &amp; medium businesses</span>
+        <h3>Grow without the risk</h3>
+        <p>Protect your business data, your customers, and meet security requirements — without hiring an entire team or blowing the budget.</p>
+      </div>
+      <div class="who-card reveal reveal-d2">
+        <span class="who-pill">In-house teams</span>
+        <h3>Get an outside perspective</h3>
+        <p>Have your compliance reviewed, your staff trained, or get a second opinion on your security posture — fast, with deliverables that hold up under audit.</p>
+      </div>
     </div>
   </div>
 </section>
+
 <section id="about" class="about-bg">
   <div class="container">
-    <div class="about-inner">
-      <div class="reveal"><p class="section-eyebrow">Who we are</p><h2 class="section-heading" style="color:white;">Built on expertise, <br>driven by clarity</h2></div>
-      <div class="reveal reveal-d1"><p class="about-text">Soroflow was founded by a cybersecurity consultant with a background in Business Law and Economics. Where most cybersecurity providers speak in technical language, we translate compliance into clear business decisions — so you understand not just what needs to be done, but why it matters. We work with small and medium-sized businesses and individuals across Denmark and the EU.</p></div>
-    </div>
-  </div>
-</section>
-<section class="philosophy">
-  <div class="container">
-    <p class="section-eyebrow reveal">Our approach</p>
-    <h2 class="section-heading reveal">Security shouldn't <br>be complicated.</h2>
-    <p class="section-body reveal">We cut through the noise and give you what matters — clear answers, practical steps, and solutions that actually work.</p>
-    <div class="pills reveal">
-      <span class="pill">Plain language</span>
-      <span class="pill">Practical solutions</span>
-      <span class="pill">No hidden costs</span>
-    </div>
-  </div>
-</section>
-<section id="process">
-  <div class="container">
-    <p class="section-eyebrow reveal">How it works</p>
-    <h2 class="section-heading reveal">A clear process, <br>start to finish</h2>
-    <div class="process-grid reveal reveal-d1">
-      <div class="process-step"><div class="process-num">01</div><div class="process-body"><h3>Free intro call</h3><p>We listen to your situation and tell you honestly how we can help — no pressure, no obligation.</p><span class="process-tag">20 minutes</span></div></div>
-      <div class="process-step"><div class="process-num">02</div><div class="process-body"><h3>Proposal</h3><p>We send a clear proposal outlining scope, deliverables, and pricing based on your needs.</p><span class="process-tag">Within 24 hours</span></div></div>
-      <div class="process-step"><div class="process-num">03</div><div class="process-body"><h3>Assessment</h3><p>We review your organisation against the relevant standards — through documents, a questionnaire, or a follow-up meeting.</p><span class="process-tag">Tailored to your situation</span></div></div>
-      <div class="process-step"><div class="process-num">04</div><div class="process-body"><h3>Report delivered</h3><p>You receive a written report with our findings and a prioritised action plan — in plain language, not technical jargon.</p><span class="process-tag">Within 5 business days</span></div></div>
-      <div class="process-step"><div class="process-num">05</div><div class="process-body"><h3>Walkthrough</h3><p>We present the findings together, answer your questions, and make sure you leave with a clear path forward.</p><span class="process-tag">Included</span></div></div>
-      <div class="process-step"><div class="process-num">06</div><div class="process-body"><h3>Follow-up</h3><p>We check in 30 days after delivery to answer any questions that have come up along the way.</p><span class="process-tag">30 days after delivery</span></div></div>
-    </div>
-  </div>
-</section>
-<section id="testimonials" class="testimonials-bg">
-  <div class="container">
-    <p class="section-eyebrow reveal" style="color:rgba(255,255,255,0.4);">What our clients say</p>
-    <h2 class="section-heading reveal" style="color:white;">Trusted by businesses <br>across Denmark</h2>
-    <div class="testimonials-grid reveal reveal-d1">
-      <div class="testimonial-card testimonial-placeholder">
-        <div class="testimonial-placeholder-inner">
-          <p>Client testimonials coming soon.</p>
-          <span>We are currently working with our first clients and will share their feedback here shortly.</span>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <p>Who we are</p>
+          <h2>Security for the <br><em>real world</em></h2>
+        </div>
+        <div class="about-text">
+          <p>Most cybersecurity consultancy is built for large enterprises with unlimited budgets and dedicated IT departments. Small businesses and individuals are often left with overcomplicated tools they don't need, or jargon-filled reports they can't act on.</p>
+          <p>At Soroflow we do things differently. We believe security should be a foundation for growth — not a barrier. We combine technical expertise with a background in business law and finance to deliver solutions that are legally sound, economically sensible and practically achievable.</p>
+          <p>We work with small and medium businesses and individuals across Denmark and the EU.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-d1">
+        <div class="about-callout">
+          <h3>Our approach</h3>
+          <ul class="service-list">
+            <li><strong>Plain language</strong> — no jargon or acronym soup</li>
+            <li><strong>Practical solutions</strong> — measures that work in your real day-to-day</li>
+            <li><strong>No hidden costs</strong> — fixed scope, fixed price</li>
+            <li><strong>Local expertise</strong> — we know the Danish Data Protection Agency, the local landscape and the EU framework</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section id="contact" class="cta-section">
+
+<section id="process" class="process-bg">
   <div class="container">
-    <p class="section-eyebrow reveal">Get started</p>
-    <h2 class="section-heading reveal">Not sure where to begin?</h2>
-    <p class="section-body reveal">Book a free 20-minute intro call — we'll listen to your situation and tell you honestly how we can help.</p>
-    <div class="cta-btns reveal">
-      <a href="https://calendly.com/hello-soroflow/20min" class="btn-dark">Book a free call →</a>
-      <a href="mailto:hello@soroflow.com" class="btn-outline">hello@soroflow.com</a>
-      <!-- TODO: When phone number is ready, replace placeholder and uncomment:
-      <a href="tel:+45XXXXXXXX" class="btn-outline">+45 XX XX XX XX</a>
-      -->
+    <div class="section-header reveal">
+      <p>How it works</p>
+      <h2>A clear process, <br>start to finish</h2>
     </div>
-  </div>
-</section>
-<section class="lead-magnet">
-  <div class="container">
-    <div class="lead-magnet-inner reveal">
-      <div class="lead-magnet-left">
-        <div class="lead-magnet-icon">📋</div>
-        <div>
-          <p class="section-eyebrow" style="color:rgba(255,255,255,0.4);">Free tool</p>
-          <h2 class="section-heading" style="color:white; font-size: clamp(24px, 3vw, 36px); margin-bottom: 0.5rem;">GDPR Readiness Test <br><em>for SMEs</em></h2>
-          <p style="font-size:15px; color:rgba(255,255,255,0.6); font-weight:300; line-height:1.7; max-width:420px;">16 checkpoints covering core GDPR obligations. Get your readiness score in 4 minutes — answers stay in your browser.</p>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-2.19a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="process-num">01</span>
         </div>
+        <h3>Free intro call</h3>
+        <p>A non-technical conversation about your situation. We listen and tell you honestly how we can help — no pressure, no obligations.</p>
+        <span class="process-tag">20 minutes</span>
       </div>
-      <div class="lead-magnet-btns">
-        <a href="/gdpr-check.html" class="lead-magnet-btn">Take the test →</a>
-        <a href="/GDPR_Checklist_Soroflow.pdf" download class="lead-magnet-btn-outline">Or download PDF</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="lead-magnet">
-  <div class="container">
-    <div class="lead-magnet-inner reveal">
-      <div class="lead-magnet-left">
-        <div class="lead-magnet-icon">🎣</div>
-        <div>
-          <p class="section-eyebrow" style="color:rgba(255,255,255,0.4);">Free tool</p>
-          <h2 class="section-heading" style="color:white; font-size: clamp(24px, 3vw, 36px); margin-bottom: 0.5rem;">Phishing Readiness Test <br><em>for SMEs</em></h2>
-          <p style="font-size:15px; color:rgba(255,255,255,0.6); font-weight:300; line-height:1.7; max-width:420px;">16 checkpoints aligned with NIS2 awareness requirements. Get your phishing readiness score in 4 minutes — answers stay in your browser.</p>
+      <div class="process-step reveal reveal-d1">
+        <div class="process-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          <span class="process-num">02</span>
         </div>
+        <h3>Proposal</h3>
+        <p>You receive a clear proposal outlining scope, deliverables and a fixed price based on your needs.</p>
+        <span class="process-tag">Within 24 hours</span>
       </div>
-      <div class="lead-magnet-btns">
-        <a href="/phishing-check.html" class="lead-magnet-btn">Take the test →</a>
-        <a href="/Phishing_Awareness_Soroflow.pdf" download class="lead-magnet-btn-outline">Or download PDF</a>
+      <div class="process-step reveal reveal-d2">
+        <div class="process-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          <span class="process-num">03</span>
+        </div>
+        <h3>Assessment</h3>
+        <p>We review your organisation against the relevant standards — through documents, a questionnaire or a follow-up meeting.</p>
+        <span class="process-tag">Tailored to you</span>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          <span class="process-num">04</span>
+        </div>
+        <h3>Report delivered</h3>
+        <p>You receive a written report with our findings and a prioritised action plan — in plain language, not technical jargon.</p>
+        <span class="process-tag">Within 5 business days</span>
+      </div>
+      <div class="process-step reveal reveal-d1">
+        <div class="process-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10H7a5 5 0 0 0-5 5v3h20v-3a5 5 0 0 0-5-5z"/><circle cx="12" cy="5" r="3"/></svg>
+          <span class="process-num">05</span>
+        </div>
+        <h3>Walkthrough</h3>
+        <p>We present the results together, answer your questions, and make sure you leave with a clear path forward.</p>
+        <span class="process-tag">Included</span>
+      </div>
+      <div class="process-step reveal reveal-d2">
+        <div class="process-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+          <span class="process-num">06</span>
+        </div>
+        <h3>Follow-up</h3>
+        <p>We check in 30 days after delivery to answer any questions that have come up along the way.</p>
+        <span class="process-tag">30 days after</span>
       </div>
     </div>
   </div>
 </section>
+
+<section class="testimonial-bg">
+  <div class="container">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">"Cybersecurity used to be a black box for us. Soroflow turned it into a clear, actionable plan we could execute in weeks."</p>
+      <p class="testimonial-author">Client testimonials <span>— coming soon. We're working with our first clients now and will share their feedback here shortly.</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="cta-wrap reveal">
+      <h2>Ready to simplify <br><em>your security?</em></h2>
+      <p>Book a free 20-minute intro call. We'll listen to your situation and tell you honestly what should be done.</p>
+      <a href="https://calendly.com/hello-soroflow/20min" class="cta-btn-primary">Book free intro →</a>
+      <a href="mailto:hello@soroflow.com" class="cta-mailto">or write to hello@soroflow.com</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-brand-row"><img src="/icon.png" alt="Soroflow"><span class="footer-brand-name">Soroflow</span></div>
-      <p class="footer-tagline">Cybersecurity, simplified. Based in Copenhagen, serving clients across Denmark and the EU.</p>
+      <p class="footer-tagline">Cybersecurity, made simple. Based in Copenhagen, serving clients in Denmark and the EU.</p>
     </div>
-    <div class="footer-col"><h4>Navigation</h4><a href="#services">Services</a><a href="#compliance">Compliance</a><a href="/compliance-check.html">Check compliance</a><a href="#process">How it works</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    <div class="footer-col"><h4>Navigation</h4><a href="#services">Services</a><a href="#compliance">Compliance</a><a href="/compliance-check.html">Compliance Check</a><a href="#process">How it works</a><a href="#about">About</a><a href="#contact">Contact</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="/da/" hreflang="da">Dansk version</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
   </div>
   <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Copenhagen, Denmark</span></div>
 </footer>
 
 <script>
-  // Reveal animation
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Hamburger menu
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
     document.getElementById('hamburger').classList.toggle('open');
@@ -595,7 +681,6 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     document.getElementById('hamburger').classList.remove('open');
   }
 
-  // Cookie consent
   if (localStorage.getItem('cookieConsent')) {
     document.getElementById('cookieBanner').classList.add('hidden');
   }
