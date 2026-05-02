@@ -1,16 +1,14 @@
-## Hi there 👋
+# Cybersecurity, simplified.
 
-<!--
-**Soroflow/soroflow** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I help individuals and businesses protect their data — without the complexity.
 
-Here are some ideas to get you started:
+## What I do
+- Security fundamentals (ISO 27001 / NIS2 mindset)
+- Practical solutions — no jargon
+- Secure tools, workflows, and systems
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Focus
+Building simple, effective cybersecurity solutions that actually get used.
+
+## Contact
+[Visit Soroflow](https://soroflow.com)
