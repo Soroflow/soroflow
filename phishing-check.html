@@ -157,8 +157,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 @media (max-width: 768px) {
   nav { padding: 0 1.25rem; }
   .lang-toggle { padding: 6px 8px; }
-  .lang-toggle span { display: none; }
-  .lang-toggle .flag { margin-right: 0; }
   .page-wrap { padding: 90px 1.25rem 4rem; }
   .question-card { padding: 1.75rem; }
   .section-scores { grid-template-columns: 1fr; }
@@ -167,6 +165,17 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 @media (max-width: 480px) {
   .page-header h1 br { display: none; }
 }
+.qfooter { border-top: 1px solid var(--border); margin-top: 4rem; padding: 2.5rem 2rem 1.5rem; background: var(--bg2); }
+.qfooter-inner { max-width: 680px; margin: 0 auto; }
+.qfooter-row { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1rem; }
+.qfooter-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.qfooter-brand img { width: 24px; height: 24px; border-radius: 6px; }
+.qfooter-brand span { font-size: 14px; font-weight: 500; color: var(--text); }
+.qfooter-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.qfooter-links a { font-size: 13px; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+.qfooter-links a:hover { color: var(--text); }
+.qfooter-bottom { font-size: 12px; color: var(--text-light); padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+@media (max-width: 600px) { .qfooter-row { flex-direction: column; align-items: flex-start; gap: 1rem; } }
 </style>
 
 <!-- JSON-LD structured data -->
@@ -473,5 +482,28 @@ function dismissCookies() {
 
 updateProgress();
 </script>
+
+<footer class="qfooter">
+  <div class="qfooter-inner">
+    <div class="qfooter-row">
+      <a href="/" class="qfooter-brand">
+        <img src="/icon.png" alt="Soroflow">
+        <span>Soroflow</span>
+      </a>
+      <div class="qfooter-links">
+        <a href="/">Home</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/da/phishing-check.html" hreflang="da">Dansk</a>
+        <a href="mailto:hello@soroflow.com">Contact</a>
+      </div>
+    </div>
+    <div class="qfooter-bottom">
+      <span>© 2026 Soroflow. All rights reserved.</span>
+      <span>Copenhagen, Denmark</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
