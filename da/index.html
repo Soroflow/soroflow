@@ -36,21 +36,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-<!-- Google Analytics (consent-gated) -->
+<!-- Google Analytics (load on consent) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', { analytics_storage: 'denied' });
-  (function() {
+  function loadGoogleAnalytics() {
+    if (window._gaLoaded) return;
+    window._gaLoaded = true;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
     document.head.appendChild(s);
-  })();
-  gtag('js', new Date());
-  gtag('config', 'G-Z6E3W7W8BE');
+    gtag('js', new Date());
+    gtag('config', 'G-Z6E3W7W8BE', { anonymize_ip: true });
+  }
   if (localStorage.getItem('cookieConsent') === 'accepted') {
-    gtag('consent', 'update', { analytics_storage: 'granted' });
+    loadGoogleAnalytics();
   }
 </script>
 
@@ -304,7 +305,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 <body>
 
 <div class="cookie-banner" id="cookieBanner">
-  <p>Vi bruger analyse-cookies (Google Analytics) og tredjepartstjenester (Google Fonts, Unsplash, Calendly), der kan sætte cookies. Analyse aktiveres først, hvis du accepterer. Se vores <a href="/da/cookies.html">Cookiepolitik</a> og <a href="/da/privacy.html">Persondatapolitik</a>.</p>
+  <p>Vi bruger analyse-cookies (Google Analytics) og tredjepartstjenester (Google Fonts, Calendly), der kan sætte cookies. Analyse aktiveres først, hvis du accepterer. Se vores <a href="/da/cookies.html">Cookiepolitik</a> og <a href="/da/privacy.html">Persondatapolitik</a>.</p>
   <div class="cookie-banner-btns">
     <button class="cookie-decline" onclick="dismissCookies()">Afvis</button>
     <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
@@ -328,7 +329,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <a href="/" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#012169"/><path d="M0 0L28 21M28 0L0 21" stroke="#fff" stroke-width="3.5"/><path d="M0 0L28 21M28 0L0 21" stroke="#C8102E" stroke-width="1.5"/><path d="M14 0V21M0 10.5H28" stroke="#fff" stroke-width="5"/><path d="M14 0V21M0 10.5H28" stroke="#C8102E" stroke-width="3"/></svg> <span>EN</span></a>
     <a href="https://calendly.com/hello-soroflow/20min" class="nav-btn">Book gratis møde →</a>
   </div>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -634,8 +635,8 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 <section class="testimonial-bg">
   <div class="container">
     <div class="testimonial-card reveal">
-      <p class="testimonial-text">"Cybersikkerhed plejede at være en sort boks for os. Soroflow gjorde det til en klar, handlingsorienteret plan, vi kunne udføre på få uger."</p>
-      <p class="testimonial-author">Kundeudtalelser <span>— kommer snart. Vi arbejder netop nu med vores første kunder og deler deres feedback her snart.</span></p>
+      <p class="testimonial-text">Kundeudtalelser, <em>kommer snart.</em></p>
+      <p class="testimonial-author"><span>Vi arbejder netop nu med vores første kunder og deler deres feedback her snart.</span></p>
     </div>
   </div>
 </section>
@@ -675,12 +676,16 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-    document.getElementById('hamburger').classList.toggle('open');
+    var menu = document.getElementById('mobileMenu');
+    var btn = document.getElementById('hamburger');
+    var isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
   function closeMenu() {
     document.getElementById('mobileMenu').classList.remove('open');
     document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('hamburger').setAttribute('aria-expanded', 'false');
   }
 
   if (localStorage.getItem('cookieConsent')) {
@@ -689,10 +694,16 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   function acceptCookies() {
     localStorage.setItem('cookieConsent', 'accepted');
     document.getElementById('cookieBanner').classList.add('hidden');
-    gtag('consent', 'update', { analytics_storage: 'granted' });
+    loadGoogleAnalytics();
   }
   function dismissCookies() {
     localStorage.setItem('cookieConsent', 'declined');
+    document.getElementById('cookieBanner').classList.add('hidden');
+  }
+</script>
+</body>
+</html>
+          
     document.getElementById('cookieBanner').classList.add('hidden');
   }
 </script>
