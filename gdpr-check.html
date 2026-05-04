@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GDPR-parathedstest | Soroflow</title>
-<meta name="description" content="Test jeres GDPR-parathed på 4 minutter — 16 tjekpunkter baseret på GDPR-forpligtelserne for SMV'er i EU.">
+<title>GDPR Compliance Test | Soroflow</title>
+<meta name="description" content="Test your GDPR readiness in 4 minutes — 16 checkpoints based on the GDPR obligations for SMEs operating in the EU.">
 <meta name="theme-color" content="#1A3828">
 
-<link rel="canonical" href="https://www.soroflow.com/da/gdpr-check.html">
+<link rel="canonical" href="https://www.soroflow.com/gdpr-check.html">
 <link rel="alternate" hreflang="en" href="https://www.soroflow.com/gdpr-check.html">
 <link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/gdpr-check.html">
+<link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/gdpr-check.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Soroflow">
-<meta property="og:locale" content="da_DK">
-<meta property="og:url" content="https://www.soroflow.com/da/gdpr-check.html">
-<meta property="og:title" content="GDPR-parathedstest | Soroflow">
-<meta property="og:description" content="Test jeres GDPR-parathed på 4 minutter — 16 tjekpunkter baseret på GDPR-forpligtelserne for SMV'er i EU.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://www.soroflow.com/gdpr-check.html">
+<meta property="og:title" content="GDPR Compliance Test | Soroflow">
+<meta property="og:description" content="Test your GDPR readiness in 4 minutes — 16 checkpoints based on the GDPR obligations for SMEs operating in the EU.">
 <meta property="og:image" content="https://www.soroflow.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GDPR-parathedstest | Soroflow">
-<meta name="twitter:description" content="Test jeres GDPR-parathed på 4 minutter — 16 tjekpunkter for SMV'er i EU.">
+<meta name="twitter:title" content="GDPR Compliance Test | Soroflow">
+<meta name="twitter:description" content="Test your GDPR readiness in 4 minutes — 16 checkpoints based on the GDPR obligations for SMEs operating in the EU.">
 <meta name="twitter:image" content="https://www.soroflow.com/og-image.jpg">
 
 <link rel="icon" href="/icon.png">
@@ -52,11 +55,23 @@
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --bg: #F7F4EF; --bg2: #EFE9DF; --white: #FDFCFA; --dark: #0F0E0C; --dark2: #1C1A17;
-  --green: #1A3828; --green2: #2C5940; --green-light: #EAF2EC;
-  --text: #0F0E0C; --text-mid: #6B6558; --text-light: #9E9589;
-  --border: rgba(15,14,12,0.09); --border2: rgba(15,14,12,0.14);
-  --amber: #B7700A; --amber-light: #FEF4E4; --red: #A32D2D; --red-light: #FCEBEB;
+  --bg: #F7F4EF;
+  --bg2: #EFE9DF;
+  --white: #FDFCFA;
+  --dark: #0F0E0C;
+  --dark2: #1C1A17;
+  --green: #1A3828;
+  --green2: #2C5940;
+  --green-light: #EAF2EC;
+  --text: #0F0E0C;
+  --text-mid: #6B6558;
+  --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09);
+  --border2: rgba(15,14,12,0.14);
+  --amber: #B7700A;
+  --amber-light: #FEF4E4;
+  --red: #A32D2D;
+  --red-light: #FCEBEB;
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; min-height: 100vh; }
@@ -150,6 +165,17 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 @media (max-width: 480px) {
   .page-header h1 br { display: none; }
 }
+.qfooter { border-top: 1px solid var(--border); margin-top: 4rem; padding: 2.5rem 2rem 1.5rem; background: var(--bg2); }
+.qfooter-inner { max-width: 680px; margin: 0 auto; }
+.qfooter-row { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1rem; }
+.qfooter-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+.qfooter-brand img { width: 24px; height: 24px; border-radius: 6px; }
+.qfooter-brand span { font-size: 14px; font-weight: 500; color: var(--text); }
+.qfooter-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.qfooter-links a { font-size: 13px; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+.qfooter-links a:hover { color: var(--text); }
+.qfooter-bottom { font-size: 12px; color: var(--text-light); padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+@media (max-width: 600px) { .qfooter-row { flex-direction: column; align-items: flex-start; gap: 1rem; } }
 </style>
 
 <!-- JSON-LD structured data -->
@@ -157,17 +183,17 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "url": "https://www.soroflow.com/da/gdpr-check.html",
-  "name": "GDPR-parathedstest — Soroflow",
-  "description": "Test jeres GDPR-parathed på 4 minutter — 16 tjekpunkter baseret på GDPR-forpligtelserne for SMV'er i EU.",
-  "inLanguage": "da-DK",
+  "url": "https://www.soroflow.com/gdpr-check.html",
+  "name": "GDPR Compliance Test — Soroflow",
+  "description": "Test your GDPR readiness in 4 minutes — 16 checkpoints based on the GDPR obligations for SMEs operating in the EU.",
+  "inLanguage": "en-GB",
   "isPartOf": {"@id": "https://www.soroflow.com/#website"},
   "about": {"@id": "https://www.soroflow.com/#organization"},
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://www.soroflow.com/da/"},
-      {"@type": "ListItem", "position": 2, "name": "GDPR-test", "item": "https://www.soroflow.com/da/gdpr-check.html"}
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.soroflow.com/"},
+      {"@type": "ListItem", "position": 2, "name": "GDPR Test", "item": "https://www.soroflow.com/gdpr-check.html"}
     ]
   }
 }
@@ -177,34 +203,34 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>Vi bruger analyse-cookies (Google Analytics) og tredjepartstjenester (Google Fonts, Calendly), der kan sætte cookies. Analyse aktiveres først, hvis du accepterer. Jeres svar i quizzen scores lokalt i jeres browser — vi gemmer dem ikke. Se vores <a href="/da/cookies.html">Cookiepolitik</a> og <a href="/da/privacy.html">Persondatapolitik</a>.</p>
+  <p>We use analytics cookies (Google Analytics) and third-party services (Google Fonts, Calendly) that may set cookies. Analytics is only enabled if you accept. Your quiz answers are scored locally in your browser — we do not store them. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
   <div class="cookie-banner-btns">
-    <button class="cookie-decline" onclick="dismissCookies()">Afvis</button>
-    <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+    <button class="cookie-decline" onclick="dismissCookies()">Decline</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
   </div>
 </div>
 
 <nav>
-  <a href="/da/" class="brand">
+  <a href="/" class="brand">
     <img src="/icon.png" alt="Soroflow">
     <span class="brand-name">Soroflow</span>
   </a>
   <div class="nav-right">
-    <a href="/gdpr-check.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#012169"/><path d="M0 0L28 21M28 0L0 21" stroke="#fff" stroke-width="3.5"/><path d="M0 0L28 21M28 0L0 21" stroke="#C8102E" stroke-width="1.5"/><path d="M14 0V21M0 10.5H28" stroke="#fff" stroke-width="5"/><path d="M14 0V21M0 10.5H28" stroke="#C8102E" stroke-width="3"/></svg> <span>EN</span></a>
-    <a href="/da/" class="nav-btn">← Tilbage</a>
+    <a href="/da/gdpr-check.html" class="lang-toggle" hreflang="da" title="Skift til dansk"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#C60C30"/><rect x="9" width="3" height="21" fill="#fff"/><rect y="9" width="28" height="3" fill="#fff"/></svg> <span>DA</span></a>
+    <a href="/" class="nav-btn">← Back to site</a>
   </div>
 </nav>
 
 <div class="page-wrap">
   <div class="page-header">
-    <p class="eyebrow">Gratis værktøj</p>
-    <h1>Hvor GDPR-klar er <br><em>jeres virksomhed?</em></h1>
-    <p>16 tjekpunkter der dækker de centrale GDPR-forpligtelser for SMV'er i EU. Cirka 4 minutter — jeres svar forbliver i jeres browser.</p>
+    <p class="eyebrow">Free tool</p>
+    <h1>How GDPR-ready is <br><em>your business?</em></h1>
+    <p>16 checkpoints covering the core GDPR obligations for SMEs in the EU. About 4 minutes — your answers stay in your browser.</p>
   </div>
 
   <div class="progress-wrap">
     <div class="progress-label">
-      <span id="progressText">Spørgsmål 1 af 16</span>
+      <span id="progressText">Question 1 of 16</span>
       <span id="progressPct">0%</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
@@ -213,60 +239,60 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
   <div id="quizWrap"></div>
 
   <div class="nav-btns" id="navBtns">
-    <button class="btn-back" id="btnBack" onclick="goBack()" style="visibility:hidden">← Tilbage</button>
-    <button class="btn-next" id="btnNext" onclick="goNext()" disabled>Næste →</button>
+    <button class="btn-back" id="btnBack" onclick="goBack()" style="visibility:hidden">← Back</button>
+    <button class="btn-next" id="btnNext" onclick="goNext()" disabled>Next →</button>
   </div>
 
   <div class="result-card" id="resultCard">
     <div class="score-block">
       <span class="score-tag" id="scoreTag">—</span>
       <div class="score-number"><span id="scoreVal">0</span><span class="total"> / 16</span></div>
-      <h2 class="score-headline" id="scoreHeadline">Jeres GDPR-parathed</h2>
+      <h2 class="score-headline" id="scoreHeadline">Your GDPR readiness</h2>
       <p class="score-intro" id="scoreIntro"></p>
     </div>
 
-    <h3 style="font-size:13px; font-weight:500; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-light); margin-bottom:0.75rem;">Score pr. område</h3>
+    <h3 style="font-size:13px; font-weight:500; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-light); margin-bottom:0.75rem;">Score by area</h3>
     <div class="section-scores" id="sectionScores"></div>
 
     <div class="gaps-block" id="gapsBlock">
-      <h3>Hvor I bør starte</h3>
+      <h3>Where to focus first</h3>
       <div id="gapsList"></div>
     </div>
 
     <div class="result-cta">
-      <p id="ctaText">Vil I have hjælp til at lukke jeres svageste huller? Book et gratis 20-minutters møde — vi gennemgår jeres situation og siger ærligt, hvad I bør gøre.</p>
+      <p id="ctaText">Want help closing your weakest gaps? Book a free 20-minute call — we'll review your situation and tell you honestly what to do.</p>
       <div class="result-cta-btns">
-        <a href="https://calendly.com/hello-soroflow/20min">Book gratis møde →</a>
-        <a href="/da/GDPR_Checklist_Soroflow.pdf" download class="outline">Download som PDF</a>
+        <a href="https://calendly.com/hello-soroflow/20min">Book a free call →</a>
+        <a href="/GDPR_Checklist_Soroflow.pdf" download class="outline">Download as PDF</a>
       </div>
     </div>
-    <button class="btn-restart" onclick="restart()">← Start forfra</button>
+    <button class="btn-restart" onclick="restart()">← Start over</button>
   </div>
 </div>
 
 <script>
 const QUESTIONS = [
-  // 1. Lovligt grundlag og gennemsigtighed
-  { sec: 'Lovligt grundlag & gennemsigtighed', text: "Vi har identificeret et lovligt grundlag for hver type personoplysning, vi behandler", hint: "Samtykke, kontrakt, legitim interesse eller retlig forpligtelse — én af disse skal gælde for hver kategori." },
-  { sec: 'Lovligt grundlag & gennemsigtighed', text: "Vi har en klar og tilgængelig privatlivspolitik på vores website", hint: "Skal forklare, hvilke data I indsamler, hvorfor og hvor længe I opbevarer dem." },
-  { sec: 'Lovligt grundlag & gennemsigtighed', text: "Vi informerer personer ved indsamling om, hvordan deres data vil blive brugt", hint: "Privatlivsnotits på formularer, e-mailtilmeldinger eller kontrakter — ikke kun begravet i policysiden." },
-  { sec: 'Lovligt grundlag & gennemsigtighed', text: "Vi indhenter og dokumenterer udtrykkeligt samtykke, når det kræves", hint: "Samtykke skal være frivilligt, specifikt, informeret og utvetydigt — og I skal kunne dokumentere det." },
-  // 2. Dataregister & dataminimering
-  { sec: 'Dataregister & dataminimering', text: "Vi fører en fortegnelse over alle personoplysninger, vi behandler (Artikel 30-fortegnelse)", hint: "GDPR Artikel 30 kræver, at organisationer dokumenterer deres behandlingsaktiviteter." },
-  { sec: 'Dataregister & dataminimering', text: "Vi indsamler kun personoplysninger, der er strengt nødvendige for det angivne formål", hint: "Undgå at indsamle data 'for en sikkerheds skyld' — behandl kun det, I faktisk har brug for." },
-  { sec: 'Dataregister & dataminimering', text: "Vi har en defineret opbevaringsperiode for hver type personoplysning", hint: "Data må ikke opbevares længere end nødvendigt til formålet." },
-  // 3. Registreredes rettigheder
-  { sec: 'Registreredes rettigheder', text: "Vi har en proces til at håndtere indsigtsanmodninger inden for 30 dage", hint: "Personer kan anmode om en kopi af deres data — I skal svare inden for én måned." },
-  { sec: 'Registreredes rettigheder', text: "Vi kan slette eller berigtige personoplysninger på anmodning", hint: "Retten til sletning ('retten til at blive glemt') og retten til berigtigelse." },
-  { sec: 'Registreredes rettigheder', text: "Vi har en proces til at håndtere indsigelser mod databehandling", hint: "Personer kan gøre indsigelse mod behandling baseret på legitim interesse." },
-  // 4. Sikkerhed & brud
-  { sec: 'Sikkerhed & brud', text: "Vi har passende tekniske sikkerhedsforanstaltninger på plads", hint: "Kryptering, adgangskontrol, stærke adgangskoder, regelmæssige backups — proportionalt med risikoen." },
-  { sec: 'Sikkerhed & brud', text: "Vi har en skriftlig plan for håndtering af databrud", hint: "Brud skal anmeldes til Datatilsynet inden for 72 timer, hvis de udgør en risiko for personer." },
-  { sec: 'Sikkerhed & brud', text: "Adgang til personoplysninger er begrænset til autoriseret personale", hint: "Anvend princippet om mindste rettighed — giv kun adgang, hvor det er nødvendigt." },
-  { sec: 'Sikkerhed & brud', text: "Vi bruger stærke adgangskoder og MFA på systemer med personoplysninger", hint: "En grundlæggende, men kritisk kontrol — i stigende grad et krav fra cyber-forsikrere." },
-  // 5. Tredjeparter & overførsler
-  { sec: 'Tredjeparter & overførsler', text: "Vi har underskrevet databehandleraftaler med alle tredjeparts-databehandlere", hint: "CRM, e-mailudbyder, regnskabssoftware, cloud-lagring — enhver leverandør, der håndterer personoplysninger." },
-  { sec: 'Tredjeparter & overførsler', text: "Overførsler til tredjelande (uden for EU/EØS) har et gyldigt retsgrundlag", hint: "Standardkontraktbestemmelser, tilstrækkelighedsafgørelse eller anden Artikel 46-foranstaltning." },
+  // 1. Lawful Basis & Transparency
+  { sec: 'Lawful basis & transparency', text: "We have identified a lawful basis for every type of personal data we process", hint: "Consent, contract, legitimate interest, legal obligation — one of these must apply for every category." },
+  { sec: 'Lawful basis & transparency', text: "We have a clear and accessible privacy policy published on our website", hint: "Must explain what data you collect, why, and how long you keep it." },
+  { sec: 'Lawful basis & transparency', text: "We inform individuals at the point of data collection about how their data will be used", hint: "Privacy notice on forms, email sign-ups, or contracts — not just buried in the policy page." },
+  { sec: 'Lawful basis & transparency', text: "We obtain and record explicit consent where required", hint: "Consent must be freely given, specific, informed and unambiguous — and you must be able to prove it." },
+  // 2. Data Inventory & Minimisation
+  { sec: 'Data inventory & minimisation', text: "We maintain a record of all personal data we process (data register)", hint: "GDPR Article 30 requires organisations to document their processing activities." },
+  { sec: 'Data inventory & minimisation', text: "We only collect personal data that is strictly necessary for the stated purpose", hint: "Avoid collecting data 'just in case' — only process what you actually need." },
+  { sec: 'Data inventory & minimisation', text: "We have a defined retention period for each type of personal data", hint: "Data should not be kept longer than necessary for its purpose." },
+  // 3. Data Subject Rights
+  { sec: 'Data subject rights', text: "We have a process for handling subject access requests within 30 days", hint: "Individuals can request a copy of their data — you must respond within one month." },
+  { sec: 'Data subject rights', text: "We can delete or correct personal data upon request", hint: "Right to erasure ('right to be forgotten') and right to rectification." },
+  { sec: 'Data subject rights', text: "We have a process for handling objections to data processing", hint: "Individuals can object to processing based on legitimate interest." },
+  // 4. Security & Data Breaches
+  { sec: 'Security & breaches', text: "We have appropriate technical security measures in place", hint: "Encryption, access controls, strong passwords, regular backups — proportional to the risk." },
+  { sec: 'Security & breaches', text: "We have a written data breach response plan", hint: "Breaches must be reported to Datatilsynet within 72 hours if they pose a risk to individuals." },
+  { sec: 'Security & breaches', text: "Access to personal data is restricted to authorised personnel only", hint: "Apply the principle of least privilege — only give access where needed." },
+  { sec: 'Security & breaches', text: "We use strong passwords and MFA for systems holding personal data", hint: "A basic but critical control — and increasingly an expectation from cyber-insurers." },
+  // 5. Third Parties & Transfers
+  { sec: 'Third parties & transfers', text: "We have signed Data Processing Agreements with all third-party processors", hint: "CRM, email provider, accounting software, cloud storage — every supplier handling personal data." },
+  { sec: 'Third parties & transfers', text: "Third-country transfers (outside EU/EEA) have a valid legal basis", hint: "Standard Contractual Clauses, adequacy decision, or other Article 46 safeguard." },
 ];
 
 const ICONS = {
@@ -285,13 +311,13 @@ function renderQuestions() {
   QUESTIONS.forEach((q, i) => {
     const num = i + 1;
     html += `<div class="question-card${num === 1 ? '' : ' hidden'}" id="q${num}">
-      <p class="question-num">${q.sec} · Spørgsmål ${num} af ${total}</p>
+      <p class="question-num">${q.sec} · Question ${num} of ${total}</p>
       <p class="question-text">${q.text}</p>
       <p class="question-hint">${q.hint}</p>
       <div class="options">
-        <button class="option-btn" data-q="${num}" data-val="yes" onclick="answer(${num},'yes')"><span class="option-icon">${ICONS.yes}</span> Ja — fuldt på plads</button>
-        <button class="option-btn" data-q="${num}" data-val="partial" onclick="answer(${num},'partial')"><span class="option-icon">${ICONS.partial}</span> Delvist — vi er på vej</button>
-        <button class="option-btn" data-q="${num}" data-val="no" onclick="answer(${num},'no')"><span class="option-icon">${ICONS.no}</span> Nej — ikke på plads</button>
+        <button class="option-btn" data-q="${num}" data-val="yes" onclick="answer(${num},'yes')"><span class="option-icon">${ICONS.yes}</span> Yes — fully in place</button>
+        <button class="option-btn" data-q="${num}" data-val="partial" onclick="answer(${num},'partial')"><span class="option-icon">${ICONS.partial}</span> Partially — some of the way there</button>
+        <button class="option-btn" data-q="${num}" data-val="no" onclick="answer(${num},'no')"><span class="option-icon">${ICONS.no}</span> No — not in place</button>
       </div>
     </div>`;
   });
@@ -310,7 +336,7 @@ function updateProgress() {
   const pct = Math.round(((current - 1) / total) * 100);
   document.getElementById('progressFill').style.width = pct + '%';
   document.getElementById('progressPct').innerText = pct + '%';
-  document.getElementById('progressText').innerText = current <= total ? `Spørgsmål ${current} af ${total}` : 'Færdig';
+  document.getElementById('progressText').innerText = current <= total ? `Question ${current} of ${total}` : 'Complete';
   document.getElementById('btnBack').style.visibility = current > 1 ? 'visible' : 'hidden';
 }
 
@@ -321,7 +347,7 @@ function goNext() {
   current++;
   document.getElementById(`q${current}`).classList.remove('hidden');
   document.getElementById('btnNext').disabled = !answers[current];
-  document.getElementById('btnNext').innerText = current === total ? 'Se min score →' : 'Næste →';
+  document.getElementById('btnNext').innerText = current === total ? 'See my score →' : 'Next →';
   updateProgress();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -332,7 +358,7 @@ function goBack() {
   current--;
   document.getElementById(`q${current}`).classList.remove('hidden');
   document.getElementById('btnNext').disabled = false;
-  document.getElementById('btnNext').innerText = current === total ? 'Se min score →' : 'Næste →';
+  document.getElementById('btnNext').innerText = current === total ? 'See my score →' : 'Next →';
   updateProgress();
 }
 
@@ -351,27 +377,27 @@ function showResult() {
 
   let bucket, tagClass, headline, intro, ctaText;
   if (finalScore >= 13) {
-    bucket = 'Stærkt fundament';
+    bucket = 'Strong foundation';
     tagClass = 'strong';
-    headline = 'Stærkt GDPR-fundament.';
-    intro = "I er langt foran de fleste SMV'er. De resterende huller handler typisk om dokumentation snarere end substans — netop den slags polering, der holder under en revision. Book et møde for at formalisere det, I har.";
-    ctaText = 'Vil I have hjælp til at gøre jeres stærke fundament til formel, revisorvenlig dokumentation? Book et gratis 20-minutters møde.';
+    headline = 'Strong GDPR foundation.';
+    intro = "You're well ahead of most SMEs. The remaining gaps are usually around documentation rather than substance — exactly the kind of polish that holds up under audit. Book a call to formalise what you have.";
+    ctaText = 'Want help turning your strong foundation into formal, auditable documentation? Book a free 20-minute call.';
   } else if (finalScore >= 8) {
-    bucket = 'Mærkbare huller';
+    bucket = 'Notable gaps';
     tagClass = 'notable';
-    headline = 'Nogle mærkbare GDPR-huller.';
-    intro = "Fundamentet er delvist på plads, men flere centrale forpligtelser kræver opmærksomhed — særligt de røde nedenfor. Disse huller dukker hurtigt op i en Datatilsyns-inspektion eller en B2B-due-diligence.";
-    ctaText = "De fleste af disse huller kan lukkes på en fokuseret uge. Book et gratis 20-minutters møde, så fortæller vi jer, hvilke 3-4 I skal starte med.";
+    headline = 'Some notable GDPR gaps.';
+    intro = "Foundations are partially in place but several core obligations need attention — particularly anything in red below. These gaps would surface fast in a Datatilsynet inspection or a B2B due-diligence review.";
+    ctaText = "Most of these gaps can be closed in a focused week. Book a free 20-minute call and we'll tell you which 3-4 to start with.";
   } else {
-    bucket = 'Betydelig eksponering';
+    bucket = 'Significant exposure';
     tagClass = 'high';
-    headline = 'Betydelig GDPR-eksponering.';
-    intro = "GDPR-bøder kan nå op på 4 % af den globale omsætning — og hullerne nedenfor er den slags, Datatilsynet leder efter først. Den gode nyhed: en fokuseret indsats på 4-6 uger løfter typisk denne score med 8-10 point.";
-    ctaText = "En kort samtale kan kortlægge prioriteterne. Book et gratis 20-minutters møde — uden jargon og uden forpligtelser.";
+    headline = 'Significant GDPR exposure.';
+    intro = "GDPR fines can reach 4% of global turnover — and the gaps below are the kind Datatilsynet looks for first. The good news: a focused 4-6 week effort typically lifts this score by 8-10 points.";
+    ctaText = "A short conversation can map out the priorities. Book a free 20-minute intro call — no jargon, no obligation.";
   }
 
   if (typeof gtag === 'function') {
-    gtag('event', 'gdpr_check_completed', { score: finalScore, bucket: bucket, lang: 'da' });
+    gtag('event', 'gdpr_check_completed', { score: finalScore, bucket: bucket });
   }
 
   document.getElementById('scoreVal').innerText = finalScore;
@@ -408,7 +434,7 @@ function showResult() {
   } else {
     document.getElementById('gapsList').innerHTML = topGaps.map(g => `
       <div class="gap-item ${g.status === 'no' ? 'weak' : ''}">
-        <span class="gap-item-status">${g.status === 'no' ? 'Ikke på plads' : 'Delvist'}</span>
+        <span class="gap-item-status">${g.status === 'no' ? 'Not in place' : 'Partial'}</span>
         <div class="gap-item-title">${g.q.text}</div>
         <div class="gap-item-hint">${g.q.hint}</div>
       </div>
@@ -431,7 +457,7 @@ function restart() {
   document.querySelector('.progress-wrap').style.display = 'block';
   document.getElementById('resultCard').classList.remove('show');
   document.getElementById('btnNext').disabled = true;
-  document.getElementById('btnNext').innerText = 'Næste →';
+  document.getElementById('btnNext').innerText = 'Next →';
   updateProgress();
 }
 
@@ -450,5 +476,28 @@ function dismissCookies() {
 
 updateProgress();
 </script>
+
+<footer class="qfooter">
+  <div class="qfooter-inner">
+    <div class="qfooter-row">
+      <a href="/" class="qfooter-brand">
+        <img src="/icon.png" alt="Soroflow">
+        <span>Soroflow</span>
+      </a>
+      <div class="qfooter-links">
+        <a href="/">Home</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/da/gdpr-check.html" hreflang="da">Dansk</a>
+        <a href="mailto:hello@soroflow.com">Contact</a>
+      </div>
+    </div>
+    <div class="qfooter-bottom">
+      <span>© 2026 Soroflow. All rights reserved.</span>
+      <span>Copenhagen, Denmark</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
