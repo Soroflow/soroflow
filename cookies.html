@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cookie Policy | Soroflow</title>
-<meta name="description" content="Cookie Policy for Soroflow — how we use cookies on our website.">
+<title>Cookiepolitik | Soroflow</title>
+<meta name="description" content="Cookiepolitik for Soroflow — sådan bruger vi cookies på vores website.">
 <meta name="theme-color" content="#1A3828">
 <meta name="robots" content="index,follow">
 
-<link rel="canonical" href="https://www.soroflow.com/cookies.html">
+<link rel="canonical" href="https://www.soroflow.com/da/cookies.html">
 <link rel="alternate" hreflang="en" href="https://www.soroflow.com/cookies.html">
 <link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/cookies.html">
-<link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/cookies.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Soroflow">
-<meta property="og:locale" content="en_GB">
-<meta property="og:url" content="https://www.soroflow.com/cookies.html">
-<meta property="og:title" content="Cookie Policy | Soroflow">
-<meta property="og:description" content="Cookie Policy for Soroflow — how we use cookies on our website.">
-<meta property="og:image" content="https://www.soroflow.com/og-image.png">
+<meta property="og:locale" content="da_DK">
+<meta property="og:url" content="https://www.soroflow.com/da/cookies.html">
+<meta property="og:title" content="Cookiepolitik | Soroflow">
+<meta property="og:description" content="Sådan bruger vi cookies på vores website.">
+<meta property="og:image" content="https://www.soroflow.com/og-image.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cookie Policy | Soroflow">
-<meta name="twitter:description" content="Cookie Policy for Soroflow — how we use cookies on our website.">
-<meta name="twitter:image" content="https://www.soroflow.com/og-image.png">
+<meta name="twitter:title" content="Cookiepolitik | Soroflow">
+<meta name="twitter:description" content="Sådan bruger vi cookies på vores website.">
+<meta name="twitter:image" content="https://www.soroflow.com/og-image.jpg">
 
 <link rel="icon" href="/icon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -32,40 +31,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 
-<!-- Google Analytics (consent-gated) -->
+<!-- Google Analytics (load on consent) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', { analytics_storage: 'denied' });
-  (function() {
+  function loadGoogleAnalytics() {
+    if (window._gaLoaded) return;
+    window._gaLoaded = true;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
     document.head.appendChild(s);
-  })();
-  gtag('js', new Date());
-  gtag('config', 'G-Z6E3W7W8BE');
+    gtag('js', new Date());
+    gtag('config', 'G-Z6E3W7W8BE', { anonymize_ip: true });
+  }
   if (localStorage.getItem('cookieConsent') === 'accepted') {
-    gtag('consent', 'update', { analytics_storage: 'granted' });
+    loadGoogleAnalytics();
   }
 </script>
 
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --bg: #F7F4EF;
-  --bg2: #EFE9DF;
-  --white: #FDFCFA;
-  --dark: #0F0E0C;
-  --dark2: #1C1A17;
-  --green: #1A3828;
-  --green2: #2C5940;
-  --green-light: #EAF2EC;
-  --text: #0F0E0C;
-  --text-mid: #6B6558;
-  --text-light: #9E9589;
-  --border: rgba(15,14,12,0.09);
-  --border2: rgba(15,14,12,0.14);
+  --bg: #F7F4EF; --bg2: #EFE9DF; --white: #FDFCFA; --dark: #0F0E0C; --dark2: #1C1A17;
+  --green: #1A3828; --green2: #2C5940; --green-light: #EAF2EC;
+  --text: #0F0E0C; --text-mid: #6B6558; --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09); --border2: rgba(15,14,12,0.14);
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
@@ -89,6 +80,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .content ul { padding-left: 1.25rem; margin-bottom: 1rem; }
 .content ul li { font-size: 15px; color: var(--text-mid); line-height: 1.8; font-weight: 300; margin-bottom: 0.4rem; }
 .content a { color: var(--green); text-decoration: underline; }
+.content code { background: var(--bg2); padding: 2px 6px; border-radius: 4px; font-size: 13px; }
 .cookie-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
 .cookie-table th { background: var(--green); color: white; padding: 10px 14px; text-align: left; font-weight: 500; font-size: 13px; }
 .cookie-table th:first-child { border-radius: 8px 0 0 0; }
@@ -123,17 +115,17 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "url": "https://www.soroflow.com/cookies.html",
-  "name": "Cookie Policy — Soroflow",
-  "description": "Cookie Policy for Soroflow — how we use cookies on our website.",
-  "inLanguage": "en-GB",
+  "url": "https://www.soroflow.com/da/cookies.html",
+  "name": "Cookiepolitik — Soroflow",
+  "description": "Cookiepolitik for Soroflow — sådan bruger vi cookies på vores website.",
+  "inLanguage": "da-DK",
   "isPartOf": {"@id": "https://www.soroflow.com/#website"},
   "about": {"@id": "https://www.soroflow.com/#organization"},
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.soroflow.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Cookie Policy", "item": "https://www.soroflow.com/cookies.html"}
+      {"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://www.soroflow.com/da/"},
+      {"@type": "ListItem", "position": 2, "name": "Cookiepolitik", "item": "https://www.soroflow.com/da/cookies.html"}
     ]
   }
 }
@@ -141,70 +133,64 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
 </head>
 <body>
 <nav>
-  <a href="/" class="brand">
+  <a href="/da/" class="brand">
     <img src="/icon.png" alt="Soroflow">
     <span class="brand-name">Soroflow</span>
   </a>
   <div class="nav-right">
-    <a href="/da/cookies.html" class="lang-toggle" hreflang="da" title="Skift til dansk"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#C60C30"/><rect x="9" width="3" height="21" fill="#fff"/><rect y="9" width="28" height="3" fill="#fff"/></svg> <span>DA</span></a>
-    <a href="/" class="nav-btn">← Back to home</a>
+    <a href="/cookies.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#012169"/><path d="M0 0L28 21M28 0L0 21" stroke="#fff" stroke-width="3.5"/><path d="M0 0L28 21M28 0L0 21" stroke="#C8102E" stroke-width="1.5"/><path d="M14 0V21M0 10.5H28" stroke="#fff" stroke-width="5"/><path d="M14 0V21M0 10.5H28" stroke="#C8102E" stroke-width="3"/></svg> <span>EN</span></a>
+    <a href="/da/" class="nav-btn">← Tilbage</a>
   </div>
 </nav>
 
 <div class="page-header">
-  <p>Legal</p>
-  <h1>Cookie Policy</h1>
-  <span class="updated">Last updated: April 2026</span>
+  <p>Juridisk</p>
+  <h1>Cookiepolitik</h1>
+  <span class="updated">Sidst opdateret: april 2026</span>
 </div>
 
 <div class="content">
 
-  <p>This Cookie Policy explains how Soroflow uses cookies and similar technologies on our website (soroflow.com). We only set non-essential cookies (such as analytics) after you give explicit consent via the cookie banner. You can change or withdraw your consent at any time by clearing the <code>cookieConsent</code> entry from your browser's site data.</p>
+  <p>Denne cookiepolitik forklarer, hvordan Soroflow bruger cookies og lignende teknologier på vores website (soroflow.com). Vi sætter kun ikke-essentielle cookies (såsom analytics), efter du har givet udtrykkeligt samtykke via cookie-banneret. Du kan til enhver tid ændre eller tilbagetrække dit samtykke ved at slette posten <code>cookieConsent</code> fra din browsers webstedsdata.</p>
 
-  <h2>1. What are cookies?</h2>
-  <p>Cookies are small text files that are stored on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners. Cookies can be "session cookies" (deleted when you close your browser) or "persistent cookies" (stored for a set period of time).</p>
+  <h2>1. Hvad er cookies?</h2>
+  <p>Cookies er små tekstfiler, der gemmes på din enhed, når du besøger et website. De bruges til at få websites til at fungere mere effektivt og til at give information til website-ejere. Cookies kan være "session-cookies" (slettes når du lukker din browser) eller "vedvarende cookies" (gemmes i en bestemt periode).</p>
 
-  <h2>2. Cookies we use</h2>
-  <p>Our website does not set any first-party cookies. However, the following third-party services used on our website may set cookies:</p>
+  <h2>2. Cookies vi bruger</h2>
+  <p>Vores website sætter ingen førsteparts-cookies. Dog kan følgende tredjepartstjenester, der bruges på vores website, sætte cookies:</p>
 
   <table class="cookie-table">
     <tr>
-      <th>Service</th>
-      <th>Purpose</th>
+      <th>Tjeneste</th>
+      <th>Formål</th>
       <th>Type</th>
-      <th>More info</th>
+      <th>Mere info</th>
     </tr>
     <tr>
       <td><strong>Google Fonts</strong></td>
-      <td>Loads fonts used on the website. Google may log font requests.</td>
-      <td>Functional</td>
+      <td>Indlæser fonte brugt på websitet. Google kan logge anmodninger om fonte.</td>
+      <td>Funktionel</td>
       <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
     </tr>
     <tr>
       <td><strong>Google Analytics</strong></td>
-      <td>Collects anonymised data about website traffic and user behaviour to help us improve the site. Sets cookies such as <code>_ga</code> and <code>_ga_&lt;container-id&gt;</code> (GA4).</td>
+      <td>Indsamler anonymiserede data om website-trafik og brugeradfærd for at hjælpe os med at forbedre sitet. Sætter cookies som <code>_ga</code> og <code>_ga_&lt;container-id&gt;</code> (GA4).</td>
       <td>Analytics</td>
       <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></td>
     </tr>
     <tr>
-      <td><strong>Unsplash</strong></td>
-      <td>Serves images displayed on our website.</td>
-      <td>Functional</td>
-      <td><a href="https://unsplash.com/privacy" target="_blank">Unsplash Privacy</a></td>
-    </tr>
-    <tr>
       <td><strong>Calendly</strong></td>
-      <td>Powers the meeting booking functionality. Calendly sets cookies when you interact with the booking link.</td>
-      <td>Functional</td>
+      <td>Driver mødebooking-funktionaliteten. Calendly sætter cookies, når du interagerer med booking-linket.</td>
+      <td>Funktionel</td>
       <td><a href="https://calendly.com/privacy" target="_blank">Calendly Privacy</a></td>
     </tr>
   </table>
 
-  <p>We do not use any marketing or advertising cookies, and we do not share data with advertisers.</p>
+  <p>Vi bruger ingen marketing- eller reklamecookies, og vi deler ingen data med annoncører.</p>
 
-  <h2>3. How to control cookies</h2>
-  <p>You can control and manage cookies in your browser settings. Most browsers allow you to refuse cookies or delete existing ones. Please note that disabling cookies may affect the functionality of some parts of our website.</p>
-  <p>Here are links to cookie settings for common browsers:</p>
+  <h2>3. Sådan styrer du cookies</h2>
+  <p>Du kan styre og administrere cookies i dine browser-indstillinger. De fleste browsere lader dig afvise cookies eller slette eksisterende cookies. Bemærk, at deaktivering af cookies kan påvirke funktionaliteten af dele af vores website.</p>
+  <p>Her er links til cookie-indstillinger for almindelige browsere:</p>
   <ul>
     <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
     <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">Mozilla Firefox</a></li>
@@ -212,11 +198,11 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank">Microsoft Edge</a></li>
   </ul>
 
-  <h2>4. Changes to this policy</h2>
-  <p>We may update this Cookie Policy from time to time. The date at the top of this page will always reflect the most recent version.</p>
+  <h2>4. Ændringer af denne politik</h2>
+  <p>Vi kan opdatere denne cookiepolitik fra tid til anden. Datoen øverst på denne side vil altid afspejle den seneste version.</p>
 
-  <h2>5. Contact</h2>
-  <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:hello@soroflow.com">hello@soroflow.com</a>.</p>
+  <h2>5. Kontakt</h2>
+  <p>Hvis du har spørgsmål om vores brug af cookies, så kontakt os på <a href="mailto:hello@soroflow.com">hello@soroflow.com</a>.</p>
 
 </div>
 
@@ -224,12 +210,13 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-brand-row"><img src="/icon.png" alt="Soroflow"><span class="footer-brand-name">Soroflow</span></div>
-      <p class="footer-tagline">Cybersecurity, simplified. Based in Copenhagen, serving clients across Denmark and the EU.</p>
+      <p class="footer-tagline">Cybersikkerhed, gjort enkelt. Baseret i København, betjener kunder i Danmark og EU.</p>
     </div>
-    <div class="footer-col"><h4>Navigation</h4><a href="/#services">Services</a><a href="/#compliance">Compliance</a><a href="/#about">About</a><a href="/#contact">Contact</a></div>
-    <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="/da/cookies.html" hreflang="da">Dansk version</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
+    <div class="footer-col"><h4>Navigation</h4><a href="/da/#services">Ydelser</a><a href="/da/#compliance">Compliance</a><a href="/da/#about">Om os</a><a href="/da/#contact">Kontakt</a></div>
+    <div class="footer-col"><h4>Juridisk</h4><a href="/da/privacy.html">Persondatapolitik</a><a href="/da/cookies.html">Cookiepolitik</a><a href="/cookies.html" hreflang="en">English version</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 Soroflow. All rights reserved.</span><span>Copenhagen, Denmark</span></div>
+  <div class="footer-bottom"><span>© 2026 Soroflow. Alle rettigheder forbeholdes.</span><span>København, Danmark</span></div>
 </footer>
 </body>
 </html>
+                                                                                                                                                                                                                                         
