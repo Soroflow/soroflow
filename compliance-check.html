@@ -429,7 +429,7 @@ if (localStorage.getItem('cookieConsent')) {
 function acceptCookies() {
   localStorage.setItem('cookieConsent', 'accepted');
   document.getElementById('cookieBanner').classList.add('hidden');
-  gtag('consent', 'update', { analytics_storage: 'granted' });
+  loadGoogleAnalytics();
 }
 function dismissCookies() {
   localStorage.setItem('cookieConsent', 'declined');
