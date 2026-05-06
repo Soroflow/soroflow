@@ -48,6 +48,6 @@
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/da/index.html", "destination": "/da/", "permanent": true }
+    { "source": "/da/index.html", "destination": "/da", "permanent": true }
   ]
 }
