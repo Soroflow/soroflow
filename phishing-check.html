@@ -1,30 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phishing Readiness Check | Soroflow</title>
-<meta name="description" content="Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.">
+<title>Phishing-parathedstest | Soroflow</title>
+<meta name="description" content="Test jeres organisations phishing-modstand på 4 minutter — 16 tjekpunkter tilpasset NIS2's awareness-krav.">
 <meta name="theme-color" content="#1A3828">
 
-<link rel="canonical" href="https://www.soroflow.com/phishing-check.html">
+<link rel="canonical" href="https://www.soroflow.com/da/phishing-check.html">
 <link rel="alternate" hreflang="en" href="https://www.soroflow.com/phishing-check.html">
 <link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/phishing-check.html">
-<link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/phishing-check.html">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Soroflow">
-<meta property="og:locale" content="en_GB">
-<meta property="og:url" content="https://www.soroflow.com/phishing-check.html">
-<meta property="og:title" content="Phishing Readiness Check | Soroflow">
-<meta property="og:description" content="Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.">
+<meta property="og:locale" content="da_DK">
+<meta property="og:url" content="https://www.soroflow.com/da/phishing-check.html">
+<meta property="og:title" content="Phishing-parathedstest | Soroflow">
+<meta property="og:description" content="Test jeres organisations phishing-modstand på 4 minutter — 16 tjekpunkter tilpasset NIS2's awareness-krav.">
 <meta property="og:image" content="https://www.soroflow.com/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Phishing Readiness Check | Soroflow">
-<meta name="twitter:description" content="Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.">
+<meta name="twitter:title" content="Phishing-parathedstest | Soroflow">
+<meta name="twitter:description" content="Test jeres organisations phishing-modstand — 16 tjekpunkter tilpasset NIS2.">
 <meta name="twitter:image" content="https://www.soroflow.com/og-image.jpg">
 
 <link rel="icon" href="/icon.png">
@@ -55,23 +52,11 @@
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --bg: #F7F4EF;
-  --bg2: #EFE9DF;
-  --white: #FDFCFA;
-  --dark: #0F0E0C;
-  --dark2: #1C1A17;
-  --green: #1A3828;
-  --green2: #2C5940;
-  --green-light: #EAF2EC;
-  --text: #0F0E0C;
-  --text-mid: #6B6558;
-  --text-light: #9E9589;
-  --border: rgba(15,14,12,0.09);
-  --border2: rgba(15,14,12,0.14);
-  --amber: #B7700A;
-  --amber-light: #FEF4E4;
-  --red: #A32D2D;
-  --red-light: #FCEBEB;
+  --bg: #F7F4EF; --bg2: #EFE9DF; --white: #FDFCFA; --dark: #0F0E0C; --dark2: #1C1A17;
+  --green: #1A3828; --green2: #2C5940; --green-light: #EAF2EC;
+  --text: #0F0E0C; --text-mid: #6B6558; --text-light: #9E9589;
+  --border: rgba(15,14,12,0.09); --border2: rgba(15,14,12,0.14);
+  --amber: #B7700A; --amber-light: #FEF4E4; --red: #A32D2D; --red-light: #FCEBEB;
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; min-height: 100vh; }
@@ -95,7 +80,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-light); margin-bottom: 8px; }
 .progress-bar { height: 4px; background: var(--border2); border-radius: 4px; overflow: hidden; }
 .progress-fill { height: 100%; background: var(--green); border-radius: 4px; transition: width 0.4s ease; }
-.section-label { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem; text-align: center; }
 .question-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 2.25rem 2.5rem; margin-bottom: 1.5rem; }
 .question-card.hidden { display: none; }
 .question-num { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem; }
@@ -166,17 +150,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 @media (max-width: 480px) {
   .page-header h1 br { display: none; }
 }
-.qfooter { border-top: 1px solid var(--border); margin-top: 4rem; padding: 2.5rem 2rem 1.5rem; background: var(--bg2); }
-.qfooter-inner { max-width: 680px; margin: 0 auto; }
-.qfooter-row { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1rem; }
-.qfooter-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
-.qfooter-brand img { width: 24px; height: 24px; border-radius: 6px; }
-.qfooter-brand span { font-size: 14px; font-weight: 500; color: var(--text); }
-.qfooter-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
-.qfooter-links a { font-size: 13px; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
-.qfooter-links a:hover { color: var(--text); }
-.qfooter-bottom { font-size: 12px; color: var(--text-light); padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
-@media (max-width: 600px) { .qfooter-row { flex-direction: column; align-items: flex-start; gap: 1rem; } }
 </style>
 
 <!-- JSON-LD structured data -->
@@ -184,17 +157,17 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "url": "https://www.soroflow.com/phishing-check.html",
-  "name": "Phishing Readiness Check — Soroflow",
-  "description": "Test your organisation's phishing defences in 4 minutes — 16 checkpoints aligned with NIS2 awareness requirements.",
-  "inLanguage": "en-GB",
+  "url": "https://www.soroflow.com/da/phishing-check.html",
+  "name": "Phishing-parathedstest — Soroflow",
+  "description": "Test jeres organisations phishing-modstand på 4 minutter — 16 tjekpunkter tilpasset NIS2's awareness-krav.",
+  "inLanguage": "da-DK",
   "isPartOf": {"@id": "https://www.soroflow.com/#website"},
   "about": {"@id": "https://www.soroflow.com/#organization"},
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.soroflow.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Phishing Test", "item": "https://www.soroflow.com/phishing-check.html"}
+      {"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://www.soroflow.com/da/"},
+      {"@type": "ListItem", "position": 2, "name": "Phishing-test", "item": "https://www.soroflow.com/da/phishing-check.html"}
     ]
   }
 }
@@ -204,34 +177,34 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>We use analytics cookies (Google Analytics) and third-party services (Google Fonts, Calendly) that may set cookies. Analytics is only enabled if you accept. Your quiz answers are scored locally in your browser — we do not store them. See our <a href="/cookies.html">Cookie Policy</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
+  <p>Vi bruger analyse-cookies (Google Analytics) og tredjepartstjenester (Google Fonts, Calendly), der kan sætte cookies. Analyse aktiveres først, hvis du accepterer. Jeres svar i quizzen scores lokalt i jeres browser — vi gemmer dem ikke. Se vores <a href="/da/cookies.html">Cookiepolitik</a> og <a href="/da/privacy.html">Persondatapolitik</a>.</p>
   <div class="cookie-banner-btns">
-    <button class="cookie-decline" onclick="dismissCookies()">Decline</button>
-    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+    <button class="cookie-decline" onclick="dismissCookies()">Afvis</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
   </div>
 </div>
 
 <nav>
-  <a href="/" class="brand">
+  <a href="/da/" class="brand">
     <img src="/icon.png" alt="Soroflow">
     <span class="brand-name">Soroflow</span>
   </a>
   <div class="nav-right">
-    <a href="/da/phishing-check.html" class="lang-toggle" hreflang="da" title="Skift til dansk"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#C60C30"/><rect x="9" width="3" height="21" fill="#fff"/><rect y="9" width="28" height="3" fill="#fff"/></svg> <span>DA</span></a>
-    <a href="/" class="nav-btn">← Back to site</a>
+    <a href="/phishing-check.html" class="lang-toggle" hreflang="en" title="Switch to English"><svg class="flag" viewBox="0 0 28 21" aria-hidden="true" focusable="false"><rect width="28" height="21" fill="#012169"/><path d="M0 0L28 21M28 0L0 21" stroke="#fff" stroke-width="3.5"/><path d="M0 0L28 21M28 0L0 21" stroke="#C8102E" stroke-width="1.5"/><path d="M14 0V21M0 10.5H28" stroke="#fff" stroke-width="5"/><path d="M14 0V21M0 10.5H28" stroke="#C8102E" stroke-width="3"/></svg> <span>EN</span></a>
+    <a href="/da/" class="nav-btn">← Tilbage</a>
   </div>
 </nav>
 
 <div class="page-wrap">
   <div class="page-header">
-    <p class="eyebrow">Free tool</p>
-    <h1>How resilient is <br>your <em>phishing defence?</em></h1>
-    <p>16 checkpoints aligned with NIS2 awareness requirements. About 4 minutes — your answers stay in your browser.</p>
+    <p class="eyebrow">Gratis værktøj</p>
+    <h1>Hvor robust er <br>jeres <em>phishing-forsvar?</em></h1>
+    <p>16 tjekpunkter tilpasset NIS2's awareness-krav. Cirka 4 minutter — jeres svar forbliver i jeres browser.</p>
   </div>
 
   <div class="progress-wrap">
     <div class="progress-label">
-      <span id="progressText">Question 1 of 16</span>
+      <span id="progressText">Spørgsmål 1 af 16</span>
       <span id="progressPct">0%</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
@@ -240,60 +213,60 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; di
   <div id="quizWrap"></div>
 
   <div class="nav-btns" id="navBtns">
-    <button class="btn-back" id="btnBack" onclick="goBack()" style="visibility:hidden">← Back</button>
-    <button class="btn-next" id="btnNext" onclick="goNext()" disabled>Next →</button>
+    <button class="btn-back" id="btnBack" onclick="goBack()" style="visibility:hidden">← Tilbage</button>
+    <button class="btn-next" id="btnNext" onclick="goNext()" disabled>Næste →</button>
   </div>
 
   <div class="result-card" id="resultCard">
     <div class="score-block">
       <span class="score-tag" id="scoreTag">—</span>
       <div class="score-number"><span id="scoreVal">0</span><span class="total"> / 16</span></div>
-      <h2 class="score-headline" id="scoreHeadline">Your phishing readiness</h2>
+      <h2 class="score-headline" id="scoreHeadline">Jeres phishing-parathed</h2>
       <p class="score-intro" id="scoreIntro"></p>
     </div>
 
-    <h3 style="font-size:13px; font-weight:500; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-light); margin-bottom:0.75rem;">Score by area</h3>
+    <h3 style="font-size:13px; font-weight:500; letter-spacing:0.8px; text-transform:uppercase; color:var(--text-light); margin-bottom:0.75rem;">Score pr. område</h3>
     <div class="section-scores" id="sectionScores"></div>
 
     <div class="gaps-block" id="gapsBlock">
-      <h3>Where to focus first</h3>
+      <h3>Hvor I bør starte</h3>
       <div id="gapsList"></div>
     </div>
 
     <div class="result-cta">
-      <p id="ctaText">Want help closing your weakest gaps? Book a free 20-minute call — we'll review your situation and tell you honestly what to do.</p>
+      <p id="ctaText">Vil I have hjælp til at lukke jeres svageste huller? Book et gratis 20-minutters møde — vi gennemgår jeres situation og siger ærligt, hvad I bør gøre.</p>
       <div class="result-cta-btns">
-        <a href="https://calendly.com/hello-soroflow/20min">Book a free call →</a>
-        <a href="/Phishing_Awareness_Soroflow.pdf" download class="outline">Download as PDF</a>
+        <a href="https://calendly.com/hello-soroflow/20min">Book gratis møde →</a>
+        <a href="/da/Phishing_Awareness_Soroflow.pdf" download class="outline">Download som PDF</a>
       </div>
     </div>
-    <button class="btn-restart" onclick="restart()">← Start over</button>
+    <button class="btn-restart" onclick="restart()">← Start forfra</button>
   </div>
 </div>
 
 <script>
 const QUESTIONS = [
-  // 1. Recognising Phishing
-  { sec: 'Recognising phishing', text: "Staff verify the sender's actual email address, not just the display name", hint: "Phishing emails commonly spoof familiar names while using a completely different real address." },
-  { sec: 'Recognising phishing', text: "Unexpected urgency or pressure is treated as a red flag", hint: "Phrases like 'act now' or 'urgent payment required' are classic warning signs." },
-  { sec: 'Recognising phishing', text: "Staff hover over links before clicking to verify the destination", hint: "The real domain often differs from the displayed text — e.g. nordea-login.dk vs. nordea.dk." },
-  { sec: 'Recognising phishing', text: "We are cautious of unexpected attachments, even from known senders", hint: "Compromised accounts are routinely used to send malware to existing contacts." },
-  // 2. Email & Account Security
-  { sec: 'Email & account security', text: "Multi-factor authentication is enabled on all email and business accounts", hint: "Drastically reduces account takeover risk even if a password is phished." },
-  { sec: 'Email & account security', text: "SPF, DKIM, and DMARC are configured for our email domain", hint: "Prevents attackers from spoofing your business domain in their phishing campaigns." },
-  { sec: 'Email & account security', text: "Look-alike domains are monitored or blocked at the email gateway", hint: "Variants like soroflovv.com or soroflow-support.com — register and monitor them." },
-  // 3. Awareness & Training
-  { sec: 'Awareness & training', text: "Phishing awareness training is delivered at least once per year", hint: "NIS2 Article 21 requires regular cybersecurity training for all staff and management." },
-  { sec: 'Awareness & training', text: "Staff have a clear, easy way to report suspicious emails", hint: "A 'Report Phishing' button, a dedicated mailbox, or a named IT contact." },
-  { sec: 'Awareness & training', text: "New employees receive phishing awareness training during onboarding", hint: "Don't wait for the annual cycle — establish security awareness from day one." },
-  // 4. Incident Response
-  { sec: 'Incident response', text: "We have a written procedure for what to do if someone clicks a phishing link", hint: "Speed matters: isolate the device, change passwords, notify IT, review activity logs." },
-  { sec: 'Incident response', text: "Passwords can be reset and active sessions revoked quickly for compromised accounts", hint: "Required to contain account takeover before further damage occurs." },
-  { sec: 'Incident response', text: "Reported phishing attempts are logged and reviewed", hint: "Patterns reveal targeted campaigns and inform future training topics." },
-  // 5. Testing & Continuous Improvement
-  { sec: 'Testing & improvement', text: "We run simulated phishing campaigns to test staff readiness", hint: "NIS2 best practice — reveals real-world gaps before actual attackers do." },
-  { sec: 'Testing & improvement', text: "We track our click-rate over time and aim to reduce it", hint: "A common goal: a click-rate under 5% within 12 months." },
-  { sec: 'Testing & improvement', text: "Staff are briefed on current threats targeting Danish SMEs", hint: "MitID-spoofing, e-Boks impersonation, fake invoices from 'DSB' or 'PostNord'." },
+  // 1. Genkend phishing
+  { sec: 'Genkend phishing', text: "Medarbejdere verificerer afsenderens faktiske e-mailadresse, ikke kun visningsnavnet", hint: "Phishing-mails forfalsker ofte velkendte navne, mens den reelle adresse er en helt anden." },
+  { sec: 'Genkend phishing', text: "Uventet hastværk eller pres behandles som et faresignal", hint: "Vendinger som 'handl nu' eller 'akut betaling påkrævet' er klassiske advarselstegn." },
+  { sec: 'Genkend phishing', text: "Medarbejdere holder musen over links før klik for at verificere destinationen", hint: "Det reelle domæne afviger ofte fra den viste tekst — fx nordea-login.dk vs. nordea.dk." },
+  { sec: 'Genkend phishing', text: "Vi er forsigtige med uventede vedhæftninger, også fra kendte afsendere", hint: "Kompromitterede konti bruges rutinemæssigt til at sende malware til eksisterende kontakter." },
+  // 2. E-mail- og kontosikkerhed
+  { sec: 'E-mail- og kontosikkerhed', text: "Multifaktor-autentificering er aktiveret på alle e-mail- og forretningskonti", hint: "Reducerer drastisk risikoen for konto-overtagelse, selv hvis en adgangskode bliver phishet." },
+  { sec: 'E-mail- og kontosikkerhed', text: "SPF, DKIM og DMARC er konfigureret for vores e-maildomæne", hint: "Forhindrer angribere i at forfalske jeres forretningsdomæne i deres phishing-kampagner." },
+  { sec: 'E-mail- og kontosikkerhed', text: "Lookalike-domæner overvåges eller blokeres ved e-mail-gatewayen", hint: "Varianter som soroflovv.com eller soroflow-support.com — registrér og overvåg dem." },
+  // 3. Awareness & træning
+  { sec: 'Awareness & træning', text: "Phishing-awareness-træning afholdes mindst én gang årligt", hint: "NIS2 Artikel 21 kræver regelmæssig cybersikkerhedstræning for alle medarbejdere og ledelse." },
+  { sec: 'Awareness & træning', text: "Medarbejdere har en klar, nem måde at rapportere mistænkelige e-mails på", hint: "En 'Rapportér phishing'-knap, en dedikeret postkasse eller en navngivet IT-kontakt." },
+  { sec: 'Awareness & træning', text: "Nye medarbejdere får phishing-awareness-træning under onboarding", hint: "Vent ikke på den årlige cyklus — etablér sikkerhedsbevidsthed fra dag ét." },
+  // 4. Hændelseshåndtering
+  { sec: 'Hændelseshåndtering', text: "Vi har en skriftlig procedure for, hvad der skal ske, hvis nogen klikker på et phishing-link", hint: "Hastighed er afgørende: isolér enheden, skift adgangskoder, underret IT, gennemgå aktivitetslogs." },
+  { sec: 'Hændelseshåndtering', text: "Adgangskoder kan nulstilles og aktive sessioner tilbagekaldes hurtigt for kompromitterede konti", hint: "Nødvendigt for at inddæmme konto-overtagelse, før yderligere skade sker." },
+  { sec: 'Hændelseshåndtering', text: "Rapporterede phishing-forsøg logges og gennemgås", hint: "Mønstre afslører målrettede kampagner og informerer fremtidige træningsemner." },
+  // 5. Test & løbende forbedring
+  { sec: 'Test & forbedring', text: "Vi kører simulerede phishing-kampagner for at teste medarbejdernes parathed", hint: "NIS2 best practice — afslører reelle huller, før rigtige angribere gør det." },
+  { sec: 'Test & forbedring', text: "Vi følger vores klikrate over tid og arbejder på at reducere den", hint: "Et almindeligt mål: en klikrate under 5 % inden for 12 måneder." },
+  { sec: 'Test & forbedring', text: "Medarbejdere er briefet om aktuelle trusler målrettet danske SMV'er", hint: "MitID-spoofing, e-Boks-imitation, falske fakturaer fra 'DSB' eller 'PostNord'." },
 ];
 
 const ICONS = {
@@ -306,20 +279,19 @@ const total = QUESTIONS.length;
 const answers = {};
 let current = 1;
 
-// Render all question cards
 function renderQuestions() {
   const wrap = document.getElementById('quizWrap');
   let html = '';
   QUESTIONS.forEach((q, i) => {
     const num = i + 1;
     html += `<div class="question-card${num === 1 ? '' : ' hidden'}" id="q${num}">
-      <p class="question-num">${q.sec} · Question ${num} of ${total}</p>
+      <p class="question-num">${q.sec} · Spørgsmål ${num} af ${total}</p>
       <p class="question-text">${q.text}</p>
       <p class="question-hint">${q.hint}</p>
       <div class="options">
-        <button class="option-btn" data-q="${num}" data-val="yes" onclick="answer(${num},'yes')"><span class="option-icon">${ICONS.yes}</span> Yes — fully in place</button>
-        <button class="option-btn" data-q="${num}" data-val="partial" onclick="answer(${num},'partial')"><span class="option-icon">${ICONS.partial}</span> Partially — some of the way there</button>
-        <button class="option-btn" data-q="${num}" data-val="no" onclick="answer(${num},'no')"><span class="option-icon">${ICONS.no}</span> No — not in place</button>
+        <button class="option-btn" data-q="${num}" data-val="yes" onclick="answer(${num},'yes')"><span class="option-icon">${ICONS.yes}</span> Ja — fuldt på plads</button>
+        <button class="option-btn" data-q="${num}" data-val="partial" onclick="answer(${num},'partial')"><span class="option-icon">${ICONS.partial}</span> Delvist — vi er på vej</button>
+        <button class="option-btn" data-q="${num}" data-val="no" onclick="answer(${num},'no')"><span class="option-icon">${ICONS.no}</span> Nej — ikke på plads</button>
       </div>
     </div>`;
   });
@@ -338,7 +310,7 @@ function updateProgress() {
   const pct = Math.round(((current - 1) / total) * 100);
   document.getElementById('progressFill').style.width = pct + '%';
   document.getElementById('progressPct').innerText = pct + '%';
-  document.getElementById('progressText').innerText = current <= total ? `Question ${current} of ${total}` : 'Complete';
+  document.getElementById('progressText').innerText = current <= total ? `Spørgsmål ${current} af ${total}` : 'Færdig';
   document.getElementById('btnBack').style.visibility = current > 1 ? 'visible' : 'hidden';
 }
 
@@ -349,7 +321,7 @@ function goNext() {
   current++;
   document.getElementById(`q${current}`).classList.remove('hidden');
   document.getElementById('btnNext').disabled = !answers[current];
-  document.getElementById('btnNext').innerText = current === total ? 'See my score →' : 'Next →';
+  document.getElementById('btnNext').innerText = current === total ? 'Se min score →' : 'Næste →';
   updateProgress();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -360,12 +332,11 @@ function goBack() {
   current--;
   document.getElementById(`q${current}`).classList.remove('hidden');
   document.getElementById('btnNext').disabled = false;
-  document.getElementById('btnNext').innerText = current === total ? 'See my score →' : 'Next →';
+  document.getElementById('btnNext').innerText = current === total ? 'Se min score →' : 'Næste →';
   updateProgress();
 }
 
 function showResult() {
-  // Score: yes = 1, partial = 0.5, no = 0
   let score = 0;
   const sectionTotals = {};
   const sectionMax = {};
@@ -380,28 +351,27 @@ function showResult() {
 
   let bucket, tagClass, headline, intro, ctaText;
   if (finalScore >= 13) {
-    bucket = 'Strong defences';
+    bucket = 'Stærkt forsvar';
     tagClass = 'strong';
-    headline = 'Strong phishing defences.';
-    intro = "You're in solid shape. Most SMEs we see don't reach this level. Use the gaps below to refine an already-good programme — and consider a formal NIS2 review to document what you have.";
-    ctaText = 'Want help formalising your awareness programme into NIS2-ready documentation? Book a free 20-minute call.';
+    headline = 'Stærkt phishing-forsvar.';
+    intro = "I er solidt placeret. De fleste SMV'er, vi ser, når ikke dette niveau. Brug hullerne nedenfor til at forfine et allerede godt program — og overvej en formel NIS2-gennemgang for at dokumentere det, I har.";
+    ctaText = 'Vil I have hjælp til at formalisere jeres awareness-program til NIS2-klar dokumentation? Book et gratis 20-minutters møde.';
   } else if (finalScore >= 8) {
-    bucket = 'Notable gaps';
+    bucket = 'Mærkbare huller';
     tagClass = 'notable';
-    headline = 'Some notable gaps.';
-    intro = "Foundations are in place but several controls would significantly raise your resilience — particularly anything in red below. These are exactly the gaps a real attacker would look for first.";
-    ctaText = 'Most of these gaps can be closed in a few hours. Book a free 20-minute call and we will tell you which 3-4 to start with.';
+    headline = 'Nogle mærkbare huller.';
+    intro = "Fundamentet er på plads, men flere kontroller ville markant hæve jeres modstandsdygtighed — særligt de røde nedenfor. Det er præcis de huller, en rigtig angriber ville kigge efter først.";
+    ctaText = 'De fleste af disse huller kan lukkes på få timer. Book et gratis 20-minutters møde, så fortæller vi jer, hvilke 3-4 I skal starte med.';
   } else {
-    bucket = 'High exposure';
+    bucket = 'Høj eksponering';
     tagClass = 'high';
-    headline = 'High phishing exposure.';
-    intro = "Phishing is statistically your most likely path to a breach right now. The good news: a few specific changes (MFA, DMARC, a basic awareness programme) typically lift this score by 6-8 points within a month.";
-    ctaText = 'A short conversation can map out the priorities. Book a free 20-minute intro call — no jargon, no obligation.';
+    headline = 'Høj phishing-eksponering.';
+    intro = "Phishing er statistisk jeres mest sandsynlige vej til et brud lige nu. Den gode nyhed: nogle få specifikke ændringer (MFA, DMARC, et basalt awareness-program) løfter typisk denne score med 6-8 point inden for en måned.";
+    ctaText = 'En kort samtale kan kortlægge prioriteterne. Book et gratis 20-minutters møde — uden jargon og uden forpligtelser.';
   }
 
-  // GA4 event
   if (typeof gtag === 'function') {
-    gtag('event', 'phishing_check_completed', { score: finalScore, bucket: bucket });
+    gtag('event', 'phishing_check_completed', { score: finalScore, bucket: bucket, lang: 'da' });
   }
 
   document.getElementById('scoreVal').innerText = finalScore;
@@ -411,7 +381,6 @@ function showResult() {
   document.getElementById('scoreIntro').innerText = intro;
   document.getElementById('ctaText').innerText = ctaText;
 
-  // Section scores
   const secEl = document.getElementById('sectionScores');
   secEl.innerHTML = Object.keys(sectionMax).map(sec => {
     const pts = sectionTotals[sec];
@@ -425,7 +394,6 @@ function showResult() {
     </div>`;
   }).join('');
 
-  // Gaps — items answered no or partial, sorted by severity
   const gaps = [];
   QUESTIONS.forEach((q, i) => {
     const v = answers[i + 1] || 'no';
@@ -440,7 +408,7 @@ function showResult() {
   } else {
     document.getElementById('gapsList').innerHTML = topGaps.map(g => `
       <div class="gap-item ${g.status === 'no' ? 'weak' : ''}">
-        <span class="gap-item-status">${g.status === 'no' ? 'Not in place' : 'Partial'}</span>
+        <span class="gap-item-status">${g.status === 'no' ? 'Ikke på plads' : 'Delvist'}</span>
         <div class="gap-item-title">${g.q.text}</div>
         <div class="gap-item-hint">${g.q.hint}</div>
       </div>
@@ -463,11 +431,10 @@ function restart() {
   document.querySelector('.progress-wrap').style.display = 'block';
   document.getElementById('resultCard').classList.remove('show');
   document.getElementById('btnNext').disabled = true;
-  document.getElementById('btnNext').innerText = 'Next →';
+  document.getElementById('btnNext').innerText = 'Næste →';
   updateProgress();
 }
 
-// Cookie consent
 if (localStorage.getItem('cookieConsent')) {
   document.getElementById('cookieBanner').classList.add('hidden');
 }
@@ -483,28 +450,5 @@ function dismissCookies() {
 
 updateProgress();
 </script>
-
-<footer class="qfooter">
-  <div class="qfooter-inner">
-    <div class="qfooter-row">
-      <a href="/" class="qfooter-brand">
-        <img src="/icon.png" alt="Soroflow">
-        <span>Soroflow</span>
-      </a>
-      <div class="qfooter-links">
-        <a href="/">Home</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/cookies.html">Cookies</a>
-        <a href="/da/phishing-check.html" hreflang="da">Dansk</a>
-        <a href="mailto:hello@soroflow.com">Contact</a>
-      </div>
-    </div>
-    <div class="qfooter-bottom">
-      <span>© 2026 Soroflow. All rights reserved.</span>
-      <span>Copenhagen, Denmark</span>
-    </div>
-  </div>
-</footer>
-
 </body>
 </html>
