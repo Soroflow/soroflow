@@ -44,7 +44,7 @@
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
     document.head.appendChild(s);
     gtag('js', new Date());
-    gtag('config', 'G-Z6E3W7W8BE', { anonymize_ip: true });
+    gtag('config', 'G-Z6E3W7W8BE');
   }
   if (localStorage.getItem('cookieConsent') === 'accepted') {
     loadGoogleAnalytics();
@@ -184,7 +184,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <li>To understand how visitors use our website and improve its content (Google Analytics)</li>
     <li>To comply with our legal obligations</li>
   </ul>
-  <p>The legal basis for processing your data is <strong>legitimate interest</strong> (Article 6(1)(f) GDPR) for general enquiries and website analytics, and <strong>performance of a contract</strong> (Article 6(1)(b) GDPR) for client engagements.</p>
+  <p>The legal basis for processing your data is <strong>consent</strong> (Article 6(1)(a) GDPR) for analytics cookies, <strong>legitimate interest</strong> (Article 6(1)(f) GDPR) for general enquiries and communication, and <strong>performance of a contract</strong> (Article 6(1)(b) GDPR) for client engagements.</p>
 
   <h2>3. Third-party services</h2>
   <p>We use the following third-party services that may process your personal data:</p>
@@ -230,7 +230,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-brand-row"><img src="/icon.png" alt="Soroflow"><span class="footer-brand-name">Soroflow</span></div>
-      <p class="footer-tagline">Cybersecurity, simplified. Based in Copenhagen, serving clients across Denmark and the EU.</p>
+      <p class="footer-tagline">Cybersecurity, made simple. Based in Copenhagen, serving clients across Denmark and the EU.</p>
     </div>
     <div class="footer-col"><h4>Navigation</h4><a href="/#services">Services</a><a href="/#compliance">Compliance</a><a href="/#about">About</a><a href="/#contact">Contact</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="/privacy.html">Privacy Policy</a><a href="/cookies.html">Cookie Policy</a><a href="/da/privacy.html" hreflang="da">Dansk version</a><a href="mailto:hello@soroflow.com">hello@soroflow.com</a></div>
