@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.soroflow.com/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://www.soroflow.com/phishing-check.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/phishing-check.html"/>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://www.soroflow.com/da/</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/"/>
@@ -84,7 +84,7 @@
   </url>
   <url>
     <loc>https://www.soroflow.com/da/phishing-check.html</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/phishing-check.html"/>
@@ -108,5 +108,41 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/cookies.html"/>
+  </url>
+  <url>
+    <loc>https://www.soroflow.com/url-check.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/url-check.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/url-check.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/url-check.html"/>
+  </url>
+  <url>
+    <loc>https://www.soroflow.com/password-check.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/password-check.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/password-check.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/password-check.html"/>
+  </url>
+  <url>
+    <loc>https://www.soroflow.com/da/url-check.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/url-check.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/url-check.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/url-check.html"/>
+  </url>
+  <url>
+    <loc>https://www.soroflow.com/da/password-check.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.soroflow.com/password-check.html"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://www.soroflow.com/da/password-check.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.soroflow.com/password-check.html"/>
   </url>
 </urlset>
