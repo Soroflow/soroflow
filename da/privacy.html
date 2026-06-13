@@ -43,7 +43,7 @@
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
     document.head.appendChild(s);
     gtag('js', new Date());
-    gtag('config', 'G-Z6E3W7W8BE', { anonymize_ip: true });
+    gtag('config', 'G-Z6E3W7W8BE');
   }
   if (localStorage.getItem('cookieConsent') === 'accepted') {
     loadGoogleAnalytics();
@@ -174,7 +174,7 @@ footer { background: var(--dark); padding: 4rem 2.5rem 2rem; }
     <li>At forstå, hvordan besøgende bruger vores website, og forbedre indholdet (Google Analytics)</li>
     <li>At overholde vores retlige forpligtelser</li>
   </ul>
-  <p>Det retlige grundlag for behandling af dine data er <strong>legitim interesse</strong> (Artikel 6, stk. 1, litra f, GDPR) for generelle henvendelser og website-analytics, og <strong>opfyldelse af en kontrakt</strong> (Artikel 6, stk. 1, litra b, GDPR) for klientforhold.</p>
+  <p>Det retlige grundlag for behandling af dine data er <strong>samtykke</strong> (Artikel 6, stk. 1, litra a, GDPR) for analytics-cookies, <strong>legitim interesse</strong> (Artikel 6, stk. 1, litra f, GDPR) for generelle henvendelser og kommunikation, og <strong>opfyldelse af en kontrakt</strong> (Artikel 6, stk. 1, litra b, GDPR) for klientforhold.</p>
 
   <h2>3. Tredjepartstjenester</h2>
   <p>Vi bruger følgende tredjepartstjenester, der kan behandle dine personoplysninger:</p>

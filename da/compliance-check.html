@@ -42,7 +42,7 @@
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Z6E3W7W8BE';
     document.head.appendChild(s);
     gtag('js', new Date());
-    gtag('config', 'G-Z6E3W7W8BE', { anonymize_ip: true });
+    gtag('config', 'G-Z6E3W7W8BE');
   }
   if (localStorage.getItem('cookieConsent') === 'accepted') {
     loadGoogleAnalytics();
